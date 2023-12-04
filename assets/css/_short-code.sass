@@ -1,0 +1,29 @@
+@use 'variables'
+
+@mixin text-DO()
+    text-decoration: none
+    outline: none
+
+@mixin fontAwesomeCreate($iconCode)
+    content: $iconCode
+    font-family: 'Font Awesome 5 Free'
+    font-weight: 700
+
+@mixin rowCreate($marginVal)
+    display: -ms-flexbox
+    display: flex
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+    margin: 
+        right: $marginVal
+        left: $marginVal
+
+@mixin colCreate($paddingVal, $widthVal)
+    position: relative
+    width: 100%
+    min-height: 1px
+    padding: 
+        right: $paddingVal
+        left: $paddingVal
+    max-width: $widthVal
+    flex: 0 0 $widthVal

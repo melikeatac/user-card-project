@@ -1,0 +1,193 @@
+@use 'variables'
+@use 'short-code'
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200300400600700900&display=swap')
+@import url('../vendor/bootstrap-5.2/css/bootstrap.min.css')
+@import url('../vendor/fontawesome/css/all.min.css')
+@import url('../vendor/icomoon/style.css')
+
+*
+    font-family: variables.$mainFontFamily
+html
+    scroll-behavior: smooth
+a,button
+    @include short-code.text-DO
+    cursor: pointer
+a
+    &:hover, &:focus
+        @include short-code.text-DO
+button
+    &:hover, &:focus
+        @include short-code.text-DO
+#goTpButton
+    display: inline-block
+    background-color: variables.$primaryColor
+    width: 50px
+    height: 50px
+    text-align: center
+    border-radius: 4px
+    position: fixed
+    bottom: 65px
+    right: -3px
+    transition: background-color 0.3s, opacity 0.5s, visibility 0.5s
+    opacity: 0
+    visibility: hidden
+    z-index: 8
+    &::after
+        @include short-code.fontAwesomeCreate('\f077')
+        font-size: 2em
+        line-height: 50px
+        color: #ffffff
+    &.show-active
+        opacity: 1
+        visibility: visible
+.cs-btn-type-1
+    margin-bottom: 10px
+    font-size: 16px
+    line-height: 24px
+    font-style: normal
+    font-weight: variables.$fontWeightBold
+    text-transform: capitalize
+    display: flex
+    align-items: center
+    justify-content: center
+    background: variables.$primaryColor
+    color: variables.$whiteColor
+    height: 50px
+    gap: 5px
+    border: none
+    width: 100%
+.cs-white-btn-1
+    color: variables.$primaryColor
+    text-align: center
+    font-family: Lato
+    font-size: 14px
+    line-height: 22px
+    font-weight: variables.$fontWeightSemiBold
+    text-transform: capitalize
+    border: 1px solid variables.$primaryColor
+    height: 50px
+    max-width: 150px
+    width: 100%
+    border-radius: 6px
+    background: variables.$whiteColor  
+.cs-input-group
+    display: flex
+    flex-direction: column
+    gap: 10px
+    .cs-duo-inputs
+        display: flex
+        justify-content: space-between  
+        label
+            color: variables.$textColor3
+            font-size: 12px
+            font-weight: variables.$fontWeightMedium
+            line-height: 20px
+            text-transform: capitalize
+        input
+            text-align: right
+            color: variables.$textColor3
+            font-size: 12px
+            font-weight: variables.$fontWeightMedium
+            line-height: 20px
+            text-transform: uppercase
+            height: 25px
+            background: variables.$whiteColor
+            border-radius: 4px
+            border: 0.5px solid variables.$textColor2
+            &:focus-visible
+                border: 1px solid variables.$primaryColor
+                outline: 0
+            &::placeholder
+                text-align: right
+                color: variables.$textColor3
+                font-size: 12px
+                font-weight: variables.$fontWeightMedium
+                line-height: 20px
+                text-transform: uppercase
+.cs-module-configurator
+    display: flex
+    .cs-left-side-main
+        max-width: 320px
+        width: 100%
+        background: variables.$bgColor3
+        height: 100vh
+        overflow: hidden
+        overflow-y: auto
+        &::-webkit-scrollbar
+            width: 0
+        .cs-first-accordion
+            .accordion-item
+                border-left: 0
+                border-right: 0
+                .accordion-header
+                    i
+                        margin-right: 5px
+            .cs-parent-acc-btn
+                background: variables.$bgColor1
+                color: variables.$whiteColor
+            & > .accordion-item
+                & > .accordion-collapse
+                    & > .accordion-body  
+                        padding: 0 !important
+            .accordion-button
+                border-radius: 0
+                outline: none
+                box-shadow: none
+                border: none
+                &:not(.collapsed)
+                    &::after
+                        background-image: none
+                        content: "-"
+                        position: absolute
+                        right: 10px
+                        top: 50%
+                        transform: translateY(-50%)
+                        font-size: 35px
+                        line-height: 0
+                        font-weight: 100 !important
+                        color: variables.$whiteColor
+                &::after
+                    background-image: none
+                    content: "\e91c"
+                    font-family: 'icomoon' !important
+                    position: absolute
+                    right: 10px
+                    top: 50%
+                    transform: translateY(-50%)
+                    font-size: 14px
+                    line-height: 1
+                    color: variables.$whiteColor
+        .cs-second-accordion
+            .accordion-button
+                background: variables.$bgColor3
+                &:not(.collapsed)
+                    color: variables.$primaryColor
+                    &::after
+                        background-image: none
+                        content: "\e900"
+                        font-family: 'icomoon' !important
+                        position: absolute
+                        right: 10px
+                        top: 50%
+                        transform: translateY(-50%)
+                        font-size: 20px
+                        line-height: 1
+                        color: variables.$bgColor2
+                &::after
+                    background-image: none
+                    content: "\e901"
+                    font-family: 'icomoon' !important
+                    position: absolute
+                    right: 10px
+                    top: 50%
+                    transform: translateY(-50%)
+                    font-size: 20px
+                    line-height: 1
+                    color: variables.$bgColor2    
+            .accordion-body
+                    background: variables.$bgColor3
+
+    .cs-right-side-main
+        background: pink
+        width: 100%

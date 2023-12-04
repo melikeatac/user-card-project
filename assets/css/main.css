@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200300400600700900&display=swap");
+@import url("../vendor/bootstrap-5.2/css/bootstrap.min.css");
+@import url("../vendor/fontawesome/css/all.min.css");
+@import url("../vendor/icomoon/style.css");
+* {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a, button {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+button:hover, button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+#goTpButton {
+  display: inline-block;
+  background-color: #2B73AC;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 65px;
+  right: -3px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 8;
+}
+#goTpButton::after {
+  content: "\f077";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 50px;
+  color: #ffffff;
+}
+#goTpButton.show-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cs-btn-type-1 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2B73AC;
+  color: #ffffff;
+  height: 50px;
+  gap: 5px;
+  border: none;
+  width: 100%;
+}
+
+.cs-white-btn-1 {
+  color: #2B73AC;
+  text-align: center;
+  font-family: Lato;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: 1px solid #2B73AC;
+  height: 50px;
+  max-width: 150px;
+  width: 100%;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.cs-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cs-input-group .cs-duo-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+.cs-input-group .cs-duo-inputs label {
+  color: #242424;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+.cs-input-group .cs-duo-inputs input {
+  text-align: right;
+  color: #242424;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+  height: 25px;
+  background: #ffffff;
+  border-radius: 4px;
+  border: 0.5px solid #707070;
+}
+.cs-input-group .cs-duo-inputs input:focus-visible {
+  border: 1px solid #2B73AC;
+  outline: 0;
+}
+.cs-input-group .cs-duo-inputs input::placeholder {
+  text-align: right;
+  color: #242424;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.cs-module-configurator {
+  display: flex;
+}
+.cs-module-configurator .cs-left-side-main {
+  max-width: 320px;
+  width: 100%;
+  background: #F6F3F3;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.cs-module-configurator .cs-left-side-main::-webkit-scrollbar {
+  width: 0;
+}
+.cs-module-configurator .cs-left-side-main .cs-first-accordion .accordion-item {
+  border-left: 0;
+  border-right: 0;
+}
+.cs-module-configurator .cs-left-side-main .cs-first-accordion .accordion-item .accordion-header i {
+  margin-right: 5px;
+}
+.cs-module-configurator .cs-left-side-main .cs-first-accordion .cs-parent-acc-btn {
+  background: #E20612;
+  color: #ffffff;
+}
+.cs-module-configurator .cs-left-side-main .cs-first-accordion > .accordion-item > .accordion-collapse > .accordion-body {
+  padding: 0 !important;
+}
+.cs-module-configurator .cs-left-side-main .cs-first-accordion .accordion-button {
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+.cs-module-configurator .cs-left-side-main .cs-first-accordion .accordion-button:not(.collapsed)::after {
+  background-image: none;
+  content: "-";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 35px;
+  line-height: 0;
+  font-weight: 100 !important;
+  color: #ffffff;
+}
+.cs-module-configurator .cs-left-side-main .cs-first-accordion .accordion-button::after {
+  background-image: none;
+  content: "\e91c";
+  font-family: "icomoon" !important;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  line-height: 1;
+  color: #ffffff;
+}
+.cs-module-configurator .cs-left-side-main .cs-second-accordion .accordion-button {
+  background: #F6F3F3;
+}
+.cs-module-configurator .cs-left-side-main .cs-second-accordion .accordion-button:not(.collapsed) {
+  color: #2B73AC;
+}
+.cs-module-configurator .cs-left-side-main .cs-second-accordion .accordion-button:not(.collapsed)::after {
+  background-image: none;
+  content: "\e900";
+  font-family: "icomoon" !important;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  line-height: 1;
+  color: #1A1A1A;
+}
+.cs-module-configurator .cs-left-side-main .cs-second-accordion .accordion-button::after {
+  background-image: none;
+  content: "\e901";
+  font-family: "icomoon" !important;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  line-height: 1;
+  color: #1A1A1A;
+}
+.cs-module-configurator .cs-left-side-main .cs-second-accordion .accordion-body {
+  background: #F6F3F3;
+}
+.cs-module-configurator .cs-right-side-main {
+  background: pink;
+  width: 100%;
+}/*# sourceMappingURL=main.css.map */
