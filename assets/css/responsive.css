@@ -1,3 +1,13 @@
+@media (min-width: 1280px) and (max-width: 1681px) {
+  #reportModal #report-tabContent {
+    height: 350px;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  .cs-general-main .cs-image-1 {
+    height: 300px;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1100px) {
   #goTpButton {
     bottom: 60px;
@@ -22,6 +32,23 @@
     line-height: 50px;
     position: relative;
     bottom: 5px;
+  }
+  .cs-container-1 {
+    padding: 0 10px;
+  }
+  #cs-add-btn-1 span {
+    display: none;
+  }
+  .cs-top-bar .cs-top-bar-content .cs-title-1 {
+    font-size: 17px;
+  }
+  .cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal {
+    z-index: 1;
+    width: 250px;
+    height: 410px;
+  }
+  .cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal .cs-header .cs-title-2 {
+    font-size: 16px;
   }
 }
 @media (min-width: 500px) {
