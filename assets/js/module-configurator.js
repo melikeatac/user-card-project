@@ -7,9 +7,8 @@ $(document).ready(function () {
         });
     }
 
-    // File ekleme butonlarının işlevselliği start
+    // File ekleme butonlarının işlevselliği
     $('#cs-create-project').click(function () {
-        console.log("tıklandı")
         $('.cs-modal-1').show();
         $('.cs-modal-2').hide();
     });
@@ -27,7 +26,6 @@ $(document).ready(function () {
     $('#cs-close-btn').click(function () {
         $('.cs-add-project-modal').hide();
     })
-    // File ekleme butonlarının işlevselliği end
 
     $('.cs-radio-area input[name="folderRadios"]').change(function () {
         if ($(this).is(':checked')) {
@@ -46,13 +44,12 @@ $(document).ready(function () {
         }
     });
 
-    // Media alanındaki butonlar seçildiğinde yapılacak işlemler başlangıç
+    // Media alanındaki butonlar seçildiğinde yapılacak işlemler
     $('.cs-butons-list button').click(function () {
         $(this).toggleClass("active");
     });
-    // Media alanındaki butonlar seçildiğinde yapılacak işlemler bitiş
 
-    // Files kısmı ekstra butonların eklenmesi başlangıç
+    // Files kısmı ekstra butonların eklenmesi
     function filesBtnGroupVisible() {
 
         function handleCheckButton(boxItem, boxButton) {
@@ -86,8 +83,6 @@ $(document).ready(function () {
         }
     }
 
-    // Files kısmı ekstra butonların eklenmesi bitiş
-
     $('#report-tab .nav-link').on('click', function () {
 
         if ($(this).attr('id') == 'files-tab') {
@@ -98,7 +93,7 @@ $(document).ready(function () {
         }
     })
 
-    // Report tag için ileri geri mekanizması başlangıç
+    // Report tag için ileri geri mekanizması
     $('#cs-back-btn').click(function () {
         var activeTabIndex = $('#report-tab .nav-link.active').parent().index();
         if (activeTabIndex > 0) {
@@ -115,7 +110,6 @@ $(document).ready(function () {
         }
         filesBtnGroupVisible();
     });
-    // Report tag için ileri geri mekanizması bitiş
 
     function finishBtn() {
         var item_count = $('#changeModal').find('.cs-step-main').length;
@@ -153,7 +147,6 @@ $(document).ready(function () {
 
     $('#cs-next-btn-2').click(function () {
         $('.cs-step-main.active .cs-main-radiogroup .form-check-change').each(function () {
-            console.log(this)
             selectedTextInfo($(this));
         })
 
