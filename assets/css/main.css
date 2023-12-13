@@ -54,6 +54,47 @@ button:hover, button:focus {
   visibility: visible;
 }
 
+.cs-main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8F8F8;
+  height: 95px;
+}
+.cs-main-header .cs-header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cs-main-header .cs-header-menu .cs-header-list {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.cs-main-header .cs-header-menu .cs-header-list .cs-list-item.active {
+  border-bottom: 1.5px solid #E20612;
+}
+.cs-main-header .cs-header-menu .cs-header-list .cs-list-item i {
+  color: #E20612;
+  font-size: 20px;
+}
+.cs-main-header .cs-header-logo {
+  width: 240px;
+  object-fit: cover;
+}
+
+#cs-mobile-menu-2 {
+  display: none;
+  margin-top: 5px;
+}
+#cs-mobile-menu-2 i {
+  font-size: 16px;
+  padding: 4px;
+  border-radius: 50%;
+  color: #E20612;
+  border: 2px solid #E20612;
+}
+
 .cs-global-select2-container-2 label {
   display: block;
   cursor: pointer;
@@ -313,23 +354,20 @@ button:hover, button:focus {
   position: absolute;
   top: 30%;
   left: 50%;
-  width: 28px;
-  height: 28px;
   transform: translate(-50%, -50%);
-  border-radius: 50%;
   z-index: 99;
-  background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .cs-accordion-hover .js-play-input i {
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 27px;
+  line-height: 27px;
   color: #E20612;
   margin: 0;
-  padding-top: 1px;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 4px;
   z-index: 98;
 }
 
@@ -343,7 +381,7 @@ button:hover, button:focus {
   height: 100vh;
   overflow: hidden;
   overflow-y: auto;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 155px);
 }
 .cs-module-configurator .cs-left-side-main::-webkit-scrollbar {
   width: 0;
@@ -456,36 +494,40 @@ button:hover, button:focus {
   background: gray;
   width: 100%;
   position: relative;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 155px);
 }
-.cs-module-configurator .cs-right-side-main .cs-button-list {
+.cs-module-configurator .cs-right-side-main .cs-button-list-mobile {
+  display: none !important;
+}
+.cs-module-configurator .cs-right-side-main .cs-button-list, .cs-module-configurator .cs-right-side-main .cs-button-list-mobile {
   position: absolute;
   bottom: 50px;
   left: 15%;
   display: flex;
   border-radius: 35.5px;
 }
-.cs-module-configurator .cs-right-side-main .cs-button-list .btn-gray {
+.cs-module-configurator .cs-right-side-main .cs-button-list .btn-gray, .cs-module-configurator .cs-right-side-main .cs-button-list-mobile .btn-gray {
   border: 0px;
   border-left: 0.5px solid #707070;
   background: #EBEBEB;
-  min-width: 125px;
+  min-width: 150px;
   text-align: center;
-  padding: 17px 20px;
+  padding: 1px 10px;
+  height: 55px;
   font-size: 18px;
   font-weight: 700;
   color: #707070;
 }
-.cs-module-configurator .cs-right-side-main .cs-button-list .btn-gray.active {
+.cs-module-configurator .cs-right-side-main .cs-button-list .btn-gray.active, .cs-module-configurator .cs-right-side-main .cs-button-list-mobile .btn-gray.active {
   background: #ffffff;
   color: #E20612;
 }
-.cs-module-configurator .cs-right-side-main .cs-button-list .btn-gray:first-child {
+.cs-module-configurator .cs-right-side-main .cs-button-list .btn-gray:first-child, .cs-module-configurator .cs-right-side-main .cs-button-list-mobile .btn-gray:first-child {
   border-top-left-radius: 35.5px;
   border-bottom-left-radius: 35.5px;
   border: none;
 }
-.cs-module-configurator .cs-right-side-main .cs-button-list .btn-gray:last-child {
+.cs-module-configurator .cs-right-side-main .cs-button-list .btn-gray:last-child, .cs-module-configurator .cs-right-side-main .cs-button-list-mobile .btn-gray:last-child {
   border-top-right-radius: 35.5px;
   border-bottom-right-radius: 35.5px;
   border: none;
@@ -1144,16 +1186,17 @@ button:hover, button:focus {
   transition: all 0.2s ease 0s;
 }
 
-.cs-files-btn-group {
-  opacity: 0;
-  visibility: hidden;
-  display: flex;
+.cs-files-btn-group, .cs-transfer-btn-group {
+  display: none;
 }
-.cs-files-btn-group.active {
-  opacity: 1;
+.cs-files-btn-group.active, .cs-transfer-btn-group.active {
   display: flex;
-  visibility: visible;
   gap: 10px;
+}
+
+.cs-next-back-group {
+  text-align: right;
+  flex: 1;
 }
 
 .cs-downloadModalMain {
@@ -1211,6 +1254,10 @@ button:hover, button:focus {
   transform: translate(-50%, -50%);
   color: #E20612;
   font-size: 25px;
+  font-size: 27px;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 4px;
 }
 .cs-lightgallery-1 #lightgallery-module-1 .img-responsive, .cs-lightgallery-1 #lightgallery-module-2 .img-responsive, .cs-lightgallery-2 #lightgallery-module-1 .img-responsive, .cs-lightgallery-2 #lightgallery-module-2 .img-responsive {
   width: 100%;
@@ -1222,5 +1269,92 @@ button:hover, button:focus {
 .lg-backdrop,
 .lg-outer {
   z-index: 9999;
-  background: rgba(0, 0, 0, 0.6901960784);
+  background: #000000;
+}
+
+.cs-global-footer-1 {
+  padding: 35px 0;
+  background-color: #dedede;
+}
+.cs-global-footer-1 .cs-footer-title-1 {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #000000;
+}
+.cs-global-footer-1 .footer-logo-1 img {
+  max-height: 28px;
+  margin-bottom: 24px;
+}
+.cs-global-footer-1 .cs-footer-logo-m-1 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+}
+.cs-global-footer-1 .cs-footer-logo-m-1 img {
+  max-width: 235px;
+  width: 100%;
+}
+.cs-global-footer-1 .cs-footer-menu-1 {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 5px;
+}
+.cs-global-footer-1 .cs-footer-menu-1 li {
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.cs-global-footer-1 .cs-footer-menu-1 li a {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
+}
+.cs-global-footer-1 .cs-footer-menu-2 {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+.cs-global-footer-1 .cs-footer-menu-2 i {
+  color: #707070;
+  font-size: 20px;
+}
+.cs-global-footer-1 .footer-desc-1 {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.cs-global-footer-1 .footer-desc-1 strong {
+  font-weight: 700;
+}
+.cs-global-footer-1 .footer-desc-1 a {
+  color: #000000;
+}
+.cs-global-footer-1 .footer-desc-1 a:hover {
+  color: #000000;
+}
+
+.cs-footer-policy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #dedede;
+  height: 50px;
+  border-top: 1px solid #707070;
+}
+.cs-footer-policy .cs-policy-list {
+  display: flex;
+  gap: 50px;
+}
+.cs-footer-policy .cs-policy-list a {
+  font-size: 12px;
+  text-decoration: underline;
+  line-height: 20px;
+  color: #000000;
 }/*# sourceMappingURL=main.css.map */

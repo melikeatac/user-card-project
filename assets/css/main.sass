@@ -41,6 +41,38 @@ button
     &.show-active
         opacity: 1
         visibility: visible
+.cs-main-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background: variables.$bgColor6
+    height: 95px
+    .cs-header-menu
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .cs-header-list
+            display: flex
+            align-items: center
+            gap: 18px
+            .cs-list-item
+                &.active
+                    border-bottom: 1.5px solid variables.$bgColor1
+                i
+                    color: variables.$bgColor1
+                    font-size: 20px
+    .cs-header-logo
+        width: 240px
+        object-fit: cover
+#cs-mobile-menu-2
+    display: none
+    margin-top: 5px
+    i
+        font-size: 16px
+        padding: 4px
+        border-radius: 50%
+        color: variables.$bgColor1
+        border: 2px solid variables.$bgColor1
 .cs-global-select2-container-2
     label
         display: block
@@ -279,22 +311,19 @@ button
         position: absolute
         top: 30%
         left: 50%
-        width: 28px
-        height: 28px
         transform: translate(-50%,-50%)
-        border-radius: 50%
         z-index: 99
-        background: variables.$whiteColor
         display: flex
         justify-content: center
         align-items: center
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
         i
-            font-size: 24px
-            line-height: 24px
+            font-size: 27px
+            line-height: 27px
             color: variables.$bgColor1
             margin: 0 
-            padding-top: 1px     
+            background: variables.$whiteColor
+            border-radius: 50%
+            padding: 4px     
             z-index: 98                  
                 
 .cs-module-configurator
@@ -306,7 +335,7 @@ button
         height: 100vh
         overflow: hidden
         overflow-y: auto
-        height: calc(100vh - 60px)
+        height: calc(100vh - 155px)
         &::-webkit-scrollbar
             width: 0
         .cs-first-accordion
@@ -408,8 +437,10 @@ button
         background: gray
         width: 100%
         position: relative
-        height: calc(100vh - 60px)
-        .cs-button-list
+        height: calc(100vh - 155px)
+        .cs-button-list-mobile
+            display: none !important
+        .cs-button-list,.cs-button-list-mobile
             position: absolute
             bottom: 50px
             left: 15%
@@ -419,9 +450,10 @@ button
                 border: 0px
                 border-left: 0.5px solid variables.$textColor2
                 background: variables.$bgColor5
-                min-width: 125px
+                min-width: 150px
                 text-align: center
-                padding: 17px 20px
+                padding: 1px 10px
+                height: 55px
                 font-size: 18px
                 font-weight: variables.$fontWeightBold
                 color: variables.$textColor2
@@ -977,16 +1009,14 @@ button
         left: 8px
         transform: translateY(10px)
         transition: all 0.2s ease 0s
-.cs-files-btn-group
-    opacity: 0
-    visibility: hidden
-    display: flex
+.cs-files-btn-group,.cs-transfer-btn-group
+    display: none
     &.active
-        opacity: 1
         display: flex
-        visibility: visible
         gap: 10px
-
+.cs-next-back-group
+    text-align: right
+    flex: 1
 .cs-downloadModalMain
     display: flex
     gap: 20px
@@ -1037,6 +1067,10 @@ button
                 transform: translate(-50%, -50%)
                 color: variables.$bgColor1
                 font-size: 25px
+                font-size: 27px
+                background: variables.$whiteColor
+                border-radius: 50%
+                padding: 4px
         .img-responsive
             width: 100%
             height: 85px
@@ -1045,4 +1079,74 @@ button
 .lg-backdrop,
 .lg-outer
     z-index: 9999
-    background: #000000b0
+    background: variables.$textColor3
+.cs-global-footer-1
+    padding: 35px 0
+    background-color: variables.$bgColor4
+    .cs-footer-title-1
+        font-size: 14px
+        line-height: 22px
+        font-weight: variables.$fontWeightSemiBold
+        color: variables.$textColor3
+    .footer-logo-1 
+        img
+            max-height: 28px
+            margin-bottom: 24px
+    .cs-footer-logo-m-1
+        list-style: none
+        padding: 0
+        margin: 0
+        display: flex
+        align-items: flex-start
+        img
+            max-width: 235px
+            width: 100%
+    .cs-footer-menu-1
+        list-style: none
+        padding: 0
+        margin: 0 0 5px
+        li
+            line-height: 1
+            margin-bottom: 10px
+            a
+                font-size: 12px
+                line-height: 20px
+                font-weight: variables.$fontWeightRegular
+                color: variables.$textColor3
+    .cs-footer-menu-2
+        display: flex
+        gap: 10px
+        list-style: none
+        padding: 0
+        i
+            color: variables.$textColor2
+            font-size: 20px
+    .footer-desc-1
+        font-size: 12px
+        line-height: 20px
+        font-weight: 400
+        color: variables.$textColor3
+        margin-bottom: 10px
+        strong
+            font-weight: 700
+        a
+            color: variables.$textColor3
+            &:hover
+                color: variables.$textColor3
+
+.cs-footer-policy
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    background-color: variables.$bgColor4
+    height: 50px
+    border-top: 1px solid variables.$textColor2
+    .cs-policy-list
+        display: flex
+        gap: 50px
+        a
+            font-size: 12px
+            text-decoration: underline
+            line-height: 20px
+            color: variables.$textColor3

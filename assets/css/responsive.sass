@@ -35,6 +35,17 @@
     #cs-add-btn-1 
         span
             display: none
+    .cs-global-footer-1 
+        .cs-footer-menu-2 
+            i
+                font-size: 16px
+        .cs-footer-logo-m-1 
+            img
+                width: 160px
+                margin-bottom:10px
+    .cs-main-header 
+        .cs-header-logo
+            width: 160px 
     .cs-top-bar 
         .cs-top-bar-content 
             .cs-title-1
@@ -47,7 +58,109 @@
                     .cs-header 
                         .cs-title-2
                             font-size: 16px
-
+    #cs-mobile-menu-2
+                display: flex
+    .cs-lightgallery-1,.cs-lightgallery-2 
+        #lightgallery-module-1,#lightgallery-module-2 
+            li
+                flex: 0 0 50%
+    .cs-downloadModalMain 
+        display: grid
+        grid-template-columns: repeat(2,1fr)
+        gap: 10px
+        padding: 0
+        .cs-downloadModalContent
+            width: 140px
+    .cs-cutlist-main 
+        table 
+            tr 
+                td
+                    width: 165px
+    .cs-fastener-main
+        flex-direction: column
+        .cs-sec-1
+            display: flex
+            justify-content: center
+        .cs-sec-2
+            padding-left: 0
+            border: none
+    .cs-general-main
+        flex-direction: column
+        .cs-image-1 
+            border-right: none
+            height: 250px
+            display: flex
+            justify-content: center
+            width: 100%
+            position: relative
+    #changeModal 
+        .modal-body
+            padding: 0 15px
+        #change-tab 
+            gap: 5px
+            .nav-item 
+                .nav-link
+                    font-size: 14px
+                    line-height: 20px
+                    &.active
+                        font-size: 14px
+                        line-height: 20px
+    .cs-accordion-hover
+        display: none
+    .cs-change-content 
+        .cs-head 
+            .cs-title-1,.cs-selected-info
+                font-size: 14px
+                line-height: 22px
+        .cs-main-radiogroup 
+            flex-wrap: wrap
+            gap: 5px
+            .form-check-change
+                max-width: 49%
+                .cs-change-info
+                    font-size: 12px
+                    line-height: 20px
+            .change-area-label
+                font-size: 12px
+                line-height: 20px
+                padding: 8px
+    .cs-files-transfer-main 
+        .cs-g-box-1
+            flex-direction: column
+            gap: 20px
+            padding: 20px
+            .cs-product-name
+                flex: 0 0 100%
+                max-width: 100%
+            .cs-butons-list
+                flex: 0 0 100%
+                max-width: 100%
+    #reportModal 
+        #report-tab 
+            border-radius: 6px
+            .nav-item 
+                .nav-link
+                    font-size: 14px
+                    line-height: 20px
+                    &.active
+                        font-size: 14px
+                        line-height: 20px
+    .cs-module-configurator
+        .cs-left-side-main
+            display: none
+            position: absolute
+            z-index: 1
+            top: 188px
+        .cs-right-side-main 
+            .cs-button-list
+                display: none
+            .cs-button-list-mobile
+                display: flex !important
+                .btn-gray
+                    min-width: 50px
+                    padding: 1px 10px
+                    height: 40px
+                    font-size: 15px
 @media (min-width: 500px)
     #goTpButton
         margin: 30px

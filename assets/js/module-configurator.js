@@ -52,15 +52,40 @@ $(document).ready(function () {
     });
     // Media alanındaki butonlar seçildiğinde yapılacak işlemler bitiş
 
-    // Files kısmı eekstra butonların eklenmesi başlangıç
+    // Files kısmı ekstra butonların eklenmesi başlangıç
     function filesBtnGroupVisible() {
+
+        function handleCheckButton(boxItem, boxButton) {
+            var allChecked = true;
+            $(boxItem + ' .cs-g-box-1').each(function () {
+                if ($(this).find('.cs-checkbtn.active').length === 0) {
+                    allChecked = false;
+                    return false;
+                }
+            });
+            $(boxButton).toggleClass('active', allChecked);
+        }
+
         if ($('#files-tab').hasClass('active')) {
-            $('.cs-files-btn-group').addClass('active');
+            $('.cs-transfer-btn-group').removeClass('active');
+            handleCheckButton('#files', '.cs-files-btn-group');
+            $('#files .cs-checkbtn').on('click', function () {
+                handleCheckButton('#files', '.cs-files-btn-group');
+            });
+        }
+
+        else if ($('#transfer-tab').hasClass('active')) {
+            $('.cs-files-btn-group').removeClass('active');
+            handleCheckButton('#transfer', '.cs-transfer-btn-group');
+            $('#transfer .cs-checkbtn').on('click', function () {
+                handleCheckButton('#transfer', '.cs-transfer-btn-group');
+            });
         }
         else {
-            $('.cs-files-btn-group').removeClass('active');
+            $(boxButton).removeClass('active');
         }
     }
+
     // Files kısmı ekstra butonların eklenmesi bitiş
 
     $('#report-tab .nav-link').on('click', function () {
@@ -279,11 +304,15 @@ $(document).ready(function () {
         }
     });
 
-    $('.cs-right-side-main .cs-button-list button').click(function () {
+    $('.cs-right-side-main .cs-button-list button,.cs-right-side-main .cs-button-list-mobile button').click(function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
         } else {
             $(this).addClass('active');
         }
+    });
+
+    $('#cs-mobile-menu-2').click(function () {
+        $('.cs-module-configurator .cs-left-side-main').toggle();
     });
 });

@@ -20,9 +20,24 @@
 
 <body>
   <header>
+    <div class="cs-main-header">
+      <div class="cs-container-1">
+        <div class="cs-header-menu">
+          <img class="cs-header-logo" src="assets/img/other/configuremate-logo.png">
+          <div class="cs-header-list">
+            <a href="javascript:void(0)" class="cs-list-item active"><i class="icon-main"></i></a>
+            <a href="javascript:void(0)" class="cs-list-item"><i class="icon-file"></i></a>
+            <a href="javascript:void(0)" class="cs-list-item"><i class="icon-login"></i></a>
+            <a href="javascript:void(0)" class="cs-list-item"><i class="icon-global"></i></a>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
+
     <div class="cs-top-bar">
       <div class="cs-container-1">
         <div class="cs-top-bar-content">
@@ -89,6 +104,11 @@
             </div>
           </div>
         </div>
+        <!-- Mobil için menü -->
+        <a href="javascrit:void(0)" class="cs-add-btn" id="cs-mobile-menu-2">
+          <i class="icon-positive"></i>
+        </a>
+        <!-- Mobil için menü -->
       </div>
     </div>
     <div class="cs-module-configurator">
@@ -552,6 +572,22 @@
             SHELF
           </button>
         </div>
+        <!-- Mobil için liste -->
+        <div class="cs-button-list-mobile">
+          <button class="btn-gray">
+            B
+          </button>
+          <button class="btn-gray">
+            C
+          </button>
+          <button class="btn-gray">
+            D
+          </button>
+          <button class="btn-gray">
+            S
+          </button>
+        </div>
+        <!-- Mobil için liste -->
       </div>
     </div>
 
@@ -857,12 +893,7 @@
                     <div id="document-collapseOne" class="accordion-collapse collapse show"
                       aria-labelledby="document-headingOne" data-bs-parent="#document-media-acc">
                       <div class="accordion-body">
-                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                        does limit overflow.
+                        <strong>This is the first item's accordion body.</strong>
                       </div>
                     </div>
                   </div>
@@ -1166,7 +1197,11 @@
               <button type="button" class="cs-btn-type-1-border px-3">Clear Selects</button>
               <button type="button" class="cs-btn-type-1 px-3">Download Selected</button>
             </div>
-            <div>
+            <div class="cs-transfer-btn-group">
+              <button type="button" class="cs-btn-type-1-border px-3">Clear Selects</button>
+              <button type="button" class="cs-btn-type-1 px-3">Export to PDF</button>
+            </div>
+            <div class="cs-next-back-group">
               <button type="button" class="btn" id="cs-back-btn">Back</button>
               <button type="button" class="btn" id="cs-next-btn">Next</button>
             </div>
@@ -1430,6 +1465,64 @@
   <a href="javascript: void(0);" id="goTpButton"></a>
 
   <footer>
+    <div class="cs-global-footer-1">
+      <div class="cs-container-1">
+        <div class="row">
+          <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+            <ul class="cs-footer-logo-m-1">
+              <img src="assets/img/other/configuremate-logo.png">
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+            <h3 class="cs-footer-title-1">Configurator</h3>
+            <ul class="cs-footer-menu-1">
+              <li>
+                <a href="" title="">Product Configurator</a>
+              </li>
+              <li>
+                <a href="" title="">Module Configurator</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+            <h3 class="cs-footer-title-1">Follow us on Social Media</h3>
+            <ul class="cs-footer-menu-2">
+              <li>
+                <a href="" title=""><i class="icon-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="" title=""><i class="icon-twitter"></i></a>
+              </li>
+              <li>
+                <a href="" title=""><i class="icon-facebook"></i></a>
+              </li>
+              <li>
+                <a href="" title=""><i class="icon-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+            <p class="footer-desc-1"><strong>Address:</strong> Atatürk Mah. Adnan Menderes Cad. No: 8-13 34513
+              Esenyurt-İstanbul/Türkiye</p>
+
+            <p class="footer-desc-1"><strong>Phone:</strong> +90 212 886 75 23</p>
+            <p class="footer-desc-1"><strong>Fax:</strong> +90 212 886 51 61</p>
+
+            <p class="footer-desc-1"><strong>E-mail: </strong> <a
+                href="mailto:info@samet.com.tr">info@sametglobal.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cs-footer-policy">
+      <div class="cs-policy-list">
+        <a href="">Privacy Policy</a>
+        <a href="">Cookies Policy</a>
+      </div>
+    </div>
   </footer>
 
   <script src="assets/vendor/jQuery/jquery-3.6.0.min.js"></script>
