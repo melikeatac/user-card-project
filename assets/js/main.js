@@ -34,3 +34,39 @@ goTopButton1.bind('click', function () {
     $('html, body').scrollTop(0);
 });
 /* Go Top Button End */
+
+$(document).ready(function () {
+    var languageArea = $('.cs-language-area');
+    var iconGlobal = $('.cs-header-list .icon-global');
+
+    iconGlobal.on('click', function (event) {
+        event.stopPropagation();
+        languageArea.toggleClass('active');
+    });
+
+    $(document).on('click', function (event) {
+        if (!languageArea.is(event.target) && languageArea.has(event.target).length === 0) {
+            languageArea.removeClass('active');
+        }
+    });
+    $('#cs-add-btn-1').click(function () {
+        $('.cs-add-project-modal').show();
+    });
+    $('.cs-file-icon').click(function () {
+        if ($('.cs-top-bar').length > 0) {
+            $('.cs-add-project-modal').addClass('headopen2');
+        }
+        else {
+            $('.cs-add-project-modal').addClass('headopen');
+        }
+        $('.cs-add-project-modal').show();
+    });
+
+    $('#cs-close-btn').click(function () {
+        $('.cs-add-project-modal').hide();
+        $('.cs-add-project-modal').removeClass('headopen2');
+        $('.cs-add-project-modal').removeClass('headopen');
+
+    })
+
+});

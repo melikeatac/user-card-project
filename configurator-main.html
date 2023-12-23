@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="assets/img/system/4alabs-fav.jpeg">
+
+    <!--CSS START-->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!--CSS END-->
+</head>
+
+<body>
+    <header>
+        <div class="cs-main-header">
+            <div class="cs-container-1">
+                <div class="cs-header-menu">
+                    <a href="configurator-main.html"><img class="cs-header-logo"
+                            src="./assets/img/other/configuremate-logo.png"></a>
+                    <div class="cs-header-list">
+                        <a href="configurator-main.html" class="cs-list-item active"><i class="icon-main"></i></a>
+                        <a href="javascript:void(0)" class="cs-list-item cs-file-icon"><i class="icon-file"></i></a>
+                        <a href="javascript:void(0)" class="cs-list-item cs-login-icon"><i class="icon-login"></i></a>
+                        <a href="javascript:void(0)" class="cs-list-item"><i class="icon-global"></i></a>
+                        <div class="cs-language-area">
+                            <ul class="cs-language-list">
+                                <li class="cs-language-item"><a href="">Turkish</a></li>
+                                <li class="cs-language-item"><a href="">English</a></li>
+                                <li class="cs-language-item"><a href="">Polish</a></li>
+                                <li class="cs-language-item"><a href="">Deutsch</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="cs-profile-modal">
+            <div class="cs-header">
+                <h6 class="cs-title">Profile</h6>
+                <a href="" class="cs-pp-close-btn"><i class="icon-close"></i></a>
+            </div>
+            <div class="cs-main">
+                <div class="accordion" id="accordion_main_pp">
+                    <form class="cs-login-form">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="ppOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#ppcollapseOne" aria-expanded="true" aria-controls="ppcollapseOne">
+                                    <p><i class="icon-login"></i>Personal Information</p>
+                                </button>
+                            </h2>
+                            <div id="ppcollapseOne" class="accordion-collapse collapse show" aria-labelledby="ppOne"
+                                data-bs-parent="#accordion_main_pp">
+                                <div class="accordion-body">
+                                    <div class="cs-form-item">
+                                        <label class="" for="form-namesurname">Name Surname</label>
+                                        <input type="text" id="form-namesurname" value="Zeynep Bz">
+                                    </div>
+                                    <div class="cs-form-item">
+                                        <label class="" for="form-email">E-mail Address</label>
+                                        <input type="email" id="form-email" value="zeynepbz@4alabs.io">
+                                    </div>
+                                    <div class="cs-form-item">
+                                        <label class="" for="form-phone">Phone Number</label>
+                                        <input type="text" id="form-phone" value="+90 545 544 89 88">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="ppTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#ppcollapseTwo" aria-expanded="false" aria-controls="ppcollapseTwo">
+                                    <p><i class="icon-login"></i>Company Information</p>
+                                </button>
+                            </h2>
+                            <div id="ppcollapseTwo" class="accordion-collapse collapse" aria-labelledby="ppTwo"
+                                data-bs-parent="#accordion_main_pp">
+                                <div class="accordion-body">
+                                    <div class="cs-form-item">
+                                        <label class="" for="form-companyname">Company Name</label>
+                                        <input type="text" id="form-companyname" value="4A Labs">
+                                    </div>
+                                    <div class="cs-form-item">
+                                        <label class="" for="form-c-profile">Company Profile</label>
+                                        <input type="email" id="form-c-profile" value="Lorem ipsum dolor">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="ppThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#ppcollapseThree" aria-expanded="false"
+                                    aria-controls="ppcollapseThree">
+                                    <p><i class="icon-login"></i>Password Settings</p>
+
+                                </button>
+                            </h2>
+                            <div id="ppcollapseThree" class="accordion-collapse collapse" aria-labelledby="ppThree"
+                                data-bs-parent="#accordion_main_pp">
+                                <div class="accordion-body">
+                                    <div class="cs-form-item cs-pass-main">
+                                        <label class="" for="form-currentpass">Current Password</label>
+                                        <input type="password" id="form-currentpass" value="4A Labs">
+                                        <i class="icon-eye-close" id="cs-icon-close-10"></i>
+                                    </div>
+                                    <div class="cs-form-item">
+                                        <input type="password" id="form-newpass" placeholder="New Password">
+                                    </div>
+                                    <div class="cs-form-item">
+                                        <input type="password" id="form-newpass-conf" placeholder="New Password Again">
+                                    </div>
+                                    <div class="cs-form-check-area">
+
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" id="form-check-1">
+                                            <label class="form-check-label" for="form-check-1">
+                                                Within the scope of the Privacy Notice, do you allow SAMET KALIP VE
+                                                MADENİ
+                                                EŞYA
+                                                SANAYİ VE TİCARET A.Ş. to receive E-MAIL for the purpose of announcing
+                                                campaigns
+                                                and advantages, advertising communication, and product promotion and
+                                                processing
+                                                your personal data that you have sent in this form for this purpose?
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" id="form-check-2">
+                                            <label class="form-check-label" for="form-check-2">
+                                                Within the scope of the Privacy Notice, do you allow SAMET KALIP VE
+                                                MADENİ
+                                                EŞYA
+                                                SANAYİ VE TİCARET A.Ş. to receive SMS for the purpose of announcing
+                                                campaigns
+                                                and advantages, advertising communication, and product promotion and
+                                                processing
+                                                your personal data that you have sent in this form for this purpose?
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="cs-btn-type-1">Save Changes</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="cs-footer">
+                <a href="" class="cs-logout-btn"><i class="icon-download-file"></i>Logout</a>
+            </div>
+        </div>
+        <div class="cs-add-project-modal">
+            <form>
+                <div class="cs-modal-1">
+                    <div class="cs-header">
+                        <span class="cs-title-2">Save</span>
+                        <a href="javascript:void(0)" id="cs-close-btn"><i class="icon-close"></i></a>
+                    </div>
+                    <div class="cs-body">
+                        <p class="cs-info">Please create new project or update
+                            existing</p>
+                        <div class="cs-radio-area">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios1"
+                                    value="option1">
+                                <label class="form-check-label" for="folderRadios1">
+                                    Folder Name 1
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios2"
+                                    value="option2">
+                                <label class="form-check-label" for="folderRadios2">
+                                    Folder Name 2
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios3"
+                                    value="option3">
+                                <label class="form-check-label" for="folderRadios3">
+                                    Folder Name 3
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-footer">
+                        <button class="cs-btn-type-1 m-0" id="cs-save-btn">Save</button>
+                        <button class="cs-btn-type-1-border m-0" id="cs-newproject-btn">Create New Project</button>
+                    </div>
+                </div>
+                <div class="cs-modal-2">
+                    <div class="cs-header">
+                        <a href="javascript:void(0)" id="cs-create-project" class="cs-title-2"><i
+                                class=" icon-arrow-left" style="margin-right: 5px;"></i> Create New Project</a>
+                    </div>
+                    <div class="cs-body">
+                        <p class="cs-info">Please enter folder name</p>
+                        <div class="cs-input-area">
+                            <label for="folder-name" class="cs-input-info">Folder Name</label>
+                            <input id="folder-name" placeholder="Zeyns Folder">
+                        </div>
+                    </div>
+                    <div class="cs-footer">
+                        <button class="cs-btn-type-1 mb-5">Create Folder</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="cs-module-configurator-main">
+            <div class="cs-promo-arae" style="background-image: url(./assets/img/other/background-img.png);">
+                <h2 class="cs-title-1">
+                    <span class="cs-first">Welcome to SAMET’s</span><br>
+                    <span class="cs-second">Digital World</span>
+                </h2>
+                <p class="cs-desc-1">While enjoying your coffee, you can access a variety of
+                    ready-made digital tools and resources that can make your work easier from this page.
+                </p>
+                <div class="cs-info-area">
+                    <p class="cs-title">The significant advantages of <span class="cs-info">using a
+                            configurator</span>
+                    </p>
+                    <ul class="cs-info-list">
+                        <li>Yazılım kurulumuna gerek olmadan uygun SAMET aksesuarlarını kolay ve hızlı yapılandırın</li>
+                        <li>Projelerinizi kaydedin ve yönetin</li>
+                        <li>CAD verilerinden, çizimlerden ve montaj bilgilerinden faydalanın</li>
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Yazılım kurulumuna gerek olmadan uygun SAMET aksesuarlarını kolay ve hızlı yapılandırın</li>
+                        <li>CAD verilerinden, çizimlerden ve montaj bilgilerinden faydalanın</li>
+                        <li>Projelerinizi kaydedin ve yönetin</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cs-content-area">
+                <h3 class="cs-title">Please continue by making a selection that suits your needs</h3>
+                <ul class="nav nav-pills mb-3" id="configurator-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="module-tab" data-bs-toggle="pill"
+                            data-bs-target="#configurator-module" type="button" role="tab"
+                            aria-controls="configurator-module" aria-selected="true">Module Configurator</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="product-tab" data-bs-toggle="pill"
+                            data-bs-target="#configurator-product" type="button" role="tab"
+                            aria-controls="configurator-product" aria-selected="false">Product Configurator</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="configurator-tabContent">
+                    <div class="tab-pane fade show active" id="configurator-module" role="tabpanel"
+                        aria-labelledby="module-tab" tabindex="0">
+                        <div class="c-module-area">
+                            <p class="cs-desc-1">You can easily design your modules in 3D with the Module Configurator
+                                and
+                                enhance their value with functional
+                                SAMET products.</p>
+                            <img class="w-100" src="./assets/img/other/module-configurator.png">
+                            <a href="module-configurator-list.html" class="cs-btn-type-1">Module Configurator <i
+                                    class="icon-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="configurator-product" role="tabpanel" aria-labelledby="product-tab"
+                        tabindex="0">
+                        <div class="c-product-area">
+                            <p class="cs-desc-1">Do you want to design a modular drawer or a cabinet with functional
+                                lift-up
+                                door? Let's choose the right product and design the suitable cabinet together!</p>
+                            <img class="w-100" src="./assets/img/other/module-configurator.png">
+                            <button class="cs-btn-type-1" data-bs-toggle="modal"
+                                data-bs-target="#productConModal">Product Configurator <i
+                                    class="icon-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal 1 -->
+        <div class="modal fade" id="productConModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="productConModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <a data-bs-dismiss="modal" aria-label="Close"><i class="icon-close"></i></a>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="cs-modal-title">Product Congifurator</h2>
+                        <p class="cs-modal-desc">Product Configurator will help you easily add the product you want.</p>
+                        <form>
+                            <div class="cs-change-content">
+                                <div class="cs-step-main-2">
+                                    <div class="cs-head">
+                                        <div class="cs-head-duo">
+                                            <h4 class="cs-title-1">Please choose Product Type to continue</h4>
+                                            <span class="cs-selected-info"></span>
+                                        </div>
+                                        <i class="icon-check"></i>
+                                    </div>
+
+                                    <div class="cs-main-radiogroup">
+                                        <div class="form-check-change cs-images-card">
+                                            <div>
+                                                <input hidden class="form-check-input" type="radio"
+                                                    name="change-area-input-4" id="change-input-2-1">
+                                                <label class="change-area-label cs-inc-img-2" for="change-input-2-1">
+                                                    <img src="./assets/img/other/module-img-1.png"
+                                                        class="cs-radio-image">
+                                                    <h6 class="cs-title-2">Hinge Systems</h6>
+                                                    <p class="cs-change-info">Briefly explain to the user what the
+                                                        Lay-On exactly refers to.</p>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-check-change cs-images-card">
+                                            <div>
+                                                <input hidden class="form-check-input" type="radio"
+                                                    name="change-area-input-4" id="change-input-2-2">
+                                                <label class="change-area-label cs-inc-img-2" for="change-input-2-2">
+                                                    <img src="./assets/img/other/module-img-2.png"
+                                                        class="cs-radio-image">
+                                                    <h6 class="cs-title-2">Drawer Systems</h6>
+                                                    <p class="cs-change-info">Briefly explain to the user what the
+                                                        Lay-On exactly refers to.</p>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-check-change cs-images-card">
+                                            <div>
+                                                <input hidden class="form-check-input" type="radio"
+                                                    name="change-area-input-4" id="change-input-2-3">
+                                                <label class="change-area-label cs-inc-img-2" for="change-input-2-3">
+                                                    <img src="./assets/img/other/module-img-2.png"
+                                                        class="cs-radio-image">
+                                                    <h6 class="cs-title-2">Lift-Up Door Systems</h6>
+                                                    <p class="cs-change-info">Briefly explain to the user what the
+                                                        Lay-On exactly refers to.</p>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="product-configurator-list.html" type="button" class="btn"
+                            id="cs-continue-btn-1">Continue</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cs-modal-backdrop"></div>
+    </main>
+
+    <a href="javascript: void(0);" id="goTpButton"></a>
+
+    <footer>
+        <div class="cs-global-footer-1">
+            <div class="cs-container-1">
+                <div class="row">
+                    <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+                        <ul class="cs-footer-logo-m-1">
+                            <a href="index.html"><img src="./assets/img/other/configuremate-logo.png"></a>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+                        <h3 class="cs-footer-title-1">Configurator</h3>
+                        <ul class="cs-footer-menu-1">
+                            <li>
+                                <a href="" title="">Product Configurator</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Module Configurator</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+                        <h3 class="cs-footer-title-1">Follow us on Social Media</h3>
+                        <ul class="cs-footer-menu-2">
+                            <li>
+                                <a href="" title=""><i class="icon-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="" title=""><i class="icon-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="" title=""><i class="icon-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="" title=""><i class="icon-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+                        <p class="footer-desc-1"><strong>Address:</strong> Atatürk Mah. Adnan Menderes Cad. No: 8-13
+                            34513
+                            Esenyurt-İstanbul/Türkiye</p>
+
+                        <p class="footer-desc-1"><strong>Phone:</strong> +90 212 886 75 23</p>
+                        <p class="footer-desc-1"><strong>Fax:</strong> +90 212 886 51 61</p>
+
+                        <p class="footer-desc-1"><strong>E-mail: </strong> <a
+                                href="mailto:info@samet.com.tr">info@sametglobal.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cs-footer-policy">
+            <div class="cs-policy-list">
+                <a href="">Privacy Policy</a>
+                <a href="">Cookies Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/vendor/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendor/bootstrap-5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/configurator-main.js"></script>
+    <script src="assets/js/module-configurator.js"></script>
+</body>
+
+</html>

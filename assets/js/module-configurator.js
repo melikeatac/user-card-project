@@ -19,14 +19,6 @@ $(document).ready(function () {
         $('.cs-modal-2').show();
     });
 
-    $('#cs-add-btn-1').click(function () {
-        $('.cs-add-project-modal').show();
-    });
-
-    $('#cs-close-btn').click(function () {
-        $('.cs-add-project-modal').hide();
-    })
-
     $('.cs-radio-area input[name="folderRadios"]').change(function () {
         if ($(this).is(':checked')) {
             $('#cs-save-btn').addClass('active');
@@ -38,14 +30,14 @@ $(document).ready(function () {
 
     var modal = $('.cs-add-projects-area');
     // cs-add-project-modal dışında bir yere tıklandığında 
-    $(document).on('click', function (event) {
-        if (!modal.is(event.target) && modal.has(event.target).length === 0) {
-            $('.cs-add-project-modal').hide();
-        }
-    });
+    // $(document).on('click', function (event) {
+    //     if (!modal.is(event.target) && modal.has(event.target).length === 0) {
+    //         $('.cs-add-project-modal').hide();
+    //     }
+    // });
 
     // Media alanındaki butonlar seçildiğinde yapılacak işlemler
-    $('.cs-butons-list button').click(function () {
+    $('.cs-butons-list .cs-checkbtn').click(function () {
         $(this).toggleClass("active");
     });
 
@@ -82,8 +74,19 @@ $(document).ready(function () {
             $(boxButton).removeClass('active');
         }
     }
+    function updateButtonVisibility() {
+        var activeTabIndex = $('#report-tab .nav-link.active').parent().index();
+        var tabCount = $('#report-tab li').length;
+        var activeTabIndex2 = $('#change-tab .nav-link.active').parent().index();
+        var tabCount2 = $('#change-tab li').length;
 
+        $('#cs-back-btn').css('display', activeTabIndex === 0 ? 'none' : 'inline-block');
+        $('#cs-next-btn').css('display', activeTabIndex === tabCount - 1 ? 'none' : 'inline-block');
+        $('#cs-back-btn-2').css('display', activeTabIndex2 === 0 ? 'none' : 'inline-block');
+        // $('#cs-next-btn-2').css('display', activeTabIndex2 === tabCount2 - 1 ? 'none' : 'inline-block');
+    }
     $('#report-tab .nav-link').on('click', function () {
+        updateButtonVisibility();
 
         if ($(this).attr('id') == 'files-tab') {
             filesBtnGroupVisible();
@@ -94,12 +97,14 @@ $(document).ready(function () {
     })
 
     // Report tag için ileri geri mekanizması
+    updateButtonVisibility();
+
     $('#cs-back-btn').click(function () {
         var activeTabIndex = $('#report-tab .nav-link.active').parent().index();
         if (activeTabIndex > 0) {
             $('#report-tab li:eq(' + (activeTabIndex - 1) + ') button').tab('show');
         }
-        filesBtnGroupVisible();
+        updateButtonVisibility();
     });
 
     $('#cs-next-btn').click(function () {
@@ -108,8 +113,9 @@ $(document).ready(function () {
         if (activeTabIndex < tabCount - 1) {
             $('#report-tab li:eq(' + (activeTabIndex + 1) + ') button').tab('show');
         }
-        filesBtnGroupVisible();
+        updateButtonVisibility();
     });
+
 
     function finishBtn() {
         var item_count = $('#changeModal').find('.cs-step-main').length;
@@ -126,6 +132,7 @@ $(document).ready(function () {
 
     // Change tagı için ileri geri mekanizması başlangıç
     $('#cs-back-btn-2').click(function () {
+
         var activeTabIndex = $('#change-tab .nav-link.active').parent().index();
         if (activeTabIndex > 0) {
             $('#change-tab li:eq(' + (activeTabIndex - 1) + ') button').tab('show');
@@ -143,6 +150,8 @@ $(document).ready(function () {
             }
             finishBtn();
         });
+        updateButtonVisibility();
+
     });
 
     $('#cs-next-btn-2').click(function () {
@@ -167,6 +176,8 @@ $(document).ready(function () {
             }
             finishBtn();
         });
+        updateButtonVisibility();
+
     });
 
     // Tab kısmında değişiklik olduğunda

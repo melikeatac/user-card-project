@@ -9,15 +9,90 @@
     .cs-general-main 
         .cs-image-1
             height: 300px
-@media (min-width: 1024px) and (max-width: 1100px)
+    .cs-container-1
+        padding: 0 150px 0 200px
+
+    .cs-module-configurator-main 
+        .cs-promo-arae
+            padding-left: 200px
+        .cs-content-area
+            padding-right: 150px
+@media (min-width: 1024px) and (max-width: 1279px)
     #goTpButton
         bottom: 60px
         right: 5px
+    .cs-container-1
+        padding: 0 50px
+    #configurator-tab 
+        .nav-item 
+            .nav-link
+                font-size: 15px
+                line-height: 23px
+                &.active
+                    font-size: 15px
+                    line-height: 23px
+    .cs-module-configurator-main 
+        .cs-promo-arae
+            padding-left: 50px
+            .cs-title-1
+                font-size: 32px
+                line-height: 40px
+        .cs-content-area
+            padding-right: 50px
 
 @media (min-width: 768px) and (max-width: 1023px)
     #goTpButton
         bottom: 60px
         right: 5px
+    .cs-container-1
+        padding: 0 40px
+    .cs-module-configurator-main
+        flex-direction: column
+        .cs-promo-arae
+            flex: 0 0 100%
+            max-width: 100%
+            padding: 20px
+            .cs-info-area 
+                padding: 20px
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+                .cs-title
+                    font-size: 18px
+                    line-height: 24px
+                .cs-info-list 
+                    li
+                        font-size: 14px
+                        line-height: 22px
+                        margin-bottom: 5px
+            .cs-title-1
+                font-size: 25px
+                line-height: 33px
+            .cs-desc-1
+                font-size: 14px
+                line-height: 22px
+        .cs-content-area
+            flex: 0 0 100%
+            max-width: 100%
+            padding: 20px
+            .cs-title
+                font-size: 18px
+                line-height: 24px
+                margin-bottom: 10px
+            img
+                margin: 0 auto
+            .c-module-area,.c-product-area
+                .cs-desc-1
+                    font-size: 14px
+                    line-height: 22px
+    #configurator-tab 
+        .nav-item 
+            .nav-link
+                font-size: 14px
+                line-height: 22px
+                padding: 15px 5px
+                &.active
+                    font-size: 14px
+                    line-height: 22px
+                    padding: 15px 5px
 
 @media (max-width: 767px)
     #goTpButton
@@ -58,8 +133,8 @@
                     .cs-header 
                         .cs-title-2
                             font-size: 16px
-    #cs-mobile-menu-2
-                display: flex
+    #cs-mobile-menu-2, #cs-mobile-menu-3,#cs-mobile-product-menu
+        display: flex
     .cs-lightgallery-1,.cs-lightgallery-2 
         #lightgallery-module-1,#lightgallery-module-2 
             li
@@ -161,6 +236,88 @@
                     padding: 1px 10px
                     height: 40px
                     font-size: 15px
+    .cs-product-configurator
+        .cs-left-side-main
+            display: none
+            position: absolute
+            z-index: 1
+            top: 180px
+            max-width: 100%
+    .cs-module-configurator-main
+        flex-direction: column
+        .cs-promo-arae
+            flex: 0 0 100%
+            max-width: 100%
+            padding: 20px
+            .cs-info-area 
+                padding: 20px
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+                .cs-title
+                    font-size: 18px
+                    line-height: 24px
+                .cs-info-list 
+                    li
+                        font-size: 14px
+                        line-height: 22px
+                        margin-bottom: 5px
+            .cs-title-1
+                font-size: 25px
+                line-height: 33px
+            .cs-desc-1
+                font-size: 14px
+                line-height: 22px
+        .cs-content-area
+            flex: 0 0 100%
+            max-width: 100%
+            padding: 20px
+            .cs-title
+                font-size: 18px
+                line-height: 24px
+                margin-bottom: 10px
+            img
+                margin: 0 auto
+            .c-module-area,.c-product-area
+                .cs-desc-1
+                    font-size: 14px
+                    line-height: 22px
+    #configurator-tab 
+        .nav-item 
+            .nav-link
+                font-size: 14px
+                line-height: 22px
+                padding: 15px 5px
+                &.active
+                    font-size: 14px
+                    line-height: 22px
+                    padding: 15px 5px
+    .cs-login-main 
+        height: auto
+        padding: 50px 0 100px 0
+        .cs-login-form
+            flex: 0 0 100%
+            max-width: 100%
+            margin-top: 0
+            form
+                padding: 0 15px
+        .cs-login-image
+            display: none
+    .cs-product-result-main 
+        .cs-save-downl-area
+            width: 100%
+        .cs-result-product
+            flex-direction: column
+            .cs-product-list
+                width: 100%
+            .cs-image-area
+                width: 100%
+                border: none
+        .cs-product-result-content
+            flex-direction: column
+            .cs-left-area
+                width: 100%
+    .cs-product-piece-table
+        table
+            width: 767px
 @media (min-width: 500px)
     #goTpButton
         margin: 30px

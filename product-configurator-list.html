@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="assets/img/system/4alabs-fav.jpeg">
+
+    <!--CSS START-->
+    <link rel="stylesheet" href="assets/vendor/select2/dist/css/select2.min.css">
+    <link href="assets/vendor/lightGallery/dist/css/lightgallery.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!--CSS END-->
+</head>
+
+<body>
+    <header>
+        <div class="cs-main-header">
+            <div class="cs-container-1">
+                <div class="cs-header-menu">
+                    <a href="configurator-main.html"><img class="cs-header-logo"
+                            src="./assets/img/other/configuremate-logo.png"></a>
+                    <div class="cs-header-list">
+                        <a href="configurator-main.html" class="cs-list-item active"><i class="icon-main"></i></a>
+                        <a href="javascript:void(0)" class="cs-list-item cs-file-icon"><i class="icon-file"></i></a>
+                        <a href="javascript:void(0)" class="cs-list-item cs-login-icon"><i class="icon-login"></i></a>
+                        <a href="javascript:void(0)" class="cs-list-item"><i class="icon-global"></i></a>
+                        <div class="cs-language-area">
+                            <ul class="cs-language-list">
+                                <li class="cs-language-item"><a href="">Turkish</a></li>
+                                <li class="cs-language-item"><a href="">English</a></li>
+                                <li class="cs-language-item"><a href="">Polish</a></li>
+                                <li class="cs-language-item"><a href="">Deutsch</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="cs-profile-modal">
+            <div class="cs-header">
+                <h6 class="cs-title">Profile</h6>
+                <a href="" class="cs-pp-close-btn"><i class="icon-close"></i></a>
+            </div>
+            <div class="cs-main">
+                <div class="accordion" id="accordion_main_pp">
+                    <form class="cs-login-form">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="ppOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#ppcollapseOne" aria-expanded="true" aria-controls="ppcollapseOne">
+                                    <p><i class="icon-login"></i>Personal Information</p>
+                                </button>
+                            </h2>
+                            <div id="ppcollapseOne" class="accordion-collapse collapse show" aria-labelledby="ppOne"
+                                data-bs-parent="#accordion_main_pp">
+                                <div class="accordion-body">
+                                    <div class="cs-form-item">
+                                        <label class="" for="form-namesurname">Name Surname</label>
+                                        <input type="text" id="form-namesurname" value="Zeynep Bz">
+                                    </div>
+                                    <div class="cs-form-item">
+                                        <label class="" for="form-email">E-mail Address</label>
+                                        <input type="email" id="form-email" value="zeynepbz@4alabs.io">
+                                    </div>
+                                    <div class="cs-form-item">
+                                        <label class="" for="form-phone">Phone Number</label>
+                                        <input type="text" id="form-phone" value="+90 545 544 89 88">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="ppTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#ppcollapseTwo" aria-expanded="false" aria-controls="ppcollapseTwo">
+                                    <p><i class="icon-login"></i>Company Information</p>
+                                </button>
+                            </h2>
+                            <div id="ppcollapseTwo" class="accordion-collapse collapse" aria-labelledby="ppTwo"
+                                data-bs-parent="#accordion_main_pp">
+                                <div class="accordion-body">
+                                    <div class="cs-form-item">
+                                        <label class="" for="form-companyname">Company Name</label>
+                                        <input type="text" id="form-companyname" value="4A Labs">
+                                    </div>
+                                    <div class="cs-form-item">
+                                        <label class="" for="form-c-profile">Company Profile</label>
+                                        <input type="email" id="form-c-profile" value="Lorem ipsum dolor">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="ppThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#ppcollapseThree" aria-expanded="false"
+                                    aria-controls="ppcollapseThree">
+                                    <p><i class="icon-login"></i>Password Settings</p>
+
+                                </button>
+                            </h2>
+                            <div id="ppcollapseThree" class="accordion-collapse collapse" aria-labelledby="ppThree"
+                                data-bs-parent="#accordion_main_pp">
+                                <div class="accordion-body">
+                                    <div class="cs-form-item cs-pass-main">
+                                        <label class="" for="form-currentpass">Current Password</label>
+                                        <input type="password" id="form-currentpass" value="4A Labs">
+                                        <i class="icon-eye-close" id="cs-icon-close-10"></i>
+                                    </div>
+                                    <div class="cs-form-item">
+                                        <input type="password" id="form-newpass" placeholder="New Password">
+                                    </div>
+                                    <div class="cs-form-item">
+                                        <input type="password" id="form-newpass-conf" placeholder="New Password Again">
+                                    </div>
+                                    <div class="cs-form-check-area">
+
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" id="form-check-1">
+                                            <label class="form-check-label" for="form-check-1">
+                                                Within the scope of the Privacy Notice, do you allow SAMET KALIP VE
+                                                MADENİ
+                                                EŞYA
+                                                SANAYİ VE TİCARET A.Ş. to receive E-MAIL for the purpose of announcing
+                                                campaigns
+                                                and advantages, advertising communication, and product promotion and
+                                                processing
+                                                your personal data that you have sent in this form for this purpose?
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" id="form-check-2">
+                                            <label class="form-check-label" for="form-check-2">
+                                                Within the scope of the Privacy Notice, do you allow SAMET KALIP VE
+                                                MADENİ
+                                                EŞYA
+                                                SANAYİ VE TİCARET A.Ş. to receive SMS for the purpose of announcing
+                                                campaigns
+                                                and advantages, advertising communication, and product promotion and
+                                                processing
+                                                your personal data that you have sent in this form for this purpose?
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="cs-btn-type-1">Save Changes</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="cs-footer">
+                <a href="" class="cs-logout-btn"><i class="icon-download-file"></i>Logout</a>
+            </div>
+        </div>
+        <div class="cs-add-project-modal">
+            <form>
+              <div class="cs-modal-1">
+                <div class="cs-header">
+                  <span class="cs-title-2">Save</span>
+                  <a href="javascript:void(0)" id="cs-close-btn"><i class="icon-close"></i></a>
+                </div>
+                <div class="cs-body">
+                  <p class="cs-info">Please create new project or update
+                    existing</p>
+                  <div class="cs-radio-area">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios1"
+                        value="option1">
+                      <label class="form-check-label" for="folderRadios1">
+                        Folder Name 1
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios2"
+                        value="option2">
+                      <label class="form-check-label" for="folderRadios2">
+                        Folder Name 2
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios3"
+                        value="option3">
+                      <label class="form-check-label" for="folderRadios3">
+                        Folder Name 3
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="cs-footer">
+                  <button class="cs-btn-type-1 m-0" id="cs-save-btn">Save</button>
+                  <button class="cs-btn-type-1-border m-0" id="cs-newproject-btn">Create New Project</button>
+                </div>
+              </div>
+              <div class="cs-modal-2">
+                <div class="cs-header">
+                  <a href="javascript:void(0)" id="cs-create-project" class="cs-title-2"><i class=" icon-arrow-left"
+                      style="margin-right: 5px;"></i> Create New Project</a>
+                </div>
+                <div class="cs-body">
+                  <p class="cs-info">Please enter folder name</p>
+                  <div class="cs-input-area">
+                    <label for="folder-name" class="cs-input-info">Folder Name</label>
+                    <input id="folder-name" placeholder="Zeyns Folder">
+                  </div>
+                </div>
+                <div class="cs-footer">
+                  <button class="cs-btn-type-1 mb-5">Create Folder</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        <div class="cs-product-configurator">
+            <div class="cs-left-side-main">
+                <button class="cs-btn-type-1"><i class="icon-positive"></i>Yeni Konfigurasyon Oluştur</button>
+                <ul class="cs-menu-2">
+                    <li class="cs-item active2" step="0"><a href="javascript:void(0)">Product Type</a> <i
+                            class="icon-check"></i></li>
+                    <li class="cs-item active2" step="1"><a href="#">Cabinet Type</a><span
+                            class="cs-menu-info"></span><i class="icon-check"></i></li>
+                    <li class="cs-item" step="2"><a href="#">Door Type</a><span class="cs-menu-info"></span><i
+                            class="icon-check"></i></li>
+                    <li class="cs-item" step="3"><a href="#">Function</a><span class="cs-menu-info"></span><i
+                            class="icon-check"></i></li>
+                    <li class="cs-item" step="4"><a href="#">Model Name</a><span class="cs-menu-info"></span><i
+                            class="icon-check"></i></li>
+                    <li class="cs-item" step="5"><a href="#">Door Angle</a><span class="cs-menu-info"></span><i
+                            class="icon-check"></i></li>
+                    <li class="cs-item" step="6"><a href="#">Spring Type</a><span class="cs-menu-info"></span><i
+                            class="icon-check"></i></li>
+                    <li class="cs-item" step="7"><a href="#">Overlay</a><span class="cs-menu-info"></span><i
+                            class="icon-check"></i></li>
+                    <li class="cs-item" step="8"><a href="#">Axis</a><span class="cs-menu-info"></span><i
+                            class="icon-check"></i></li>
+                    <li class="cs-item" step="9"><a href="#">Hinge Cup Screw Type</a><span
+                            class="cs-menu-info"></span><i class="icon-check"></i></li>
+                    <li class="cs-item" step="10"><a href="#">Assembly Type</a><span class="cs-menu-info"></span><i
+                            class="icon-check"></i></li>
+                    <li class="cs-item" step="11"><a href="#">Mounting Plate Type</a><span
+                            class="cs-menu-info"></span><i class="icon-check"></i></li>
+                    <li class="cs-item" step="12"><a href="#">Mounting Plate Screw Type</a><span
+                            class="cs-menu-info"></span><i class="icon-check"></i>
+                    </li>
+                    <li class="cs-item" step="13"><a href="#">Mounting Plate Thickness</a><span
+                            class="cs-menu-info"></span><i class="icon-check"></i>
+                    </li>
+                    <li class="cs-item" step="14"><a href="#">Coating</a><span class="cs-menu-info"></span><i
+                            class="icon-check"></i></li>
+                    <li class="cs-item" step="15"><a href="#">Results</a></li>
+                </ul>
+            </div>
+            <div class="cs-right-side-main-2">
+                <div class="right-area-1">
+                    <h6 class="cs-main-title">Product Configurator</h6>
+                    <a href="javascript:void(0)" class="cs-add-btn mb-2" id="cs-mobile-product-menu">
+                        <i class="icon-positive"></i>
+                    </a>
+                    <div class="cs-content-main" step="1">
+                        <div class="cs-head">
+                            <h6 class="cs-title-1">Cabinet Type<span class="cs-info-select"></span></h6>
+                            <i class="icon-check"></i>
+                        </div>
+                        <div class="cs-card-area">
+                            <p class="cs-small-info">Please select your cabinet type</p>
+                            <div class="cs-images-card-list">
+                                <div class="cs-list-item">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-1"
+                                        id="list-input-1" checked>
+                                    <label class="list-area-label cs-inc-img-2 active3" for="list-input-1">
+                                        <img src="./assets/img/other/module-img-2.png" class="cs-radio-image">
+                                        <h6 class="cs-title-2">Standart Cabinet</h6>
+                                        <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly
+                                            refers to.</p>
+                                    </label>
+                                </div>
+                                <div class="cs-list-item">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-1"
+                                        id="list-input-2">
+                                    <label class="list-area-label cs-inc-img-2" for="list-input-2">
+                                        <img src="./assets/img/other/module-img-2.png" class="cs-radio-image">
+                                        <h6 class="cs-title-2">Face Frame Cabinet</h6>
+                                        <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly
+                                            refers to.</p>
+                                    </label>
+                                </div>
+                                <div class="cs-list-item">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-1"
+                                        id="list-input-3">
+                                    <label class="list-area-label cs-inc-img-2" for="list-input-3">
+                                        <img src="./assets/img/other/module-img-2.png" class="cs-radio-image">
+                                        <h6 class="cs-title-2">Angular Door Cabinet</h6>
+                                        <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly
+                                            refers to.</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-content-main" step="2">
+                        <div class="cs-head">
+                            <h6 class="cs-title-1">Door Type <span class="cs-info-select"></span></h6>
+                            <i class="icon-check"></i>
+                        </div>
+                        <div class="cs-card-area">
+                            <p class="cs-small-info">Please select door type</p>
+                            <div class="cs-images-card-list">
+                                <div class="cs-list-item">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-2"
+                                        id="list-input-4">
+                                    <label class="list-area-label cs-inc-img-2" for="list-input-4">
+                                        <img src="./assets/img/other/module-img-2.png" class="cs-radio-image">
+                                        <h6 class="cs-title-2">Wooden Door</h6>
+                                        <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly
+                                            refers to.</p>
+                                    </label>
+                                </div>
+                                <div class="cs-list-item">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-2"
+                                        id="list-input-5" checked>
+                                    <label class="list-area-label cs-inc-img-2 active3" for="list-input-5">
+                                        <img src="./assets/img/other/module-img-2.png" class="cs-radio-image">
+                                        <h6 class="cs-title-2">Aluminum Frame</h6>
+                                        <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly
+                                            refers to.</p>
+                                    </label>
+                                </div>
+                                <div class="cs-list-item">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-2"
+                                        id="list-input-6">
+                                    <label class="list-area-label cs-inc-img-2" for="list-input-6">
+                                        <img src="./assets/img/other/module-img-2.png" class="cs-radio-image">
+                                        <h6 class="cs-title-2">Aluminum Narrow Frame</h6>
+                                        <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly
+                                            refers to.</p>
+                                    </label>
+                                </div>
+                                <div class="cs-list-item">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-2"
+                                        id="list-input-7">
+                                    <label class="list-area-label cs-inc-img-2" for="list-input-7">
+                                        <img src="./assets/img/other/module-img-2.png" class="cs-radio-image">
+                                        <h6 class="cs-title-2">Pin-Fix</h6>
+                                        <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly
+                                            refers to.</p>
+                                    </label>
+                                </div>
+                                <div class="cs-list-item">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-2"
+                                        id="list-input-8">
+                                    <label class="list-area-label cs-inc-img-2" for="list-input-8">
+                                        <img src="./assets/img/other/module-img-2.png" class="cs-radio-image">
+                                        <h6 class="cs-title-2">Decofix</h6>
+                                        <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly
+                                            refers to.</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-content-main" step="3">
+                        <div class="cs-head">
+                            <h6 class="cs-title-1">Function <span class="cs-info-select"></span></h6>
+                            <i class="icon-check"></i>
+                        </div>
+                        <div class="cs-card-area">
+                            <p class="cs-small-info">Please select door type</p>
+                            <div class="cs-images-card-list">
+                                <div class="cs-no-img-list">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-3"
+                                        id="list-input-9" checked>
+                                    <label class="list-area-label active" for="list-input-9">
+                                        Soft Close
+                                    </label>
+                                </div>
+                                <div class="cs-no-img-list">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-3"
+                                        id="list-input-10">
+                                    <label class="list-area-label" for="list-input-10">
+                                        Self Close
+                                    </label>
+                                </div>
+                                <div class="cs-no-img-list">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-3"
+                                        id="list-input-11">
+                                    <label class="list-area-label" for="list-input-11">
+                                        Push Open
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-content-main" step="4">
+                        <div class="cs-head">
+                            <h6 class="cs-title-1">Model Name <span class="cs-info-select"></span></h6>
+                            <i class="icon-check"></i>
+                        </div>
+                        <div class="cs-card-area">
+                            <p class="cs-small-info">Please select door type</p>
+                            <div class="cs-images-card-list">
+                                <div class="cs-list-item">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-4"
+                                        id="list-input-12">
+                                    <label class="list-area-label cs-inc-img-2" for="list-input-12">
+                                        <img src="./assets/img/other/module-img-2.png" class="cs-radio-image">
+                                        <h6 class="cs-title-2">Master</h6>
+                                        <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly
+                                            refers to.</p>
+                                    </label>
+                                </div>
+                                <div class="cs-list-item">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-4"
+                                        id="list-input-13" checked>
+                                    <label class="list-area-label cs-inc-img-2 active3" for="list-input-13">
+                                        <img src="./assets/img/other/module-img-2.png" class="cs-radio-image">
+                                        <h6 class="cs-title-2">Star Track</h6>
+                                        <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly
+                                            refers to.</p>
+                                    </label>
+                                </div>
+                                <div class="cs-list-item">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-4"
+                                        id="list-input-14">
+                                    <label class="list-area-label cs-inc-img-2" for="list-input-14">
+                                        <img src="./assets/img/other/module-img-2.png" class="cs-radio-image">
+                                        <h6 class="cs-title-2">Star</h6>
+                                        <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly
+                                            refers to.</p>
+                                    </label>
+                                </div>
+                                <div class="cs-list-item">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-4"
+                                        id="list-input-15">
+                                    <label class="list-area-label cs-inc-img-2" for="list-input-15">
+                                        <img src="./assets/img/other/module-img-2.png" class="cs-radio-image">
+                                        <h6 class="cs-title-2">Star Mini</h6>
+                                        <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly
+                                            refers to.</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-content-main deactive" step="5">
+                        <div class="cs-head">
+                            <h6 class="cs-title-1">Door Angle: <span class="cs-info-select">110</span></h6>
+                            <i class="icon-check"></i>
+                        </div>
+                    </div>
+                    <div class="cs-content-main deactive" step="6">
+                        <div class="cs-head">
+                            <h6 class="cs-title-1">Spring Type: <span class="cs-info-select">Standart Type</span></h6>
+                            <i class="icon-check"></i>
+                        </div>
+                    </div>
+                    <div class="cs-content-main" step="7">
+                        <div class="cs-head">
+                            <h6 class="cs-title-1">Overlay <span class="cs-info-select"></span></h6>
+                            <i class="icon-check"></i>
+                        </div>
+                        <div class="cs-card-area">
+                            <p class="cs-small-info">Please select door type</p>
+                            <div class="cs-images-card-list">
+                                <div class="cs-list-item">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-5"
+                                        id="list-input-16">
+                                    <label class="list-area-label cs-inc-img-2" for="list-input-16">
+                                        <img src="./assets/img/other/module-img-2.png" class="cs-radio-image">
+                                        <h6 class="cs-title-2">Inset</h6>
+                                        <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly
+                                            refers to.</p>
+                                    </label>
+                                </div>
+                                <div class="cs-list-item">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-5"
+                                        id="list-input-17" checked>
+                                    <label class="list-area-label cs-inc-img-2 active3" for="list-input-17">
+                                        <img src="./assets/img/other/module-img-2.png" class="cs-radio-image">
+                                        <h6 class="cs-title-2">Full Overlay</h6>
+                                        <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly
+                                            refers to.</p>
+                                    </label>
+                                </div>
+                                <div class="cs-list-item">
+                                    <input hidden="" class="form-check-input" type="radio" name="list-area-input-5"
+                                        id="list-input-18">
+                                    <label class="list-area-label cs-inc-img-2" for="list-input-18">
+                                        <img src="./assets/img/other/module-img-2.png" class="cs-radio-image">
+                                        <h6 class="cs-title-2">Half Overlay</h6>
+                                        <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly
+                                            refers to.</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-content-main deactive" step="8">
+                        <div class="cs-head">
+                            <h6 class="cs-title-1">Axis: <span class="cs-info-select">38</span></h6>
+                            <i class="icon-check"></i>
+                        </div>
+                    </div>
+                    <div class="cs-content-main" step="9">
+                        <div class="cs-head">
+                            <h6 class="cs-title-1">Hinge Cup Screw Type <span class="cs-info-select"></span>
+                            </h6>
+                            <i class="icon-check"></i>
+                        </div>
+                        <div class="cs-pic-img-area">
+                            <div class="cs-pic-img-list">
+                                <div>
+                                    <input hidden class="form-check-input" type="radio" name="list-area-input-6"
+                                        id="list-input-19">
+                                    <label class="list-area-label cs-inc-img" for="list-input-19">
+                                        <img src="./assets/img/svg/piktogram-1.svg" class="cs-pik-image"> Euro Screw
+                                    </label>
+                                </div>
+                                <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly refers to.
+                                </p>
+                            </div>
+                            <div class="cs-pic-img-list">
+                                <div>
+                                    <input hidden class="form-check-input" type="radio" name="list-area-input-6"
+                                        id="list-input-20">
+                                    <label class="list-area-label cs-inc-img" for="list-input-20">
+                                        <img src="./assets/img/svg/piktogram-1.svg" class="cs-pik-image"> Easy Fit
+                                    </label>
+                                </div>
+                                <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly refers to.
+                                </p>
+                            </div>
+                            <div class="cs-pic-img-list">
+                                <div>
+                                    <input hidden class="form-check-input" type="radio" name="list-area-input-6"
+                                        id="list-input-21" checked>
+                                    <label class="list-area-label cs-inc-img active2" for="list-input-21">
+                                        <img src="./assets/img/svg/piktogram-1.svg" class="cs-pik-image"> Ø10 Dowel
+                                    </label>
+                                </div>
+                                <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly refers to.
+                                </p>
+                            </div>
+                            <div class="cs-pic-img-list">
+                                <div>
+                                    <input hidden class="form-check-input" type="radio" name="list-area-input-6"
+                                        id="list-input-22">
+                                    <label class="list-area-label cs-inc-img" for="list-input-22">
+                                        <img src="./assets/img/svg/piktogram-1.svg" class="cs-pik-image"> Ø8 Dowel
+                                    </label>
+                                </div>
+                                <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly refers to.
+                                </p>
+                            </div>
+                            <div class="cs-pic-img-list">
+                                <div>
+                                    <input hidden class="form-check-input" type="radio" name="list-area-input-6"
+                                        id="list-input-23">
+                                    <label class="list-area-label cs-inc-img" for="list-input-23">
+                                        <img src="./assets/img/svg/piktogram-1.svg" class="cs-pik-image"> Chipboard
+                                        Screw
+                                    </label>
+                                </div>
+                                <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly refers to.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-content-main deactive" step="10">
+                        <div class="cs-head">
+                            <h6 class="cs-title-1">Assembly Type: <span class="cs-info-select">Slide On</span></h6>
+                            <i class="icon-check"></i>
+                        </div>
+                    </div>
+                    <div class="cs-content-main deactive" step="11">
+                        <div class="cs-head">
+                            <h6 class="cs-title-1">Mounting Plate Type: <span class="cs-info-select">Two Holes</span>
+                            </h6>
+                            <i class="icon-check"></i>
+                        </div>
+                    </div>
+                    <div class="cs-content-main" step="12">
+                        <div class="cs-head">
+                            <h6 class="cs-title-1">Mounting Plate Screw Type <span class="cs-info-select"></span></h6>
+                            <i class="icon-check"></i>
+                        </div>
+                        <div class="cs-pic-img-area">
+                            <div class="cs-pic-img-list">
+                                <div>
+                                    <input hidden class="form-check-input" type="radio" name="list-area-input-7"
+                                        id="list-input-24" checked>
+                                    <label class="list-area-label cs-inc-img active2" for="list-input-24">
+                                        <img src="./assets/img/svg/piktogram-1.svg" class="cs-pik-image"> Euro Screw
+                                    </label>
+                                </div>
+                                <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly refers to.
+                                </p>
+                            </div>
+                            <div class="cs-pic-img-list">
+                                <div>
+                                    <input hidden class="form-check-input" type="radio" name="list-area-input-7"
+                                        id="list-input-25">
+                                    <label class="list-area-label cs-inc-img" for="list-input-25">
+                                        <img src="./assets/img/svg/piktogram-1.svg" class="cs-pik-image"> Easy Fit
+                                    </label>
+                                </div>
+                                <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly refers to.
+                                </p>
+                            </div>
+                            <div class="cs-pic-img-list">
+                                <div>
+                                    <input hidden class="form-check-input" type="radio" name="list-area-input-7"
+                                        id="list-input-26">
+                                    <label class="list-area-label cs-inc-img" for="list-input-26">
+                                        <img src="./assets/img/svg/piktogram-1.svg" class="cs-pik-image"> Ø10 Dowel
+                                    </label>
+                                </div>
+                                <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly refers to.
+                                </p>
+                            </div>
+                            <div class="cs-pic-img-list">
+                                <div>
+                                    <input hidden class="form-check-input" type="radio" name="list-area-input-7"
+                                        id="list-input-27">
+                                    <label class="list-area-label cs-inc-img" for="list-input-27">
+                                        <img src="./assets/img/svg/piktogram-1.svg" class="cs-pik-image"> Ø8 Dowel
+                                    </label>
+                                </div>
+                                <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly refers to.
+                                </p>
+                            </div>
+                            <div class="cs-pic-img-list">
+                                <div>
+                                    <input hidden class="form-check-input" type="radio" name="list-area-input-7"
+                                        id="list-input-28">
+                                    <label class="list-area-label cs-inc-img" for="list-input-28">
+                                        <img src="./assets/img/svg/piktogram-1.svg" class="cs-pik-image"> Chipboard
+                                        Screw
+                                    </label>
+                                </div>
+                                <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly refers to.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-content-main" step="13">
+                        <div class="cs-head">
+                            <h6 class="cs-title-1">Mounting Plate Thickness <span class="cs-info-select"></span>
+                            </h6>
+                            <i class="icon-check"></i>
+                        </div>
+                        <div class="cs-pic-img-area">
+                            <div class="cs-pic-img-list">
+                                <div>
+                                    <input hidden class="form-check-input" checked type="radio" name="list-area-input-8"
+                                        id="list-input-29">
+                                    <label class="list-area-label cs-inc-img active2" for="list-input-29">
+                                        <img src="./assets/img/svg/piktogram-1.svg" class="cs-pik-image"> 2 mm
+                                    </label>
+                                </div>
+                                <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly refers to.
+                                </p>
+                            </div>
+                            <div class="cs-pic-img-list">
+                                <div>
+                                    <input hidden class="form-check-input" type="radio" name="list-area-input-8"
+                                        id="list-input-30">
+                                    <label class="list-area-label cs-inc-img" for="list-input-30">
+                                        <img src="./assets/img/svg/piktogram-1.svg" class="cs-pik-image"> 3 mm
+                                    </label>
+                                </div>
+                                <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly refers to.
+                                </p>
+                            </div>
+                            <div class="cs-pic-img-list">
+                                <div>
+                                    <input hidden class="form-check-input" type="radio" name="list-area-input-8"
+                                        id="list-input-31">
+                                    <label class="list-area-label cs-inc-img" for="list-input-31">
+                                        <img src="./assets/img/svg/piktogram-1.svg" class="cs-pik-image"> 4 mm
+                                    </label>
+                                </div>
+                                <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly refers to.
+                                </p>
+                            </div>
+                            <div class="cs-pic-img-list">
+                                <div>
+                                    <input hidden class="form-check-input" type="radio" name="list-area-input-8"
+                                        id="list-input-32">
+                                    <label class="list-area-label cs-inc-img" for="list-input-32">
+                                        <img src="./assets/img/svg/piktogram-1.svg" class="cs-pik-image"> 5 mm
+                                    </label>
+                                </div>
+                                <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly refers to.
+                                </p>
+                            </div>
+                            <div class="cs-pic-img-list">
+                                <div>
+                                    <input hidden class="form-check-input" type="radio" name="list-area-input-8"
+                                        id="list-input-33">
+                                    <label class="list-area-label cs-inc-img" for="list-input-33">
+                                        <img src="./assets/img/svg/piktogram-1.svg" class="cs-pik-image"> 6 mm
+                                    </label>
+                                </div>
+                                <p class="cs-change-info">Briefly explain to the user what the Lay-On exactly refers to.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-content-main deactive" step="14">
+                        <div class="cs-head">
+                            <h6 class="cs-title-1">Coating: <span class="cs-info-select">Nickel</span></h6>
+                            <i class="icon-check"></i>
+                        </div>
+                    </div>
+                    <!-- <div class="cs-content-main" step="15"></div> -->
+                    <div class="right-area-1 cs-content-main" step="15">
+                        <div class="cs-product-result-main">
+                            <h6 class="cs-title-1">Results</h6>
+                            <div class="cs-product-result-content">
+                                <div class="cs-left-area">
+                                    <div class="cs-result-product">
+                                        <div class="cs-image-area">
+                                            <p class="cs-p-title">1013101712 SM</p>
+                                            <img src="assets/img/other/productimage1.png">
+                                        </div>
+                                        <div class="cs-product-list">
+                                            <div class="cs-duo-element">
+                                                <p class="cs-p-title">Product Type</p>
+                                                <p class="cs-p-response">Hinge System</p>
+                                            </div>
+                                            <div class="cs-duo-element">
+                                                <p class="cs-p-title">Cabinet Type</p>
+                                                <p class="cs-p-response">Standart Cabinet</p>
+                                            </div>
+                                            <div class="cs-duo-element">
+                                                <p class="cs-p-title">Door Type</p>
+                                                <p class="cs-p-response">Wooden Door</p>
+                                            </div>
+                                            <div class="cs-duo-element">
+                                                <p class="cs-p-title">Function</p>
+                                                <p class="cs-p-response">Self Close</p>
+                                            </div>
+                                            <div class="cs-duo-element">
+                                                <p class="cs-p-title">Model Name</p>
+                                                <p class="cs-p-response">Star Mini</p>
+                                            </div>
+                                            <div class="cs-duo-element">
+                                                <p class="cs-p-title">Door Angle</p>
+                                                <p class="cs-p-response">110</p>
+                                            </div>
+                                            <div class="cs-duo-element">
+                                                <p class="cs-p-title">Spring Type</p>
+                                                <p class="cs-p-response">Standart Type</p>
+                                            </div>
+                                            <div class="cs-duo-element">
+                                                <p class="cs-p-title">Overlay</p>
+                                                <p class="cs-p-response">Full Overlay</p>
+                                            </div>
+                                            <div class="cs-duo-element">
+                                                <p class="cs-p-title"></p>
+                                                <p class="cs-read-more"><a href="javascript:void(0)">Devamını Gör</a><i
+                                                        class="icon-arrow-down"></i></p>
+                                            </div>
+
+                                            <div class="cs-other-list">
+                                                <div class="cs-duo-element">
+                                                    <p class="cs-p-title">Product Type</p>
+                                                    <p class="cs-p-response">Hinge System</p>
+                                                </div>
+                                                <div class="cs-duo-element">
+                                                    <p class="cs-p-title">Cabinet Type</p>
+                                                    <p class="cs-p-response">Standart Cabinet</p>
+                                                </div>
+                                                <div class="cs-duo-element">
+                                                    <p class="cs-p-title">Door Type</p>
+                                                    <p class="cs-p-response">Wooden Door</p>
+                                                </div>
+                                                <div class="cs-duo-element">
+                                                    <p class="cs-p-title">Function</p>
+                                                    <p class="cs-p-response">Self Close</p>
+                                                </div>
+                                                <div class="cs-duo-element">
+                                                    <p class="cs-p-title">Model Name</p>
+                                                    <p class="cs-p-response">Star Mini</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="cs-product-list">
+                                        <h6 class="cs-title-1">Ürün Parça Listesi</h6>
+                                        <div class="cs-product-piece-table">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col"><span class="cs-p-response">Ürün</span></th>
+                                                        <th scope="col"><span class="cs-p-response">Part Code</span>
+                                                        </th>
+                                                        <th scope="col"><span class="cs-p-response">Description</span>
+                                                        </th>
+                                                        <th scope="col"><span class="cs-p-response">Quantity</span></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><img src="assets/img/other/report-general.png"></td>
+                                                        <td><span class="cs-table-desc">123456</span></td>
+                                                        <td><span class="cs-table-desc">Smart slide full extensıon 500
+                                                                mm 40
+                                                                kg soft close lock fix</span></td>
+                                                        <td><span class="cs-table-desc">4</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="assets/img/other/report-general.png"></td>
+                                                        <td><span class="cs-table-desc">123456</span></td>
+                                                        <td><span class="cs-table-desc">Smart slide full extensıon 500
+                                                                mm 40
+                                                                kg soft close lock fix</span></td>
+                                                        <td><span class="cs-table-desc">4</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="assets/img/other/report-general.png"></td>
+                                                        <td><span class="cs-table-desc">123456</span></td>
+                                                        <td><span class="cs-table-desc">Smart slide full extensıon 500
+                                                                mm 40
+                                                                kg soft close lock fix</span></td>
+                                                        <td><span class="cs-table-desc">4</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cs-save-downl-area">
+                                    <div class="cs-sec-main cs-sec-1">
+                                        <h6 class="cs-title-1">Save</h6>
+                                        <button class="cs-desc-2" id="cs-add-to-btn"><i class="icon-file"></i>Add To
+                                            Projects</button>
+                                        <h6 class="cs-title-1">Download</h6>
+                                        <button class="cs-desc-2" id="cs-doc-download-btn"><i class="icon-download-file"
+                                                style="font-size: 18px;"></i>Download project files</button>
+                                    </div>
+                                    <div class="cs-sec-main cs-sec-2">
+                                        <button class="cs-title-1 cs-to-main"><i class="icon-arrow-left"></i>
+                                            Download</button>
+                                        <div class="accordion mt-2" id="accordionProduct">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="productheadingOne">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#productOne"
+                                                        aria-expanded="true" aria-controls="productOne">
+                                                        Product Name 1
+                                                    </button>
+                                                </h2>
+                                                <div id="productOne" class="accordion-collapse collapse show"
+                                                    aria-labelledby="productheadingOne"
+                                                    data-bs-parent="#accordionProduct">
+                                                    <div class="accordion-body cs-input-control-main">
+                                                        <div class="cs-input-control">
+                                                            <input class="form-check-input" type="checkbox" checked
+                                                                value="" id="product-check-1">
+                                                            <label class="form-check-label" for="product-check-1">
+                                                                .3ds
+                                                            </label>
+                                                        </div>
+                                                        <div class="cs-input-control">
+                                                            <input class="form-check-input" type="checkbox" checked
+                                                                value="" id="product-check-2">
+                                                            <label class="form-check-label" for="product-check-2">
+                                                                .dae
+                                                            </label>
+                                                        </div>
+                                                        <div class="cs-input-control">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="product-check-3">
+                                                            <label class="form-check-label" for="product-check-3">
+                                                                .dwg
+                                                            </label>
+                                                        </div>
+                                                        <div class="cs-input-control">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="product-check-4">
+                                                            <label class="form-check-label" for="product-check-4">
+                                                                .dxf
+                                                            </label>
+                                                        </div>
+                                                        <div class="cs-input-control">
+                                                            <input class="form-check-input" type="checkbox" checked
+                                                                value="" id="product-check-5">
+                                                            <label class="form-check-label" for="product-check-5">
+                                                                .fbx
+                                                            </label>
+                                                        </div>
+                                                        <div class="cs-input-control">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="product-check-6">
+                                                            <label class="form-check-label" for="product-check-6">
+                                                                .igs
+                                                            </label>
+                                                        </div>
+                                                        <div class="cs-input-control">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="product-check-7">
+                                                            <label class="form-check-label" for="product-check-7">
+                                                                .log
+                                                            </label>
+                                                        </div>
+                                                        <div class="cs-input-control">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="product-check-8">
+                                                            <label class="form-check-label" for="product-check-8">
+                                                                .max
+                                                            </label>
+                                                        </div>
+                                                        <div class="cs-input-control">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="product-check-9">
+                                                            <label class="form-check-label" for="product-check-9">
+                                                                .igs
+                                                            </label>
+                                                        </div>
+                                                        <div class="cs-input-control">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="product-check-10">
+                                                            <label class="form-check-label" for="product-check-10">
+                                                                .log
+                                                            </label>
+                                                        </div>
+                                                        <div class="cs-input-control">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="product-check-11">
+                                                            <label class="form-check-label" for="product-check-11">
+                                                                .max
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="productheadingTwo">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#productTwo"
+                                                        aria-expanded="false" aria-controls="productTwo">
+                                                        Product Name 2
+                                                    </button>
+                                                </h2>
+                                                <div id="productTwo" class="accordion-collapse collapse"
+                                                    aria-labelledby="productheadingTwo"
+                                                    data-bs-parent="#accordionProduct">
+                                                    <div class="accordion-body">
+                                                        2222
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cs-footer mt-5">
+                                            <button class="cs-btn-type-1 m-0 active" id="cs-download-btn">Download
+                                                Selected</button>
+                                            <button class="cs-btn-type-1-border m-0" id="cs-clear-btn">Clear
+                                                Selects</button>
+                                        </div>
+                                    </div>
+                                    <div class="cs-sec-main cs-sec-3">
+                                        <button class="cs-title-1 cs-to-main"><i class="icon-arrow-left"></i>
+                                            Save</button>
+                                        <div class="cs-body">
+                                            <p class="cs-info">Please create new project or update
+                                                existing</p>
+                                            <div class="cs-radio-area">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="folderRadios1"
+                                                        id="folderRadios-1-product" value="option1">
+                                                    <label class="form-check-label" for="folderRadios-1-product">
+                                                        Folder Name 1
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="folderRadios1"
+                                                        id="folderRadios-2-product" value="option2">
+                                                    <label class="form-check-label" for="folderRadios-2-product">
+                                                        Folder Name 2
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="folderRadios1"
+                                                        id="folderRadios-3-product" value="option3">
+                                                    <label class="form-check-label" for="folderRadios-3-product">
+                                                        Folder Name 3
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cs-footer mt-5">
+                                            <button class="cs-btn-type-1 m-0 active" id="cs-save-btn-2">Save</button>
+                                            <button class="cs-btn-type-1-border m-0" id="cs-newproject-btn-2">Create New
+                                                Project</button>
+                                        </div>
+                                    </div>
+                                    <div class="cs-sec-main cs-sec-4">
+                                        <div class="cs-header">
+                                            <button class="cs-title-1 cs-to-download"><i class="icon-arrow-left"></i>
+                                                Create New
+                                                Project</button>
+                                        </div>
+                                        <div class="cs-body">
+                                            <p class="cs-info">Please enter folder name</p>
+                                            <div class="cs-input-area mt-4">
+                                                <input id="folder-name-1" placeholder="Enter Folder Name">
+                                            </div>
+                                        </div>
+                                        <div class="cs-footer mt-5">
+                                            <button class="cs-btn-type-1 mb-5">Create Folder</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cs-footer-button">
+                    <button class="cs-btn-type-1-border" id="cs-back-btn-3">Back</button>
+                    <button class="cs-btn-type-1" id="cs-next-btn-3">Next Step</button>
+                    <a class="cs-btn-type-1" href="configurator-main.html" id="cs-next-btn-4" hidden>Homepage</a>
+                </div>
+            </div>
+        </div>
+        <div class="cs-modal-backdrop"></div>
+    </main>
+
+    <a href="javascript: void(0);" id="goTpButton"></a>
+
+    <footer hidden>
+        <div class="cs-global-footer-1">
+            <div class="cs-container-1">
+                <div class="row">
+                    <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+                        <ul class="cs-footer-logo-m-1">
+                            <a href="index.html"><img src="./assets/img/other/configuremate-logo.png"></a>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+                        <h3 class="cs-footer-title-1">Configurator</h3>
+                        <ul class="cs-footer-menu-1">
+                            <li>
+                                <a href="" title="">Product Configurator</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Module Configurator</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+                        <h3 class="cs-footer-title-1">Follow us on Social Media</h3>
+                        <ul class="cs-footer-menu-2">
+                            <li>
+                                <a href="" title=""><i class="icon-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="" title=""><i class="icon-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="" title=""><i class="icon-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="" title=""><i class="icon-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+                        <p class="footer-desc-1"><strong>Address:</strong> Atatürk Mah. Adnan Menderes Cad. No: 8-13
+                            34513
+                            Esenyurt-İstanbul/Türkiye</p>
+
+                        <p class="footer-desc-1"><strong>Phone:</strong> +90 212 886 75 23</p>
+                        <p class="footer-desc-1"><strong>Fax:</strong> +90 212 886 51 61</p>
+
+                        <p class="footer-desc-1"><strong>E-mail: </strong> <a
+                                href="mailto:info@samet.com.tr">info@sametglobal.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cs-footer-policy">
+            <div class="cs-policy-list">
+                <a href="">Privacy Policy</a>
+                <a href="">Cookies Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/vendor/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendor/bootstrap-5.2/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/select2/dist/js/select2.min.js"></script>
+    <script src="assets/js/module-configurator.js"></script>
+    <script src="assets/js/configurator-main.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#lightgallery-module-1').lightGallery({
+                videojs: true
+            });
+            $('#lightgallery-module-2').lightGallery({
+                videojs: true
+            });
+        });
+    </script>
+    <script src="assets/vendor/lightGallery/dist/js/lightgallery-all.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

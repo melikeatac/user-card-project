@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 @import url("../vendor/bootstrap-5.2/css/bootstrap.min.css");
 @import url("../vendor/fontawesome/css/all.min.css");
@@ -54,6 +55,13 @@ button:hover, button:focus {
   visibility: visible;
 }
 
+.cs-small-info-2 {
+  display: flex;
+}
+.cs-small-info-2.deactive {
+  display: none !important;
+}
+
 .cs-main-header {
   display: flex;
   justify-content: space-between;
@@ -70,6 +78,49 @@ button:hover, button:focus {
   display: flex;
   align-items: center;
   gap: 18px;
+  position: relative;
+}
+.cs-main-header .cs-header-menu .cs-header-list .cs-language-area {
+  position: absolute;
+  z-index: 1;
+  top: 60px;
+  right: 0;
+  background: #ffffff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 170px;
+  height: 145px;
+  overflow: hidden;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.cs-main-header .cs-header-menu .cs-header-list .cs-language-area.active {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s;
+}
+.cs-main-header .cs-header-menu .cs-header-list .cs-language-area::-webkit-scrollbar {
+  width: 0;
+}
+.cs-main-header .cs-header-menu .cs-header-list .cs-language-area .cs-language-list {
+  padding: 0;
+  list-style: none;
+}
+.cs-main-header .cs-header-menu .cs-header-list .cs-language-area .cs-language-list .cs-language-item {
+  padding: 10px 5px;
+  border-bottom: 0.5px solid rgba(112, 112, 112, 0.231372549);
+  width: 100%;
+}
+.cs-main-header .cs-header-menu .cs-header-list .cs-language-area .cs-language-list .cs-language-item:last-child {
+  border: none;
+}
+.cs-main-header .cs-header-menu .cs-header-list .cs-language-area .cs-language-list .cs-language-item a {
+  color: #242424;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+  display: inline-block;
 }
 .cs-main-header .cs-header-menu .cs-header-list .cs-list-item.active {
   border-bottom: 1.5px solid #E20612;
@@ -83,16 +134,20 @@ button:hover, button:focus {
   object-fit: cover;
 }
 
-#cs-mobile-menu-2 {
+#cs-mobile-menu-2, #cs-mobile-menu-3, #cs-mobile-product-menu {
   display: none;
   margin-top: 5px;
 }
-#cs-mobile-menu-2 i {
+#cs-mobile-menu-2 i, #cs-mobile-menu-3 i, #cs-mobile-product-menu i {
   font-size: 16px;
   padding: 4px;
   border-radius: 50%;
   color: #E20612;
   border: 2px solid #E20612;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: #707070;
 }
 
 .cs-global-select2-container-2 label {
@@ -101,12 +156,12 @@ button:hover, button:focus {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
-  color: black;
+  color: #000000;
   margin-bottom: 12px;
   text-align: left;
 }
 .cs-global-select2-container-2 ::placeholder {
-  color: black;
+  color: #000000;
 }
 .cs-global-select2-container-2 .select2-container--default .select2-selection--single {
   border: 0.5px solid #707070 !important;
@@ -163,7 +218,7 @@ button:hover, button:focus {
   padding: 12px 25px;
 }
 .cs-global-select2-container-2 .select2-selection--single .select2-selection__placeholder {
-  color: black;
+  color: #707070 !important;
   opacity: 0.5;
 }
 .cs-global-select2-container-2 .select2-selection--multiple .select2-selection__placeholder {
@@ -173,13 +228,13 @@ button:hover, button:focus {
 .cs-global-select2-container-2 .select2-search--inline .select2-search__field {
   cursor: pointer;
   margin: 10px 0px 0px -10px;
-  color: black;
+  color: #707070 !important;
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
 }
 .cs-global-select2-container-2 .select2-search--inline .select2-search__field::placeholder {
-  color: black;
+  color: #707070 !important;
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
@@ -202,6 +257,9 @@ button:hover, button:focus {
   gap: 5px;
   border: none;
   width: 100%;
+}
+.cs-btn-type-1:hover {
+  color: #ffffff;
 }
 
 .cs-btn-type-1-border {
@@ -371,44 +429,44 @@ button:hover, button:focus {
   z-index: 98;
 }
 
-.cs-module-configurator {
+.cs-module-configurator, .cs-product-configurator {
   display: flex;
 }
-.cs-module-configurator .cs-left-side-main {
+.cs-module-configurator .cs-left-side-main, .cs-product-configurator .cs-left-side-main {
   max-width: 320px;
   width: 100%;
-  background: #F6F3F3;
+  background: #ffffff;
   height: 100vh;
   overflow: hidden;
   overflow-y: auto;
-  height: calc(100vh - 155px);
+  height: calc(100vh - 95px);
 }
-.cs-module-configurator .cs-left-side-main::-webkit-scrollbar {
+.cs-module-configurator .cs-left-side-main::-webkit-scrollbar, .cs-product-configurator .cs-left-side-main::-webkit-scrollbar {
   width: 0;
 }
-.cs-module-configurator .cs-left-side-main .cs-first-accordion .accordion-item {
+.cs-module-configurator .cs-left-side-main .cs-first-accordion .accordion-item, .cs-product-configurator .cs-left-side-main .cs-first-accordion .accordion-item {
   border-left: 0;
   border-right: 0;
 }
-.cs-module-configurator .cs-left-side-main .cs-first-accordion .accordion-item .accordion-header:hover .cs-accordion-hover {
+.cs-module-configurator .cs-left-side-main .cs-first-accordion .accordion-item .accordion-header:hover .cs-accordion-hover, .cs-product-configurator .cs-left-side-main .cs-first-accordion .accordion-item .accordion-header:hover .cs-accordion-hover {
   transition: all 0.4s;
   opacity: 1;
   visibility: visible;
 }
-.cs-module-configurator .cs-left-side-main .cs-first-accordion .cs-parent-acc-btn {
+.cs-module-configurator .cs-left-side-main .cs-first-accordion .cs-parent-acc-btn, .cs-product-configurator .cs-left-side-main .cs-first-accordion .cs-parent-acc-btn {
   background: #E20612;
   color: #ffffff;
 }
-.cs-module-configurator .cs-left-side-main .cs-first-accordion > .accordion-item > .accordion-collapse > .accordion-body {
+.cs-module-configurator .cs-left-side-main .cs-first-accordion > .accordion-item > .accordion-collapse > .accordion-body, .cs-product-configurator .cs-left-side-main .cs-first-accordion > .accordion-item > .accordion-collapse > .accordion-body {
   padding: 0 !important;
 }
-.cs-module-configurator .cs-left-side-main .cs-first-accordion .accordion-button {
+.cs-module-configurator .cs-left-side-main .cs-first-accordion .accordion-button, .cs-product-configurator .cs-left-side-main .cs-first-accordion .accordion-button {
   border-radius: 0;
   outline: none;
   box-shadow: none;
   border: none;
 }
-.cs-module-configurator .cs-left-side-main .cs-first-accordion .accordion-button:not(.collapsed)::after {
+.cs-module-configurator .cs-left-side-main .cs-first-accordion .accordion-button:not(.collapsed)::after, .cs-product-configurator .cs-left-side-main .cs-first-accordion .accordion-button:not(.collapsed)::after {
   background-image: none;
   content: "\e91f";
   font-family: "icomoon" !important;
@@ -420,7 +478,7 @@ button:hover, button:focus {
   line-height: 1;
   color: #ffffff;
 }
-.cs-module-configurator .cs-left-side-main .cs-first-accordion .accordion-button::after {
+.cs-module-configurator .cs-left-side-main .cs-first-accordion .accordion-button::after, .cs-product-configurator .cs-left-side-main .cs-first-accordion .accordion-button::after {
   background-image: none;
   content: "\e91c";
   font-family: "icomoon" !important;
@@ -432,18 +490,18 @@ button:hover, button:focus {
   line-height: 1;
   color: #ffffff;
 }
-.cs-module-configurator .cs-left-side-main .cs-second-accordion .accordion-item {
+.cs-module-configurator .cs-left-side-main .cs-second-accordion .accordion-item, .cs-product-configurator .cs-left-side-main .cs-second-accordion .accordion-item {
   position: relative;
 }
-.cs-module-configurator .cs-left-side-main .cs-second-accordion .accordion-button {
+.cs-module-configurator .cs-left-side-main .cs-second-accordion .accordion-button, .cs-product-configurator .cs-left-side-main .cs-second-accordion .accordion-button {
   background: #F6F3F3;
   display: flex;
   gap: 5px;
 }
-.cs-module-configurator .cs-left-side-main .cs-second-accordion .accordion-button:not(.collapsed) {
+.cs-module-configurator .cs-left-side-main .cs-second-accordion .accordion-button:not(.collapsed), .cs-product-configurator .cs-left-side-main .cs-second-accordion .accordion-button:not(.collapsed) {
   color: #2B73AC;
 }
-.cs-module-configurator .cs-left-side-main .cs-second-accordion .accordion-button:not(.collapsed)::after {
+.cs-module-configurator .cs-left-side-main .cs-second-accordion .accordion-button:not(.collapsed)::after, .cs-product-configurator .cs-left-side-main .cs-second-accordion .accordion-button:not(.collapsed)::after {
   background-image: none;
   content: "\e900";
   font-family: "icomoon" !important;
@@ -455,7 +513,7 @@ button:hover, button:focus {
   line-height: 1;
   color: #1A1A1A;
 }
-.cs-module-configurator .cs-left-side-main .cs-second-accordion .accordion-button::after {
+.cs-module-configurator .cs-left-side-main .cs-second-accordion .accordion-button::after, .cs-product-configurator .cs-left-side-main .cs-second-accordion .accordion-button::after {
   background-image: none;
   content: "\e901";
   font-family: "icomoon" !important;
@@ -467,46 +525,300 @@ button:hover, button:focus {
   line-height: 1;
   color: #1A1A1A;
 }
-.cs-module-configurator .cs-left-side-main .cs-second-accordion .accordion-body {
+.cs-module-configurator .cs-left-side-main .cs-second-accordion .accordion-body, .cs-product-configurator .cs-left-side-main .cs-second-accordion .accordion-body {
   background: #F6F3F3;
 }
-.cs-module-configurator .cs-left-side-main .cs-grid2-main {
+.cs-module-configurator .cs-left-side-main .cs-grid2-main, .cs-product-configurator .cs-left-side-main .cs-grid2-main {
   display: grid;
   padding: 5px;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   gap: 10px;
 }
-.cs-module-configurator .cs-left-side-main .cs-grid2-main button {
+.cs-module-configurator .cs-left-side-main .cs-grid2-main button, .cs-product-configurator .cs-left-side-main .cs-grid2-main button {
   max-width: 100% !important;
   position: relative;
 }
-.cs-module-configurator .cs-left-side-main .cs-grid2-main button .cs-accordion-hover {
+.cs-module-configurator .cs-left-side-main .cs-grid2-main button .cs-accordion-hover, .cs-product-configurator .cs-left-side-main .cs-grid2-main button .cs-accordion-hover {
   right: 0 !important;
 }
-.cs-module-configurator .cs-left-side-main .cs-grid2-main button:hover .cs-accordion-hover {
+.cs-module-configurator .cs-left-side-main .cs-grid2-main button:hover .cs-accordion-hover, .cs-product-configurator .cs-left-side-main .cs-grid2-main button:hover .cs-accordion-hover {
   opacity: 1;
   visibility: visible;
   transition: all 0.4s;
   z-index: 1;
 }
-.cs-module-configurator .cs-right-side-main {
+.cs-module-configurator .cs-right-side-main-2, .cs-product-configurator .cs-right-side-main-2 {
+  background: #ffffff;
+  width: 100%;
+  position: relative;
+  height: calc(100vh - 95px);
+  padding: 0 20px;
+  max-width: 1230px;
+  display: flex;
+  flex-direction: column;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-change-info, .cs-product-configurator .cs-right-side-main-2 .cs-change-info {
+  color: #000000;
+  font-size: 14px;
+  line-height: 22px;
+}
+.cs-module-configurator .cs-right-side-main-2 .right-area-1, .cs-product-configurator .cs-right-side-main-2 .right-area-1 {
+  height: calc(100vh - 95px);
+  overflow: hidden;
+  overflow-y: auto;
+  gap: 10px;
+}
+.cs-module-configurator .cs-right-side-main-2 .right-area-1::-webkit-scrollbar, .cs-product-configurator .cs-right-side-main-2 .right-area-1::-webkit-scrollbar {
+  width: 0;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-card-area, .cs-product-configurator .cs-right-side-main-2 .cs-card-area {
+  display: block;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-card-area.deactive, .cs-product-configurator .cs-right-side-main-2 .cs-card-area.deactive {
+  display: none;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list, .cs-product-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-no-img-list, .cs-product-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-no-img-list {
+  max-width: 200px;
+  width: 100%;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-no-img-list .list-area-label, .cs-product-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-no-img-list .list-area-label {
+  color: #707070;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-radius: 12px;
+  border: 0.5px solid #504F4E;
+  background: #ffffff;
+  cursor: pointer;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-no-img-list .list-area-label.active, .cs-product-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-no-img-list .list-area-label.active {
+  border: 0.5px solid #E20612;
+  background: #E20612;
+  box-shadow: 0px 3px 10px 0px rgba(36, 36, 36, 0.15);
+  color: #ffffff;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-list-item, .cs-product-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-list-item {
+  background: #ffffff;
+  border-radius: 12px;
+  max-width: min-content !important;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-list-item .list-area-label, .cs-product-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-list-item .list-area-label {
+  color: #707070;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 24px;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 12px;
+  border: 0.5px solid #504F4E;
+  background: #ffffff;
+  cursor: pointer !important;
+  padding: 10px;
+  border: 1px solid transparent !important;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-list-item .list-area-label.active3, .cs-product-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-list-item .list-area-label.active3 {
+  border: 1px solid #2B73AC !important;
+  background: #ffffff;
+  box-shadow: 0px 3px 10px 0px rgba(36, 36, 36, 0.15);
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-list-item .cs-inc-img-2, .cs-product-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-list-item .cs-inc-img-2 {
+  border: none;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-list-item img, .cs-product-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-list-item img {
+  width: 200px;
+  height: 165px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-list-item .cs-title-2, .cs-product-configurator .cs-right-side-main-2 .cs-card-area .cs-images-card-list .cs-list-item .cs-title-2 {
+  color: #2B73AC;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-main-title, .cs-product-configurator .cs-right-side-main-2 .cs-main-title {
+  color: #242424;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: capitalize;
+  padding: 5px 10px;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main, .cs-product-configurator .cs-right-side-main-2 .cs-content-main {
+  background: #F6F3F3;
+  border-radius: 6px;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  display: none;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main.active1, .cs-product-configurator .cs-right-side-main-2 .cs-content-main.active1 {
+  display: block;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main.deactive, .cs-product-configurator .cs-right-side-main-2 .cs-content-main.deactive {
+  background-color: #D6D6D6;
+  cursor: auto;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main.deactive .cs-head .cs-title-1, .cs-product-configurator .cs-right-side-main-2 .cs-content-main.deactive .cs-head .cs-title-1 {
+  color: #707070;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main.deactive .cs-head .cs-title-1 span, .cs-product-configurator .cs-right-side-main-2 .cs-content-main.deactive .cs-head .cs-title-1 span {
+  color: #707070;
+  font-weight: 500;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main.deactive .cs-head i, .cs-product-configurator .cs-right-side-main-2 .cs-content-main.deactive .cs-head i {
+  color: #707070;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-text-i-area, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-text-i-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-text-i-area img, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-text-i-area img {
+  width: 45px;
+  height: 45px;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-img-area-2, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-img-area-2 {
+  display: flex;
+  flex-direction: column;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-img-area-2 .cs-pic-img-list, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-img-area-2 .cs-pic-img-list {
+  max-width: 300px !important;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-content-text-input, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-content-text-input {
+  position: relative;
+  width: 100%;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-content-text-input label, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-content-text-input label {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  font-size: 11px;
+  line-height: 19px;
+  color: #000000;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-content-text-input .form-check-input, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-content-text-input .form-check-input {
+  width: 100%;
+  height: 55px !important;
+  border-radius: 60px !important;
+  border: 0.5px solid #707070 !important;
+  padding-left: 18px;
+  padding-top: 10px;
+  margin: 0;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-content-text-input .form-check-input:focus, .cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-content-text-input .form-check-input:focus-visible, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-content-text-input .form-check-input:focus, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-content-text-input .form-check-input:focus-visible {
+  box-shadow: none;
+  outline: none;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-content-text-input .form-check-input:active, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-content-text-input .form-check-input:active {
+  filter: none;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-content-text-input .cs-small-info, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-content-text-input .cs-small-info {
+  color: #E30613;
+  font-size: 14px;
+  line-height: 22px;
+  max-width: 180px;
+  padding-left: 10px;
+  width: 100%;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-pic-img-area, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-pic-img-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-pic-img-area.deactive, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-pic-img-area.deactive {
+  display: none;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-pic-img-area .cs-pic-img-list, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-pic-img-area .cs-pic-img-list {
+  max-width: 200px;
+  width: 100%;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-pic-img-area .cs-pic-img-list .list-area-label, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-pic-img-area .cs-pic-img-list .list-area-label {
+  color: #707070;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-radius: 12px;
+  border: 0.5px solid #504F4E;
+  background: #ffffff;
+  cursor: pointer;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-pic-img-area .cs-pic-img-list .list-area-label.active2, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-pic-img-area .cs-pic-img-list .list-area-label.active2 {
+  border: 0.5px solid #E20612;
+  background: #ffffff;
+  box-shadow: 0px 3px 10px 0px rgba(36, 36, 36, 0.15);
+  color: #E20612;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-pic-img-area .cs-pic-img-list .list-area-label .cs-pik-image, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-pic-img-area .cs-pic-img-list .list-area-label .cs-pik-image {
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+  object-fit: cover;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-pic-img-area .cs-input-img-list, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-pic-img-area .cs-input-img-list {
+  max-width: 250px !important;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-head, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-head .cs-title-1, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-head .cs-title-1 {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #242424;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-head .cs-info-select, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-head .cs-info-select {
+  font-size: 18px;
+  line-height: 26px;
+  color: #E20612;
+  font-weight: 600;
+  padding-left: 5px;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-head .cs-small-info, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-head .cs-small-info {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  text-align: left;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-head i, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-head i {
+  color: #E20612;
+}
+.cs-module-configurator .cs-right-side-main, .cs-product-configurator .cs-right-side-main {
   background: gray;
   width: 100%;
   position: relative;
   height: calc(100vh - 155px);
 }
-.cs-module-configurator .cs-right-side-main .cs-button-list-mobile {
+.cs-module-configurator .cs-right-side-main .cs-button-list-mobile, .cs-product-configurator .cs-right-side-main .cs-button-list-mobile {
   display: none !important;
 }
-.cs-module-configurator .cs-right-side-main .cs-button-list, .cs-module-configurator .cs-right-side-main .cs-button-list-mobile {
+.cs-module-configurator .cs-right-side-main .cs-button-list, .cs-module-configurator .cs-right-side-main .cs-button-list-mobile, .cs-product-configurator .cs-right-side-main .cs-button-list, .cs-product-configurator .cs-right-side-main .cs-button-list-mobile {
   position: absolute;
   bottom: 50px;
   left: 15%;
   display: flex;
   border-radius: 35.5px;
 }
-.cs-module-configurator .cs-right-side-main .cs-button-list .btn-gray, .cs-module-configurator .cs-right-side-main .cs-button-list-mobile .btn-gray {
+.cs-module-configurator .cs-right-side-main .cs-button-list .btn-gray, .cs-module-configurator .cs-right-side-main .cs-button-list-mobile .btn-gray, .cs-product-configurator .cs-right-side-main .cs-button-list .btn-gray, .cs-product-configurator .cs-right-side-main .cs-button-list-mobile .btn-gray {
   border: 0px;
   border-left: 0.5px solid #707070;
   background: #EBEBEB;
@@ -518,16 +830,16 @@ button:hover, button:focus {
   font-weight: 700;
   color: #707070;
 }
-.cs-module-configurator .cs-right-side-main .cs-button-list .btn-gray.active, .cs-module-configurator .cs-right-side-main .cs-button-list-mobile .btn-gray.active {
+.cs-module-configurator .cs-right-side-main .cs-button-list .btn-gray.active, .cs-module-configurator .cs-right-side-main .cs-button-list-mobile .btn-gray.active, .cs-product-configurator .cs-right-side-main .cs-button-list .btn-gray.active, .cs-product-configurator .cs-right-side-main .cs-button-list-mobile .btn-gray.active {
   background: #ffffff;
   color: #E20612;
 }
-.cs-module-configurator .cs-right-side-main .cs-button-list .btn-gray:first-child, .cs-module-configurator .cs-right-side-main .cs-button-list-mobile .btn-gray:first-child {
+.cs-module-configurator .cs-right-side-main .cs-button-list .btn-gray:first-child, .cs-module-configurator .cs-right-side-main .cs-button-list-mobile .btn-gray:first-child, .cs-product-configurator .cs-right-side-main .cs-button-list .btn-gray:first-child, .cs-product-configurator .cs-right-side-main .cs-button-list-mobile .btn-gray:first-child {
   border-top-left-radius: 35.5px;
   border-bottom-left-radius: 35.5px;
   border: none;
 }
-.cs-module-configurator .cs-right-side-main .cs-button-list .btn-gray:last-child, .cs-module-configurator .cs-right-side-main .cs-button-list-mobile .btn-gray:last-child {
+.cs-module-configurator .cs-right-side-main .cs-button-list .btn-gray:last-child, .cs-module-configurator .cs-right-side-main .cs-button-list-mobile .btn-gray:last-child, .cs-product-configurator .cs-right-side-main .cs-button-list .btn-gray:last-child, .cs-product-configurator .cs-right-side-main .cs-button-list-mobile .btn-gray:last-child {
   border-top-right-radius: 35.5px;
   border-bottom-right-radius: 35.5px;
   border: none;
@@ -535,17 +847,27 @@ button:hover, button:focus {
 }
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-  font-size: 12px !important;
+  font-size: 16px !important;
   background: #2B73AC;
 }
 .select2-container--default .select2-results__option--selected, .select2-container--default .select2-results__option--selectable {
-  font-size: 12px !important;
+  font-size: 16px !important;
 }
 .select2-container--default .select2-selection__rendered {
-  font-size: 12px !important;
+  font-size: 16px !important;
+  line-height: 50px !important;
+  color: #242424 !important;
 }
 .select2-container--default .select2-selection--single {
   border: 0.5px solid #707070 !important;
+  height: 55px;
+  border-radius: 27px;
+  color: #707070;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
 }
 
 .cs-container-1 {
@@ -573,109 +895,18 @@ button:hover, button:focus {
   line-height: 24px;
   text-transform: capitalize;
 }
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area {
-  position: relative;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area #cs-close-btn i {
-  font-size: 22px;
-  color: #242424;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-btn {
-  color: #242424;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 22px;
-  text-transform: capitalize;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal {
-  display: none;
-  position: absolute;
-  top: 42px;
-  padding-top: 10px;
-  background: #ffffff;
-  right: 0;
-  width: 300px;
-  height: 450px;
-  z-index: 3;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal #cs-save-btn {
-  opacity: 0.5;
-  pointer-events: none;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal #cs-save-btn.active {
-  opacity: 1;
-  pointer-events: visible;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal .cs-header {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 0.5px solid #707070;
-  padding: 0 10px 10px 10px;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal .cs-header .cs-title-2 {
-  color: #242424;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 28px;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal .cs-body {
-  padding: 10px 10px 20px 10px;
-  border-bottom: 0.5px solid #707070;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal .cs-body .cs-radio-area {
-  max-height: 150px;
-  overflow: hidden;
-  overflow-y: auto;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal .cs-body .cs-radio-area::-webkit-scrollbar {
-  width: 0;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal .cs-body .form-check {
-  margin-bottom: 8px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal .cs-body .form-check-input:checked {
-  background-color: #E20612;
-  width: 24px;
-  height: 24px;
-  border-color: #E20612;
-  box-shadow: none;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal .cs-body label {
-  cursor: pointer;
-  color: #242424;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 22px;
-  text-transform: capitalize;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal .cs-body .form-check-input[type=radio] {
-  width: 24px;
-  height: 24px;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal .cs-footer {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal .cs-modal-2 {
-  display: none;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal .cs-modal-2 .cs-input-area {
+
+.cs-input-area {
   display: flex;
   flex-direction: column;
 }
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal .cs-modal-2 .cs-input-area .cs-input-info {
+.cs-input-area .cs-input-info {
   color: #707070;
   font-size: 12px;
   font-weight: 500;
   line-height: 20px;
 }
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal .cs-modal-2 .cs-input-area input {
+.cs-input-area input {
   border: none;
   box-shadow: none;
   outline: none;
@@ -685,9 +916,6 @@ button:hover, button:focus {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
-}
-.cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal .cs-modal-2 .cs-body {
-  border: none;
 }
 
 #reportModal {
@@ -846,7 +1074,7 @@ button:hover, button:focus {
   box-shadow: 0px 3px 10px 0px rgba(36, 36, 36, 0.15);
 }
 .cs-change-content .cs-main-radiogroup .change-area-label.active3 {
-  border: 1px solid #2B73AC;
+  border: 1px solid #2B73AC !important;
   background: #ffffff;
   box-shadow: 0px 3px 10px 0px rgba(36, 36, 36, 0.15);
 }
@@ -1032,6 +1260,7 @@ button:hover, button:focus {
   padding: 10px 20px;
   border-radius: 72px;
   border: 0.5px solid #707070;
+  cursor: pointer;
 }
 .cs-files-transfer-main .cs-g-box-1 .cs-butons-list .cs-checkbtn.active {
   background-color: #E20612;
@@ -1144,14 +1373,14 @@ button:hover, button:focus {
   border-radius: 100px !important;
   white-space: nowrap;
 }
-.modal-footer #cs-next-btn, .modal-footer #cs-next-btn-2, .modal-footer .cs-primary-btn {
+.modal-footer #cs-next-btn, .modal-footer #cs-next-btn-2, .modal-footer .cs-primary-btn, .modal-footer #cs-continue-btn-1 {
   background: #2B73AC;
   border-radius: 92px;
   padding: 10px 20px;
   color: #ffffff;
   border: 1px solid transparent;
 }
-.modal-footer #cs-next-btn:hover, .modal-footer #cs-next-btn-2:hover, .modal-footer .cs-primary-btn:hover {
+.modal-footer #cs-next-btn:hover, .modal-footer #cs-next-btn-2:hover, .modal-footer .cs-primary-btn:hover, .modal-footer #cs-continue-btn-1:hover {
   color: #2B73AC;
   border: 1px solid #2B73AC;
   background: #ffffff;
@@ -1357,4 +1586,1067 @@ button:hover, button:focus {
   text-decoration: underline;
   line-height: 20px;
   color: #000000;
+}
+
+#configurator-tab {
+  display: flex;
+  width: max-content;
+  justify-content: space-between;
+  background-color: #EBEBEB;
+  padding: 7px;
+  border-radius: 82px;
+  max-width: 450px;
+  width: 100%;
+}
+#configurator-tab .nav-item {
+  width: 48%;
+}
+#configurator-tab .nav-item .nav-link {
+  color: #707070;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  width: 100%;
+}
+#configurator-tab .nav-item .nav-link.active {
+  border-radius: 82px;
+  background: #ffffff;
+  color: #E20612;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cs-module-configurator-main {
+  display: flex;
+}
+.cs-module-configurator-main .cs-promo-arae {
+  flex: 0 0 50%;
+  max-width: 50%;
+  width: 100%;
+  background-size: cover;
+  padding-left: 320px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.cs-module-configurator-main .cs-promo-arae .cs-title-1 {
+  color: #242424;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 50px;
+}
+.cs-module-configurator-main .cs-promo-arae .cs-title-1 .cs-second {
+  font-style: italic;
+}
+.cs-module-configurator-main .cs-promo-arae .cs-desc-1 {
+  color: #000000;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 30px 0;
+  padding: 0 10%;
+}
+.cs-module-configurator-main .cs-promo-arae .cs-info-area {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 30px;
+}
+.cs-module-configurator-main .cs-promo-arae .cs-info-area .cs-title {
+  color: #000000;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+}
+.cs-module-configurator-main .cs-promo-arae .cs-info-area .cs-title .cs-info {
+  color: #E20612;
+}
+.cs-module-configurator-main .cs-promo-arae .cs-info-area .cs-info-list {
+  padding: 0;
+  padding-left: 1em;
+  list-style: none;
+}
+.cs-module-configurator-main .cs-promo-arae .cs-info-area .cs-info-list li {
+  color: #000000;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 17px;
+}
+.cs-module-configurator-main .cs-promo-arae .cs-info-area .cs-info-list li::before {
+  content: "•";
+  color: #E20612;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.cs-module-configurator-main .cs-content-area {
+  flex: 0 0 50%;
+  padding-top: 50px;
+  max-width: 50%;
+  width: 100%;
+  padding-right: 200px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cs-module-configurator-main .cs-content-area img {
+  width: 100%;
+  margin: 20px 0;
+  margin-left: -50px;
+}
+.cs-module-configurator-main .cs-content-area .cs-title {
+  color: #000000;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  max-width: 450px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+.cs-module-configurator-main .cs-content-area .c-module-area, .cs-module-configurator-main .cs-content-area .c-product-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.cs-module-configurator-main .cs-content-area .c-module-area .cs-desc-1, .cs-module-configurator-main .cs-content-area .c-product-area .cs-desc-1 {
+  max-width: 450px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+.cs-module-configurator-main .cs-content-area .c-module-area .cs-btn-type-1, .cs-module-configurator-main .cs-content-area .c-product-area .cs-btn-type-1 {
+  max-width: 450px;
+  width: 100%;
+  border-radius: 240px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.cs-module-configurator-main .cs-content-area .c-module-area .cs-btn-type-1 i, .cs-module-configurator-main .cs-content-area .c-product-area .cs-btn-type-1 i {
+  font-size: 22px;
+}
+
+#productConModal {
+  --bs-modal-width: 785px !important;
+}
+#productConModal #cs-continue-btn-1 {
+  border-radius: 12px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+#productConModal #cs-continue-btn-1.active {
+  opacity: 1;
+  pointer-events: visible;
+}
+#productConModal .cs-step-main-2 {
+  padding: 15px 15px 40px 15px;
+  background: #F6F3F3;
+  border-radius: 12px;
+}
+#productConModal .cs-step-main-2 .cs-change-content .cs-main-radiogroup {
+  flex-wrap: wrap;
+}
+#productConModal .cs-step-main-2 .change-area-label {
+  border: 1px solid transparent;
+}
+
+.cs-product-configurator #cs-next-btn-4, .cs-product-configurator #cs-next-btn-5 {
+  display: none;
+}
+.cs-product-configurator #cs-next-btn-4.active, .cs-product-configurator #cs-next-btn-5.active {
+  display: flex !important;
+}
+.cs-product-configurator .cs-menu-2 {
+  list-style: none;
+  padding: 0;
+}
+.cs-product-configurator .cs-menu-2 .cs-menu-info {
+  display: flex;
+  white-space: nowrap;
+  color: #707070;
+  font-size: 13px;
+  line-height: 21px;
+}
+.cs-product-configurator .cs-menu-2 .cs-menu-info.deactive {
+  display: none;
+}
+.cs-product-configurator .cs-menu-2 .cs-item {
+  padding: 10px 5px;
+  border-bottom: 0.5px solid #B8B7B7;
+  padding-left: 10px;
+  position: relative;
+  cursor: pointer !important;
+  background: #ffffff;
+  display: none;
+  user-select: none;
+}
+.cs-product-configurator .cs-menu-2 .cs-item.active-red::before {
+  position: absolute;
+  left: 0;
+  width: 4px;
+  background: #E20612;
+  content: "";
+  display: block;
+  height: 100%;
+  top: 0;
+}
+.cs-product-configurator .cs-menu-2 .cs-item:last-child {
+  color: #ffffff !important;
+  background: #E20612 !important;
+}
+.cs-product-configurator .cs-menu-2 .cs-item:last-child a {
+  color: #ffffff;
+}
+.cs-product-configurator .cs-menu-2 .cs-item:first-child {
+  pointer-events: none !important;
+  display: flex !important;
+  user-select: none;
+}
+.cs-product-configurator .cs-menu-2 .cs-item:last-child {
+  pointer-events: none !important;
+  user-select: none;
+}
+.cs-product-configurator .cs-menu-2 .cs-item.deactive {
+  pointer-events: none;
+  background-color: #D6D6D6 !important;
+}
+.cs-product-configurator .cs-menu-2 .cs-item.deactive i {
+  color: #707070 !important;
+}
+.cs-product-configurator .cs-menu-2 .cs-item.active2 {
+  background: #F6F3F3;
+  display: flex;
+}
+.cs-product-configurator .cs-menu-2 .cs-item.redClass {
+  background: #F6F3F3;
+}
+.cs-product-configurator .cs-menu-2 .cs-item.redClass::before {
+  position: absolute;
+  left: 0;
+  width: 4px;
+  background: #E20612;
+  content: "";
+  display: block;
+  height: 100%;
+  top: 0;
+}
+.cs-product-configurator .cs-menu-2 .cs-item.active {
+  background: #FFF9FA;
+  display: flex;
+}
+.cs-product-configurator .cs-menu-2 .cs-item.active::before {
+  position: absolute;
+  left: 0;
+  width: 4px;
+  background: #E20612;
+  content: "";
+  display: block;
+  height: 100%;
+  top: 0;
+}
+.cs-product-configurator .cs-menu-2 .cs-item i {
+  color: #E20612;
+  display: none;
+}
+.cs-product-configurator .cs-menu-2 .cs-item a {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #242424;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.cs-footer-button {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 10px;
+  padding: 20px 30px;
+  background: #ffffff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.cs-footer-button button, .cs-footer-button .cs-btn-type-1 {
+  max-width: 120px;
+  width: 100%;
+  border-radius: 240px;
+}
+
+.cs-login-main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 950px;
+}
+.cs-login-main .cs-login-image {
+  flex: 0 0 50%;
+  max-width: 50%;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  height: 100%;
+}
+.cs-login-main .cs-login-form, .cs-login-main .cs-register-form {
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-top: -200px;
+}
+.cs-login-main .cs-login-form .cs-duo-inputs, .cs-login-main .cs-register-form .cs-duo-inputs {
+  display: flex;
+  gap: 10px;
+}
+.cs-login-main .cs-login-form .cs-duo-inputs .select2-container, .cs-login-main .cs-register-form .cs-duo-inputs .select2-container {
+  width: 100%;
+}
+.cs-login-main .cs-login-form .cs-register-desc, .cs-login-main .cs-register-form .cs-register-desc {
+  color: #000000;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+}
+.cs-login-main .cs-login-form .cs-form-title, .cs-login-main .cs-register-form .cs-form-title {
+  color: #242424;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+.cs-login-main .cs-login-form form, .cs-login-main .cs-register-form form {
+  max-width: 450px;
+  width: 100%;
+  padding: 0 0 0 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.cs-login-main .cs-login-form form .cs-form-info, .cs-login-main .cs-register-form form .cs-form-info {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.cs-login-main .cs-login-form form .cs-form-info a, .cs-login-main .cs-register-form form .cs-form-info a {
+  color: #2B73AC;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-decoration-line: underline;
+  margin-left: 8px;
+}
+.cs-login-main .cs-login-form form .cs-remember-area-2, .cs-login-main .cs-register-form form .cs-remember-area-2 {
+  flex-direction: column;
+}
+.cs-login-main .cs-login-form form .cs-remember-area, .cs-login-main .cs-login-form form .cs-remember-area-2, .cs-login-main .cs-register-form form .cs-remember-area, .cs-login-main .cs-register-form form .cs-remember-area-2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.cs-login-main .cs-login-form form .cs-remember-area .form-check-label, .cs-login-main .cs-login-form form .cs-remember-area-2 .form-check-label, .cs-login-main .cs-register-form form .cs-remember-area .form-check-label, .cs-login-main .cs-register-form form .cs-remember-area-2 .form-check-label {
+  flex: 1;
+  color: #707070;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.cs-login-main .cs-login-form form .cs-remember-area a, .cs-login-main .cs-login-form form .cs-remember-area-2 a, .cs-login-main .cs-register-form form .cs-remember-area a, .cs-login-main .cs-register-form form .cs-remember-area-2 a {
+  color: #2B73AC;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-decoration-line: underline;
+}
+.cs-login-main .cs-login-form form .cs-remember-area input[type=checkbox], .cs-login-main .cs-login-form form .cs-remember-area-2 input[type=checkbox], .cs-login-main .cs-register-form form .cs-remember-area input[type=checkbox], .cs-login-main .cs-register-form form .cs-remember-area-2 input[type=checkbox] {
+  border: 1px solid #E20612;
+  box-shadow: none;
+  user-select: none !important;
+  width: 16px;
+  height: 16px;
+}
+.cs-login-main .cs-login-form form .cs-remember-area input[type=checkbox]:checked, .cs-login-main .cs-login-form form .cs-remember-area-2 input[type=checkbox]:checked, .cs-login-main .cs-register-form form .cs-remember-area input[type=checkbox]:checked, .cs-login-main .cs-register-form form .cs-remember-area-2 input[type=checkbox]:checked {
+  background-color: #E20612;
+  border: 1px solid #E20612;
+  box-shadow: none;
+}
+.cs-login-main .cs-login-form form .cs-btn-type-1, .cs-login-main .cs-register-form form .cs-btn-type-1 {
+  border-radius: 240px;
+  pointer-events: none;
+  opacity: 0.6;
+  user-select: none;
+  margin-top: 40px;
+  padding: 20px;
+}
+.cs-login-main .cs-login-form form .cs-btn-type-1.active, .cs-login-main .cs-register-form form .cs-btn-type-1.active {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.form-floating {
+  width: 100%;
+  position: relative;
+}
+.form-floating label {
+  color: #707070;
+}
+.form-floating i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.form-floating .icon-eye-close {
+  font-size: 28px;
+}
+.form-floating input.cs-text-input {
+  width: 100%;
+  color: #242424;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  border-radius: 60px;
+  border: 0.5px solid #707070;
+}
+.form-floating input.cs-text-input:focus-visible, .form-floating input.cs-text-input:focus {
+  box-shadow: none;
+  border: 0.5px solid #707070;
+  outline: none;
+}
+
+#forgotpass-modal .cs-modal-title {
+  margin-top: -20px;
+}
+#forgotpass-modal .cs-btn-type-1 {
+  border-radius: 240px;
+  pointer-events: none;
+  opacity: 0.6;
+  user-select: none;
+  margin-top: 40px;
+  padding: 20px 0;
+  max-width: 140px;
+}
+#forgotpass-modal .cs-btn-type-1.active {
+  opacity: 1;
+  pointer-events: visible;
+}
+#forgotpass-modal .modal-content {
+  padding: 0 10px;
+}
+
+.swal2-popup {
+  display: flex !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.cs-sweetalert2-1 {
+  max-width: 730px !important;
+  width: 100% !important;
+}
+.cs-sweetalert2-1 .swal2-toast {
+  top: 0;
+  cursor: pointer;
+}
+.cs-sweetalert2-1 .swal2-toast.swal2-popup {
+  min-height: 90px;
+  align-items: center;
+  border-radius: 12px;
+}
+.cs-sweetalert2-1 .swal2-toast.swal2-popup::before {
+  content: "";
+  background-color: #ffffff;
+  width: 25px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.cs-sweetalert2-1 .swal2-toast.swal2-popup.swal2-toast .swal2-styled {
+  background-color: #EBEBEB;
+  padding: 4px 8px;
+  color: #242424;
+  border-radius: 50%;
+  margin: 0;
+}
+.cs-sweetalert2-1 .swal2-toast.swal2-popup.swal2-toast .swal2-title {
+  margin: 0px 30px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  color: #242424;
+}
+.cs-sweetalert2-1.color-1 .swal2-toast.swal2-popup {
+  background-color: #ffffff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.cs-sweetalert2-1.color-1 .swal2-toast.swal2-popup::before {
+  background-color: #E20612;
+}
+.cs-sweetalert2-1.color-2 .swal2-toast.swal2-popup {
+  background-color: #ffffff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.cs-sweetalert2-1.color-2 .swal2-toast.swal2-popup::before {
+  background-color: #15AB24;
+}
+
+.cs-login-main .cs-register-form {
+  margin-top: 0 !important;
+}
+.cs-login-main .cs-register-form form {
+  height: 950px;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 20px 0 40px 80px;
+  justify-content: flex-start;
+}
+.cs-login-main .cs-register-form form::-webkit-scrollbar {
+  width: 0;
+}
+
+.cs-check-wrapper {
+  display: flex;
+  gap: 5px;
+}
+
+.cs-product-result-main {
+  background: #F6F3F3;
+  padding: 15px 0 15px 15px;
+}
+.cs-product-result-main .cs-other-list {
+  display: none;
+}
+.cs-product-result-main .cs-other-list.active {
+  display: block;
+}
+.cs-product-result-main .cs-product-result-content {
+  display: flex;
+  justify-content: space-between;
+}
+.cs-product-result-main .cs-product-result-content .cs-product-list {
+  margin-top: 30px;
+}
+.cs-product-result-main .cs-product-result-content .cs-product-list .cs-product-piece-table {
+  background-color: #ffffff;
+  margin-top: 20px;
+  height: 300px;
+  overflow: auto;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.cs-product-result-main .cs-product-result-content .cs-product-list .cs-product-piece-table::-webkit-scrollbar {
+  width: 0;
+}
+.cs-product-result-main .cs-product-result-content .cs-product-list .cs-product-piece-table table tr:last-child td {
+  border-bottom: none !important;
+}
+.cs-product-result-main .cs-product-result-content .cs-product-list .cs-product-piece-table table img {
+  max-width: 85px;
+  height: 55px;
+  object-fit: cover;
+}
+.cs-product-result-main .cs-product-result-content .cs-product-list .cs-product-piece-table table > :not(caption) > * > * {
+  vertical-align: middle;
+  border-bottom: 0.5px solid #707070;
+}
+.cs-product-result-main .cs-product-result-content .cs-product-list .cs-product-piece-table table .cs-table-desc {
+  max-width: 180px;
+  display: block;
+}
+.cs-product-result-main .cs-product-result-content .cs-product-list .cs-product-piece-table table .cs-p-response {
+  font-weight: 700 !important;
+}
+.cs-product-result-main .cs-title-1 {
+  color: #242424;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+  padding: 5px 10px;
+  background: transparent;
+  border: none;
+}
+.cs-product-result-main .cs-title-1 i {
+  font-size: 15px;
+  margin-right: 5px;
+}
+.cs-product-result-main .cs-p-response {
+  color: #707070;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.cs-product-result-main .cs-result-product {
+  background: #ffffff;
+  padding: 30px 15px;
+  display: flex;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  gap: 30px;
+}
+.cs-product-result-main .cs-result-product .cs-p-title {
+  color: #242424;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 23px;
+  align-self: flex-start;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.cs-product-result-main .cs-result-product .cs-read-more {
+  display: flex;
+  color: #2B73AC;
+  align-items: center;
+}
+.cs-product-result-main .cs-result-product .cs-read-more a {
+  color: #2B73AC;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  text-decoration-line: underline;
+  text-transform: capitalize;
+}
+.cs-product-result-main .cs-result-product .cs-read-more i {
+  font-size: 20px;
+  text-decoration-line: none !important;
+}
+.cs-product-result-main .cs-result-product .cs-image-area {
+  border-right: 0.5px solid #707070;
+  padding-left: 5px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cs-product-result-main .cs-result-product .cs-image-area img {
+  max-width: 300px;
+  width: 100%;
+  height: 215px;
+  object-fit: cover;
+}
+.cs-product-result-main .cs-result-product .cs-product-list {
+  width: 60%;
+  flex: 2;
+}
+.cs-product-result-main .cs-result-product .cs-product-list .cs-duo-element {
+  display: flex;
+  justify-content: space-between;
+}
+.cs-product-result-main .cs-left-area {
+  width: 70%;
+}
+.cs-product-result-main .cs-save-downl-area {
+  width: 28%;
+  background: #ffffff;
+}
+.cs-product-result-main .cs-save-downl-area .cs-btn-type-1 {
+  opacity: 0.6 !important;
+  pointer-events: none !important;
+  transition: all 0.4s;
+}
+.cs-product-result-main .cs-save-downl-area .cs-btn-type-1.active {
+  opacity: 1 !important;
+  pointer-events: visible !important;
+  transition: all 0.4s;
+}
+.cs-product-result-main .cs-save-downl-area .cs-sec-1 {
+  display: block;
+}
+.cs-product-result-main .cs-save-downl-area .cs-sec-1.deactive {
+  display: none;
+}
+.cs-product-result-main .cs-save-downl-area .cs-sec-2, .cs-product-result-main .cs-save-downl-area .cs-sec-3, .cs-product-result-main .cs-save-downl-area .cs-sec-4 {
+  display: none;
+}
+.cs-product-result-main .cs-save-downl-area .cs-sec-2.active, .cs-product-result-main .cs-save-downl-area .cs-sec-3.active, .cs-product-result-main .cs-save-downl-area .cs-sec-4.active {
+  display: block;
+}
+.cs-product-result-main .cs-save-downl-area .cs-sec-2 .cs-body, .cs-product-result-main .cs-save-downl-area .cs-sec-3 .cs-body, .cs-product-result-main .cs-save-downl-area .cs-sec-4 .cs-body {
+  padding: 10px;
+}
+.cs-product-result-main .cs-save-downl-area .cs-sec-2 .cs-body .cs-info, .cs-product-result-main .cs-save-downl-area .cs-sec-3 .cs-body .cs-info, .cs-product-result-main .cs-save-downl-area .cs-sec-4 .cs-body .cs-info {
+  font-size: 14px;
+  line-height: 22px;
+  color: #242424;
+  margin: 0;
+}
+.cs-product-result-main .cs-save-downl-area .cs-sec-2 .cs-body .cs-radio-area, .cs-product-result-main .cs-save-downl-area .cs-sec-3 .cs-body .cs-radio-area, .cs-product-result-main .cs-save-downl-area .cs-sec-4 .cs-body .cs-radio-area {
+  max-height: 150px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.cs-product-result-main .cs-save-downl-area .cs-sec-2 .cs-body .cs-radio-area::-webkit-scrollbar, .cs-product-result-main .cs-save-downl-area .cs-sec-3 .cs-body .cs-radio-area::-webkit-scrollbar, .cs-product-result-main .cs-save-downl-area .cs-sec-4 .cs-body .cs-radio-area::-webkit-scrollbar {
+  width: 0;
+}
+.cs-product-result-main .cs-save-downl-area .cs-sec-2 .cs-body .form-check, .cs-product-result-main .cs-save-downl-area .cs-sec-3 .cs-body .form-check, .cs-product-result-main .cs-save-downl-area .cs-sec-4 .cs-body .form-check {
+  margin-bottom: 8px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-top: 10px;
+}
+.cs-product-result-main .cs-save-downl-area .cs-sec-2 .cs-body .form-check-input:checked, .cs-product-result-main .cs-save-downl-area .cs-sec-3 .cs-body .form-check-input:checked, .cs-product-result-main .cs-save-downl-area .cs-sec-4 .cs-body .form-check-input:checked {
+  background-color: #E20612;
+  width: 24px;
+  height: 24px;
+  border-color: #E20612;
+  box-shadow: none;
+}
+.cs-product-result-main .cs-save-downl-area .cs-sec-2 .cs-body label, .cs-product-result-main .cs-save-downl-area .cs-sec-3 .cs-body label, .cs-product-result-main .cs-save-downl-area .cs-sec-4 .cs-body label {
+  cursor: pointer;
+  color: #242424;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  text-transform: capitalize;
+}
+.cs-product-result-main .cs-save-downl-area .cs-sec-2 .cs-body .form-check-input[type=radio], .cs-product-result-main .cs-save-downl-area .cs-sec-3 .cs-body .form-check-input[type=radio], .cs-product-result-main .cs-save-downl-area .cs-sec-4 .cs-body .form-check-input[type=radio] {
+  width: 24px;
+  height: 24px;
+}
+.cs-product-result-main .cs-save-downl-area .cs-desc-2 {
+  border: none;
+  background: #ffffff;
+  border-top: 0.5px solid #707070;
+  border-bottom: 0.5px solid #707070;
+  font-size: 14px;
+  line-height: 22px;
+  color: #242424;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: start;
+}
+.cs-product-result-main .cs-save-downl-area .cs-desc-2 i {
+  color: #E20612;
+  margin-right: 10px;
+}
+
+#accordionProduct {
+  border-top: 0.5px solid #707070;
+}
+#accordionProduct .accordion-item {
+  border: none;
+  border-radius: 0;
+  border-bottom: 0.5px solid #707070;
+}
+#accordionProduct .accordion-button {
+  border-radius: 0;
+}
+#accordionProduct .accordion-button:focus {
+  box-shadow: none;
+}
+#accordionProduct .accordion-button:not(.collapsed) {
+  color: #242424;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: capitalize;
+  box-shadow: none;
+  border: none;
+  background-color: #F7F7F7;
+}
+#accordionProduct .accordion-body {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: #F7F7F7;
+}
+#accordionProduct .accordion-body .form-check-label {
+  font-size: 14px;
+  color: #242424;
+}
+#accordionProduct .accordion-body input[type=checkbox] {
+  box-shadow: none;
+  user-select: none !important;
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border: 1px solid #E20612;
+}
+#accordionProduct .accordion-body input[type=checkbox]:checked {
+  background-color: #E20612;
+  border: 1px solid #E20612;
+}
+
+.cs-profile-modal {
+  position: absolute;
+  right: 0;
+  width: 380px;
+  height: 950px;
+  background: #ffffff;
+  box-shadow: 0px 64px 144px -36px rgba(112, 112, 112, 0.71);
+  z-index: 1051;
+  display: none;
+}
+.cs-profile-modal .cs-btn-type-1 {
+  pointer-events: none;
+  opacity: 0.6;
+  user-select: none;
+  margin-top: 40px;
+  padding: 20px;
+}
+.cs-profile-modal .cs-btn-type-1.active {
+  opacity: 1;
+  pointer-events: visible;
+}
+.cs-profile-modal .accordion-item {
+  border-radius: 0;
+}
+.cs-profile-modal .cs-form-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  position: relative;
+}
+.cs-profile-modal .cs-form-item .icon-eye-close {
+  cursor: pointer;
+}
+.cs-profile-modal .cs-form-item .icon-eye-open {
+  font-size: 10px;
+  cursor: pointer;
+}
+.cs-profile-modal .cs-form-item i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+}
+.cs-profile-modal .cs-form-item label {
+  color: #242424;
+  font-size: 11px;
+  line-height: 19px;
+}
+.cs-profile-modal .cs-form-item input {
+  border: none;
+  border-bottom: 0.5px solid #707070;
+  padding: 5px 10px;
+}
+.cs-profile-modal .cs-form-item input:focus {
+  border: none;
+  border-bottom: 0.5px solid #707070;
+  box-shadow: none;
+  outline: none;
+}
+.cs-profile-modal .accordion-button {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: #F6F3F3;
+  border-radius: 0 !important;
+}
+.cs-profile-modal .accordion-button:focus {
+  box-shadow: none;
+  outline: none;
+}
+.cs-profile-modal .accordion-button p {
+  margin: 0;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: #242424;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.cs-profile-modal .accordion-button p i {
+  color: #E20612;
+}
+.cs-profile-modal .cs-footer {
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+}
+.cs-profile-modal .cs-footer i {
+  color: #E20612;
+  font-size: 18px;
+}
+.cs-profile-modal .cs-footer .cs-logout-btn {
+  margin: 0;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: #242424;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  width: 100%;
+}
+.cs-profile-modal .cs-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid #B8B7B7;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.cs-profile-modal .cs-header .cs-pp-close-btn i {
+  font-size: 22px;
+  color: #242424;
+}
+.cs-profile-modal .cs-header .cs-title {
+  color: #242424;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  margin: 0;
+}
+
+.cs-form-check-area div {
+  display: flex;
+  gap: 5px;
+}
+.cs-form-check-area label {
+  flex: 1;
+  color: #707070;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.cs-form-check-area input[type=checkbox] {
+  border: 1px solid #E20612;
+  box-shadow: none;
+  user-select: none !important;
+  width: 16px;
+  height: 16px;
+}
+.cs-form-check-area input[type=checkbox]:checked {
+  background-color: #E20612;
+  border: 1px solid #E20612;
+  box-shadow: none;
+}
+
+.cs-modal-backdrop {
+  background: none;
+  position: relative;
+}
+.cs-modal-backdrop.active {
+  position: fixed;
+  top: 95px;
+  left: 0;
+  z-index: 1050;
+  width: 100vw;
+  height: calc(100vh - 95px);
+  background-color: rgba(0, 0, 0, 0.5058823529);
+}
+
+.cs-add-project-modal {
+  display: none;
+  position: absolute;
+  top: 42px;
+  padding-top: 10px;
+  background: #ffffff;
+  right: 10px;
+  width: 300px;
+  height: 450px;
+  z-index: 3;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.cs-add-project-modal.headopen {
+  top: 95px;
+}
+.cs-add-project-modal.headopen2 {
+  top: -18px;
+}
+.cs-add-project-modal #cs-save-btn {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.cs-add-project-modal #cs-save-btn.active {
+  opacity: 1;
+  pointer-events: visible;
+}
+.cs-add-project-modal .cs-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid #707070;
+  padding: 0 10px 10px 10px;
+}
+.cs-add-project-modal .cs-header .cs-title-2 {
+  color: #242424;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.cs-add-project-modal .cs-body {
+  padding: 10px 10px 20px 10px;
+  border-bottom: 0.5px solid #707070;
+}
+.cs-add-project-modal .cs-body .cs-radio-area {
+  max-height: 150px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.cs-add-project-modal .cs-body .cs-radio-area::-webkit-scrollbar {
+  width: 0;
+}
+.cs-add-project-modal .cs-body .form-check {
+  margin-bottom: 8px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.cs-add-project-modal .cs-body .form-check-input:checked {
+  background-color: #E20612;
+  width: 24px;
+  height: 24px;
+  border-color: #E20612;
+  box-shadow: none;
+}
+.cs-add-project-modal .cs-body label {
+  cursor: pointer;
+  color: #242424;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  text-transform: capitalize;
+}
+.cs-add-project-modal .cs-body .form-check-input[type=radio] {
+  width: 24px;
+  height: 24px;
+}
+.cs-add-project-modal .cs-footer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.cs-add-project-modal .cs-modal-2 {
+  display: none;
+}
+.cs-add-project-modal .cs-modal-2 .cs-body {
+  border: none;
+}
+
+.cs-add-projects-area {
+  position: relative;
+}
+.cs-add-projects-area .cs-add-btn {
+  color: #242424;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  text-transform: capitalize;
+}
+
+#cs-close-btn i {
+  font-size: 22px;
+  color: #242424;
 }/*# sourceMappingURL=main.css.map */
