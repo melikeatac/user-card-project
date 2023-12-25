@@ -16,7 +16,7 @@ $(document).ready(function () {
         const containInput = $(this).closest('.cs-pass-main').find('input').attr('id');
         togglePasswordVisibility(clickedIcon, containInput);
     })
-    $('.cs-main-radiogroup .form-check-change').on('change', function () {
+    $('.cs-step-main-2 .cs-main-radiogroup .form-check-change').on('change', function () {
         $('#cs-continue-btn-1').addClass('active')
         if ($(this).find('.form-check-input').prop('checked')) {
             $('.change-area-label').removeClass('active3')
@@ -32,7 +32,6 @@ $(document).ready(function () {
         var allFilled = true;
         var allSelectsExist = form.find('select').length > 0;
         var allSelects = true;
-        console.log("trueee")
         if (allSelectsExist) {
             form.find('select').each(function () {
                 if (!$(this).val()) {
@@ -306,5 +305,19 @@ $(document).ready(function () {
         $('.cs-modal-backdrop').removeClass('active')
     })
 
+    $('.cs-radio-area').each(function () {
+        var currentArea = $(this);
+    
+        currentArea.find('input[type="radio"], input[type="checkbox"], input').on('input', function () {
+    
+            var checkedInputs = currentArea.find('input[type="radio"]:checked, input[type="checkbox"]:checked');
+            var textInputs = currentArea.find('input').filter(function () {
+                return $(this).val().trim() !== '';
+            });
+    
+            currentArea.closest('.cs-sec-main').find('.cs-btn-type-1').toggleClass('active', checkedInputs.length > 0 || textInputs.length > 0);
+        });
+    });
+    
 
 })

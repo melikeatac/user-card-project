@@ -43,6 +43,7 @@ $(document).ready(function () {
 
     // Files kısmı ekstra butonların eklenmesi
     function filesBtnGroupVisible() {
+        $('.cs-files-btn-group').removeClass('active');
 
         function handleCheckButton(boxItem, boxButton) {
             var allChecked = true;
@@ -70,16 +71,15 @@ $(document).ready(function () {
                 handleCheckButton('#transfer', '.cs-transfer-btn-group');
             });
         }
-        else {
-            $(boxButton).removeClass('active');
-        }
+        // else {
+        //     $(boxButton).removeClass('active');
+        // }
     }
     function updateButtonVisibility() {
         var activeTabIndex = $('#report-tab .nav-link.active').parent().index();
         var tabCount = $('#report-tab li').length;
         var activeTabIndex2 = $('#change-tab .nav-link.active').parent().index();
         var tabCount2 = $('#change-tab li').length;
-
         $('#cs-back-btn').css('display', activeTabIndex === 0 ? 'none' : 'inline-block');
         $('#cs-next-btn').css('display', activeTabIndex === tabCount - 1 ? 'none' : 'inline-block');
         $('#cs-back-btn-2').css('display', activeTabIndex2 === 0 ? 'none' : 'inline-block');
@@ -105,6 +105,7 @@ $(document).ready(function () {
             $('#report-tab li:eq(' + (activeTabIndex - 1) + ') button').tab('show');
         }
         updateButtonVisibility();
+        filesBtnGroupVisible();
     });
 
     $('#cs-next-btn').click(function () {
@@ -113,6 +114,7 @@ $(document).ready(function () {
         if (activeTabIndex < tabCount - 1) {
             $('#report-tab li:eq(' + (activeTabIndex + 1) + ') button').tab('show');
         }
+        filesBtnGroupVisible();
         updateButtonVisibility();
     });
 
@@ -233,6 +235,7 @@ $(document).ready(function () {
     });
 
     $('#change-tab button').click(function () {
+        updateButtonVisibility();
         var clickedButtonId = $(this).attr('controls1');
         var numericValue1 = clickedButtonId.split('-')[2];
         $('.cs-step-main .cs-main-radiogroup .form-check-change').each(function () {

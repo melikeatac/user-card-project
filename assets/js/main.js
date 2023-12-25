@@ -38,6 +38,10 @@ goTopButton1.bind('click', function () {
 $(document).ready(function () {
     var languageArea = $('.cs-language-area');
     var iconGlobal = $('.cs-header-list .icon-global');
+    $('.cs-header-list .cs-list-item').on('click', function () {
+        $('.cs-header-list .cs-list-item').removeClass('active');
+        $(this).addClass('active');
+    })
 
     iconGlobal.on('click', function (event) {
         event.stopPropagation();
@@ -68,5 +72,41 @@ $(document).ready(function () {
         $('.cs-add-project-modal').removeClass('headopen');
 
     })
+
+    
+    function inputVal() {
+        const combinedVal = Array.from($('.cs-content-text-input .cs-num-input')).map((input, index) => {
+            const label = ["Width", "Depth", "Height"][index] || `Input ${index + 1}`;
+            const value = $(input).val().trim();
+            return value !== "" ? `${label}: ${value}` : null;
+        }).filter(Boolean).join(" ");
+
+        const isComplete = $('.cs-content-text-input .cs-num-input').toArray().every(input => $(input).val().trim() !== "");
+
+        if (isComplete) {
+            $('.cs-info-select-2').text(combinedVal);
+        }
+    }
+    $('.cs-content-text-input .cs-num-input').on('input', function () {
+        inputVal();
+        const enterValue = parseInt($(this).val());
+        var maxVal = parseInt($(this).attr('maxValue'));
+        if (enterValue > maxVal) {
+            $(this).closest('.cs-content-text-input ').find('.cs-small-info').addClass('active');
+            $('#cs-next-btn-3').addClass('deactive');
+        }
+        else {
+            $(this).closest('.cs-content-text-input ').find('.cs-small-info').removeClass('active');
+            $('#cs-next-btn-3').removeClass('deactive');
+        }
+    });
+    inputVal();
+
+    $('.cs-num').keypress(function (event) {
+        var keyCode = event.which;
+        if (keyCode < 48 || keyCode > 57) {
+            event.preventDefault();
+        }
+    });
 
 });

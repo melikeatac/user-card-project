@@ -380,7 +380,7 @@ button
         height: 100vh
         overflow: hidden
         overflow-y: auto
-        height: calc(100vh - 95px)
+        height: calc(100vh - 155px)
         &::-webkit-scrollbar
             width: 0
         .cs-first-accordion
@@ -633,6 +633,9 @@ button
                     max-width: 180px
                     padding-left: 10px
                     width: 100%
+                    display: none
+                    &.active
+                        display: flex
 
             .cs-pic-img-area
                 display: flex
@@ -680,7 +683,7 @@ button
                     font-size: 18px
                     line-height: 26px
                     color: variables.$textColor1
-                .cs-info-select
+                .cs-info-select,.cs-info-select-2
                     font-size: 18px
                     line-height: 26px
                     color: variables.$bgColor1
@@ -729,27 +732,6 @@ button
                     border-bottom-right-radius: 35.5px
                     border: none
                     border-left: 0.5px solid variables.$textColor2
-
-.select2-container--default
-    .select2-results__option--highlighted
-        &.select2-results__option--selectable
-            font-size: 16px !important
-            background: variables.$primaryColor
-    .select2-results__option--selected,.select2-results__option--selectable
-        font-size: 16px !important
-    .select2-selection__rendered
-        font-size: 16px !important
-        line-height: 50px !important
-        color: variables.$textColor1 !important
-    .select2-selection--single
-        border: 0.5px solid variables.$textColor2 !important
-        height: 55px
-        border-radius: 27px
-        color: variables.$textColor2
-        .select2-selection__arrow
-            top: 50%
-            right: 0
-            transform: translate(0, -50%)
 .cs-container-1
     padding: 0 200px 0 330px
     margin: 0 auto
@@ -1481,6 +1463,10 @@ button
                 flex-wrap: wrap
         .change-area-label
             border: 1px solid transparent
+            &.active3
+                border: 1px solid variables.$primaryColor !important
+                background: variables.$whiteColor
+                box-shadow: 0px 3px 10px 0px rgba(36, 36, 36, 0.15)
 .cs-product-configurator
     #cs-next-btn-4,#cs-next-btn-5
         display: none
@@ -1699,6 +1685,7 @@ button
         line-height: 24px
         border-radius: 60px
         border: 0.5px solid variables.$textColor2
+        padding: 1rem .75rem
         &:focus-visible, &:focus
             box-shadow: none
             border: 0.5px solid variables.$textColor2
@@ -1894,8 +1881,8 @@ button
         width: 28%
         background: variables.$whiteColor
         .cs-btn-type-1
-            opacity: 0.6 !important
-            pointer-events: none !important
+            opacity: 0.6
+            pointer-events: none 
             transition: all .4s
             &.active
                 opacity: 1 !important
@@ -2216,3 +2203,29 @@ button
     i
         font-size: 22px
         color: variables.$textColor1
+
+.select2-container--default 
+    .select2-selection--single 
+        .select2-selection__rendered
+            font-size: 12px
+#cs-next-btn-3
+    opacity: 1
+    pointer-events: visible
+    &.deactive
+        opacity: 0.6
+        pointer-events: none
+    
+.iti--separate-dial-code 
+    .iti__selected-flag
+        box-shadow: none !important
+    .iti__selected-dial-code
+        color: variables.$textColor2
+.iti--allow-dropdown 
+    width: 100%
+    .iti__flag-container
+        &:hover 
+            .iti__selected-flag
+                background: none
+.iti__flag,.iti__flag-box
+    display: none !important
+

@@ -439,7 +439,7 @@ button:hover, button:focus {
   height: 100vh;
   overflow: hidden;
   overflow-y: auto;
-  height: calc(100vh - 95px);
+  height: calc(100vh - 155px);
 }
 .cs-module-configurator .cs-left-side-main::-webkit-scrollbar, .cs-product-configurator .cs-left-side-main::-webkit-scrollbar {
   width: 0;
@@ -731,6 +731,10 @@ button:hover, button:focus {
   max-width: 180px;
   padding-left: 10px;
   width: 100%;
+  display: none;
+}
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-content-text-input .cs-small-info.active, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-content-text-input .cs-small-info.active {
+  display: flex;
 }
 .cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-pic-img-area, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-pic-img-area {
   display: flex;
@@ -786,7 +790,7 @@ button:hover, button:focus {
   line-height: 26px;
   color: #242424;
 }
-.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-head .cs-info-select, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-head .cs-info-select {
+.cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-head .cs-info-select, .cs-module-configurator .cs-right-side-main-2 .cs-content-main .cs-head .cs-info-select-2, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-head .cs-info-select, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-head .cs-info-select-2 {
   font-size: 18px;
   line-height: 26px;
   color: #E20612;
@@ -844,30 +848,6 @@ button:hover, button:focus {
   border-bottom-right-radius: 35.5px;
   border: none;
   border-left: 0.5px solid #707070;
-}
-
-.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-  font-size: 16px !important;
-  background: #2B73AC;
-}
-.select2-container--default .select2-results__option--selected, .select2-container--default .select2-results__option--selectable {
-  font-size: 16px !important;
-}
-.select2-container--default .select2-selection__rendered {
-  font-size: 16px !important;
-  line-height: 50px !important;
-  color: #242424 !important;
-}
-.select2-container--default .select2-selection--single {
-  border: 0.5px solid #707070 !important;
-  height: 55px;
-  border-radius: 27px;
-  color: #707070;
-}
-.select2-container--default .select2-selection--single .select2-selection__arrow {
-  top: 50%;
-  right: 0;
-  transform: translate(0, -50%);
 }
 
 .cs-container-1 {
@@ -1755,6 +1735,11 @@ button:hover, button:focus {
 #productConModal .cs-step-main-2 .change-area-label {
   border: 1px solid transparent;
 }
+#productConModal .cs-step-main-2 .change-area-label.active3 {
+  border: 1px solid #2B73AC !important;
+  background: #ffffff;
+  box-shadow: 0px 3px 10px 0px rgba(36, 36, 36, 0.15);
+}
 
 .cs-product-configurator #cs-next-btn-4, .cs-product-configurator #cs-next-btn-5 {
   display: none;
@@ -2019,6 +2004,7 @@ button:hover, button:focus {
   line-height: 24px;
   border-radius: 60px;
   border: 0.5px solid #707070;
+  padding: 1rem 0.75rem;
 }
 .form-floating input.cs-text-input:focus-visible, .form-floating input.cs-text-input:focus {
   box-shadow: none;
@@ -2254,8 +2240,8 @@ button:hover, button:focus {
   background: #ffffff;
 }
 .cs-product-result-main .cs-save-downl-area .cs-btn-type-1 {
-  opacity: 0.6 !important;
-  pointer-events: none !important;
+  opacity: 0.6;
+  pointer-events: none;
   transition: all 0.4s;
 }
 .cs-product-result-main .cs-save-downl-area .cs-btn-type-1.active {
@@ -2649,4 +2635,35 @@ button:hover, button:focus {
 #cs-close-btn i {
   font-size: 22px;
   color: #242424;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  font-size: 12px;
+}
+
+#cs-next-btn-3 {
+  opacity: 1;
+  pointer-events: visible;
+}
+#cs-next-btn-3.deactive {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+  box-shadow: none !important;
+}
+.iti--separate-dial-code .iti__selected-dial-code {
+  color: #707070;
+}
+
+.iti--allow-dropdown {
+  width: 100%;
+}
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+  background: none;
+}
+
+.iti__flag, .iti__flag-box {
+  display: none !important;
 }/*# sourceMappingURL=main.css.map */
