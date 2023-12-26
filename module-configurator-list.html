@@ -83,7 +83,7 @@
                             <h2 class="accordion-header" id="ppTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#ppcollapseTwo" aria-expanded="false" aria-controls="ppcollapseTwo">
-                                    <p><i class="icon-login"></i>Company Information</p>
+                                    <p><i class="icon-company"></i>Company Information</p>
                                 </button>
                             </h2>
                             <div id="ppcollapseTwo" class="accordion-collapse collapse" aria-labelledby="ppTwo"
@@ -105,7 +105,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#ppcollapseThree" aria-expanded="false"
                                     aria-controls="ppcollapseThree">
-                                    <p><i class="icon-login"></i>Password Settings</p>
+                                    <p><i class="icon-lock"></i>Password Settings</p>
 
                                 </button>
                             </h2>
@@ -170,11 +170,11 @@
             <form>
                 <div class="cs-modal-1">
                     <div class="cs-header">
-                        <span class="cs-title-2">Save</span>
+                        <span class="cs-title-2">My Projects</span>
                         <a href="javascript:void(0)" id="cs-close-btn"><i class="icon-close"></i></a>
                     </div>
-                    <div class="cs-body">
-                        <p class="cs-info">Please create new project or update
+                    <div class="cs-body" style="border-bottom: none;">
+                        <p class="cs-info mb-4">Please create new project or update
                             existing</p>
                         <div class="cs-radio-area">
                             <div class="form-check">
@@ -199,9 +199,10 @@
                                 </label>
                             </div>
                         </div>
+                        <a href="" class="cs-delete-folder">Delete Selected Folder</a>
                     </div>
                     <div class="cs-footer">
-                        <button class="cs-btn-type-1 m-0" id="cs-save-btn">Save</button>
+                        <button class="cs-btn-type-1 m-0" id="cs-save-btn">Open Selected Folder</button>
                         <button class="cs-btn-type-1-border m-0" id="cs-newproject-btn">Create New Project</button>
                     </div>
                 </div>
@@ -214,7 +215,7 @@
                         <p class="cs-info">Please enter folder name</p>
                         <div class="cs-input-area">
                             <label for="folder-name" class="cs-input-info">Folder Name</label>
-                            <input id="folder-name" placeholder="Zeyns Folder">
+                            <input id="folder-name" value="Folder 5">
                         </div>
                     </div>
                     <div class="cs-footer">
@@ -246,7 +247,7 @@
                 <div class="right-area-1">
                     <h6 class="cs-main-title">Module Configurator</h6>
                     <a href="javascript:void(0)" class="cs-add-btn mb-2" id="cs-mobile-product-menu">
-                        <i class="icon-positive"></i>
+                        <i class="icon-hamburger"></i>
                     </a>
                     <div class="cs-content-main" step="1">
                         <div class="cs-head">

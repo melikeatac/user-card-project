@@ -150,16 +150,17 @@
   .cs-top-bar .cs-top-bar-content .cs-title-1 {
     font-size: 17px;
   }
-  .cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal {
+  .cs-add-project-modal {
     z-index: 2;
     width: 250px;
     height: 410px;
   }
-  .cs-top-bar .cs-top-bar-content .cs-add-projects-area .cs-add-project-modal .cs-header .cs-title-2 {
+  .cs-add-project-modal .cs-header .cs-title-2 {
     font-size: 16px;
   }
   #cs-mobile-menu-2, #cs-mobile-menu-3, #cs-mobile-product-menu {
     display: flex;
+    width: fit-content;
   }
   .cs-lightgallery-1 #lightgallery-module-1 li, .cs-lightgallery-1 #lightgallery-module-2 li, .cs-lightgallery-2 #lightgallery-module-1 li, .cs-lightgallery-2 #lightgallery-module-2 li {
     flex: 0 0 50%;
@@ -250,6 +251,7 @@
   }
   #reportModal #report-tab {
     border-radius: 6px;
+    justify-content: center;
   }
   #reportModal #report-tab .nav-item .nav-link {
     font-size: 14px;
@@ -270,6 +272,8 @@
   }
   .cs-module-configurator .cs-right-side-main .cs-button-list-mobile {
     display: flex !important;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .cs-module-configurator .cs-right-side-main .cs-button-list-mobile .btn-gray {
     min-width: 50px;
@@ -376,6 +380,29 @@
   }
   .cs-product-piece-table table {
     width: 767px;
+  }
+  .cs-transfer-btn-group, .cs-files-btn-group {
+    width: 130px !important;
+    height: auto;
+  }
+  .cs-transfer-btn-group button, .cs-files-btn-group button {
+    font-size: 12px;
+    height: auto;
+    padding: 6px 20px;
+    margin: 0;
+  }
+  .modal-footer #cs-back-btn, .modal-footer #cs-back-btn-2, .modal-footer .cs-primary-border-btn, .modal-footer #cs-next-btn, .modal-footer #cs-next-btn-2, .modal-footer .cs-primary-btn, .modal-footer #cs-continue-btn-1 {
+    font-size: 12px;
+    margin: 0;
+  }
+  .cs-files-transfer-main .cs-g-box-1 .cs-butons-list .cs-checkbtn {
+    font-size: 13px;
+  }
+  .cs-cutlist-main .table-bordered > :not(caption) > * > * {
+    font-size: 13px;
+  }
+  #changeModal .modal-footer {
+    gap: 5px;
   }
 }
 @media (min-width: 500px) {

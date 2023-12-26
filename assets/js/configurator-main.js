@@ -36,18 +36,15 @@ $(document).ready(function () {
         const phoneValue = form.find('#floatPhone-1').val()?.trim();
         var phoneRegex = /^\(\d{3}\) \d{3} \d{2} \d{2}$/;
         var isValidPhone = phoneRegex.test(phoneValue);
-        console.log(phoneValue);
         if (phoneValue == null) {
             isValidPhone = true;
         }
         var enteredEmail = form.find(".floatingEmail-1").val()?.trim();
         var emailRegex = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
         var isValidEmail = emailRegex.test(enteredEmail);
-        console.log(enteredEmail);
         if (enteredEmail == null) {
             isValidEmail = true;
         }
-        console.log(isValidEmail, isValidPhone);
         if (allSelectsExist) {
             form.find('select').each(function () {
                 if (!$(this).val()) {
@@ -72,7 +69,6 @@ $(document).ready(function () {
         });
         if (allFilled && (allSelectsExist ? allSelects : true) && isValidPhone && isValidEmail) {
             form.find('.cs-btn-type-1').addClass("active");
-            console.log(allFilled)
         } else {
             form.find('.cs-btn-type-1').removeClass("active");
         }
@@ -216,6 +212,10 @@ $(document).ready(function () {
                 $('#cs-next-btn-5').addClass('active');
                 $('#cs-next-btn-4').addClass('active');
                 $('#cs-next-btn-3').hide();
+
+                // $('.cs-left-area').addClass('active');
+                // $(".cs-content-main").hide();
+                // $('.right-area-1').show();
             }
         })
     });

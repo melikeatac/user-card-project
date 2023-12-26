@@ -109,11 +109,12 @@ button
     display: none
     margin-top: 5px
     i
-        font-size: 16px
-        padding: 4px
-        border-radius: 50%
+        font-size: 14px
+        padding: 6px 4px
+        border-radius: 5px
         color: variables.$bgColor1
-        border: 2px solid variables.$bgColor1
+        background: variables.$bgColor12
+        border: 2px solid variables.$bgColor12
 .select2-container--default
     .select2-selection--single
         .select2-selection__placeholder
@@ -838,6 +839,7 @@ button
         display: flex
         gap: 20px
         align-items: center
+        flex-wrap: wrap
         &.deactive
             display: none
         .cs-inc-img-2
@@ -1101,6 +1103,9 @@ button
                     line-height: 26px
                     font-weight: variables.$fontWeightBold
                     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+                &.active2
+                    opacity: 0.6
+                    pointer-events: none
 #document-media-acc
     .accordion-button
         &:not(.collapsed)
@@ -1877,6 +1882,12 @@ button
                 justify-content: space-between
     .cs-left-area
         width: 70%
+        &.active
+            height: calc(100vh - 350px)
+            overflow: hidden
+            overflow-y: auto
+            &::-webkit-scrollbar
+                width: 0
     .cs-save-downl-area
         width: 28%
         background: variables.$whiteColor
@@ -2126,7 +2137,7 @@ button
     padding-top: 10px
     background: variables.$whiteColor
     right: 10px
-    width: 300px
+    width: 340px
     height: 450px
     z-index: 3
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
@@ -2229,3 +2240,22 @@ button
 .iti__flag,.iti__flag-box
     display: none !important
 
+
+.cs-delete-folder
+    color: variables.$bgColor1
+    font-size: 14px
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+    text-decoration-line: underline
+    margin-top: 15px
+    &:hover
+        color: variables.$bgColor1
+// .cs-product-configurator 
+//     .cs-right-side-main-2 
+//         .cs-content-main
+//             overflow: hidden
+//             overflow-y: hidden
+//         .right-area-1
+//             overflow: hidden
+//             overflow-y: hidden

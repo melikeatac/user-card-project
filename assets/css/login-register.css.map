@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["login-register.sass","_variables.sass"],"names":[],"mappings":"AAIQ;EACI;EACA,YCJG;;ADKX;EACI;;AACJ;EACI;EACA;EACA;;AACJ;EACI;EACA;EACA;EACA;;AACA;EACI;EACA;EACA","file":"login-register.css"}
+{"version":3,"sourceRoot":"","sources":["login-register.sass","_variables.sass"],"names":[],"mappings":"AAIQ;EACI;EACA,YCJG;;ADKX;EACI;;AACJ;EACI;EACA;EACA;;AACJ;EACI;EACA;EACA;EACA,OCCK;;ADAL;EACI;EACA;EACA","file":"login-register.css"}

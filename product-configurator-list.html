@@ -82,7 +82,7 @@
                             <h2 class="accordion-header" id="ppTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#ppcollapseTwo" aria-expanded="false" aria-controls="ppcollapseTwo">
-                                    <p><i class="icon-login"></i>Company Information</p>
+                                    <p><i class="icon-company"></i>Company Information</p>
                                 </button>
                             </h2>
                             <div id="ppcollapseTwo" class="accordion-collapse collapse" aria-labelledby="ppTwo"
@@ -104,7 +104,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#ppcollapseThree" aria-expanded="false"
                                     aria-controls="ppcollapseThree">
-                                    <p><i class="icon-login"></i>Password Settings</p>
+                                    <p><i class="icon-lock"></i>Password Settings</p>
 
                                 </button>
                             </h2>
@@ -166,61 +166,62 @@
         </div>
         <div class="cs-add-project-modal">
             <form>
-              <div class="cs-modal-1">
-                <div class="cs-header">
-                  <span class="cs-title-2">Save</span>
-                  <a href="javascript:void(0)" id="cs-close-btn"><i class="icon-close"></i></a>
-                </div>
-                <div class="cs-body">
-                  <p class="cs-info">Please create new project or update
-                    existing</p>
-                  <div class="cs-radio-area">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios1"
-                        value="option1">
-                      <label class="form-check-label" for="folderRadios1">
-                        Folder Name 1
-                      </label>
+                <div class="cs-modal-1">
+                    <div class="cs-header">
+                        <span class="cs-title-2">My Projects</span>
+                        <a href="javascript:void(0)" id="cs-close-btn"><i class="icon-close"></i></a>
                     </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios2"
-                        value="option2">
-                      <label class="form-check-label" for="folderRadios2">
-                        Folder Name 2
-                      </label>
+                    <div class="cs-body" style="border-bottom: none;">
+                        <p class="cs-info mb-4">Please create new project or update
+                            existing</p>
+                        <div class="cs-radio-area">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios1"
+                                    value="option1">
+                                <label class="form-check-label" for="folderRadios1">
+                                    Folder Name 1
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios2"
+                                    value="option2">
+                                <label class="form-check-label" for="folderRadios2">
+                                    Folder Name 2
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios3"
+                                    value="option3">
+                                <label class="form-check-label" for="folderRadios3">
+                                    Folder Name 3
+                                </label>
+                            </div>
+                        </div>
+                        <a href="" class="cs-delete-folder">Delete Selected Folder</a>
                     </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios3"
-                        value="option3">
-                      <label class="form-check-label" for="folderRadios3">
-                        Folder Name 3
-                      </label>
+                    <div class="cs-footer">
+                        <button class="cs-btn-type-1 m-0" id="cs-save-btn">Open Selected Folder</button>
+                        <button class="cs-btn-type-1-border m-0" id="cs-newproject-btn">Create New Project</button>
                     </div>
-                  </div>
                 </div>
-                <div class="cs-footer">
-                  <button class="cs-btn-type-1 m-0" id="cs-save-btn">Save</button>
-                  <button class="cs-btn-type-1-border m-0" id="cs-newproject-btn">Create New Project</button>
+                <div class="cs-modal-2">
+                    <div class="cs-header">
+                        <a href="javascript:void(0)" id="cs-create-project" class="cs-title-2"><i
+                                class=" icon-arrow-left" style="margin-right: 5px;"></i> Create New Project</a>
+                    </div>
+                    <div class="cs-body">
+                        <p class="cs-info">Please enter folder name</p>
+                        <div class="cs-input-area">
+                            <label for="folder-name" class="cs-input-info">Folder Name</label>
+                            <input id="folder-name" value="Folder 5">
+                        </div>
+                    </div>
+                    <div class="cs-footer">
+                        <button class="cs-btn-type-1 mb-5">Create Folder</button>
+                    </div>
                 </div>
-              </div>
-              <div class="cs-modal-2">
-                <div class="cs-header">
-                  <a href="javascript:void(0)" id="cs-create-project" class="cs-title-2"><i class=" icon-arrow-left"
-                      style="margin-right: 5px;"></i> Create New Project</a>
-                </div>
-                <div class="cs-body">
-                  <p class="cs-info">Please enter folder name</p>
-                  <div class="cs-input-area">
-                    <label for="folder-name" class="cs-input-info">Folder Name</label>
-                    <input id="folder-name" placeholder="Zeyns Folder">
-                  </div>
-                </div>
-                <div class="cs-footer">
-                  <button class="cs-btn-type-1 mb-5">Create Folder</button>
-                </div>
-              </div>
             </form>
-          </div>
+        </div>
         <div class="cs-product-configurator">
             <div class="cs-left-side-main">
                 <button class="cs-btn-type-1"><i class="icon-positive"></i>Yeni Konfigurasyon Oluştur</button>
@@ -264,7 +265,7 @@
                 <div class="right-area-1">
                     <h6 class="cs-main-title">Product Configurator</h6>
                     <a href="javascript:void(0)" class="cs-add-btn mb-2" id="cs-mobile-product-menu">
-                        <i class="icon-positive"></i>
+                        <i class="icon-hamburger"></i>
                     </a>
                     <div class="cs-content-main" step="1">
                         <div class="cs-head">
@@ -813,6 +814,46 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                    <tr>
+                                                        <td><img src="assets/img/other/report-general.png"></td>
+                                                        <td><span class="cs-table-desc">123456</span></td>
+                                                        <td><span class="cs-table-desc">Smart slide full extensıon 500
+                                                                mm 40
+                                                                kg soft close lock fix</span></td>
+                                                        <td><span class="cs-table-desc">4</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="assets/img/other/report-general.png"></td>
+                                                        <td><span class="cs-table-desc">123456</span></td>
+                                                        <td><span class="cs-table-desc">Smart slide full extensıon 500
+                                                                mm 40
+                                                                kg soft close lock fix</span></td>
+                                                        <td><span class="cs-table-desc">4</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="assets/img/other/report-general.png"></td>
+                                                        <td><span class="cs-table-desc">123456</span></td>
+                                                        <td><span class="cs-table-desc">Smart slide full extensıon 500
+                                                                mm 40
+                                                                kg soft close lock fix</span></td>
+                                                        <td><span class="cs-table-desc">4</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="assets/img/other/report-general.png"></td>
+                                                        <td><span class="cs-table-desc">123456</span></td>
+                                                        <td><span class="cs-table-desc">Smart slide full extensıon 500
+                                                                mm 40
+                                                                kg soft close lock fix</span></td>
+                                                        <td><span class="cs-table-desc">4</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="assets/img/other/report-general.png"></td>
+                                                        <td><span class="cs-table-desc">123456</span></td>
+                                                        <td><span class="cs-table-desc">Smart slide full extensıon 500
+                                                                mm 40
+                                                                kg soft close lock fix</span></td>
+                                                        <td><span class="cs-table-desc">4</span></td>
+                                                    </tr>
                                                     <tr>
                                                         <td><img src="assets/img/other/report-general.png"></td>
                                                         <td><span class="cs-table-desc">123456</span></td>

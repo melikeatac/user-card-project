@@ -139,11 +139,12 @@ button:hover, button:focus {
   margin-top: 5px;
 }
 #cs-mobile-menu-2 i, #cs-mobile-menu-3 i, #cs-mobile-product-menu i {
-  font-size: 16px;
-  padding: 4px;
-  border-radius: 50%;
+  font-size: 14px;
+  padding: 6px 4px;
+  border-radius: 5px;
   color: #E20612;
-  border: 2px solid #E20612;
+  background: #D9D9D9;
+  border: 2px solid #D9D9D9;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
@@ -980,6 +981,7 @@ button:hover, button:focus {
   display: flex;
   gap: 20px;
   align-items: center;
+  flex-wrap: wrap;
 }
 .cs-change-content .cs-main-radiogroup.deactive {
   display: none;
@@ -1297,6 +1299,10 @@ button:hover, button:focus {
   line-height: 26px;
   font-weight: 700;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#changeModal #change-tab .nav-item .nav-link.active2 {
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 #document-media-acc .accordion-button:not(.collapsed) {
@@ -2235,6 +2241,14 @@ button:hover, button:focus {
 .cs-product-result-main .cs-left-area {
   width: 70%;
 }
+.cs-product-result-main .cs-left-area.active {
+  height: calc(100vh - 350px);
+  overflow: hidden;
+  overflow-y: auto;
+}
+.cs-product-result-main .cs-left-area.active::-webkit-scrollbar {
+  width: 0;
+}
 .cs-product-result-main .cs-save-downl-area {
   width: 28%;
   background: #ffffff;
@@ -2539,7 +2553,7 @@ button:hover, button:focus {
   padding-top: 10px;
   background: #ffffff;
   right: 10px;
-  width: 300px;
+  width: 340px;
   height: 450px;
   z-index: 3;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -2666,4 +2680,17 @@ button:hover, button:focus {
 
 .iti__flag, .iti__flag-box {
   display: none !important;
+}
+
+.cs-delete-folder {
+  color: #E20612;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration-line: underline;
+  margin-top: 15px;
+}
+.cs-delete-folder:hover {
+  color: #E20612;
 }/*# sourceMappingURL=main.css.map */

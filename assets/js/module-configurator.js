@@ -45,10 +45,21 @@ $(document).ready(function () {
     function filesBtnGroupVisible() {
         $('.cs-files-btn-group').removeClass('active');
 
+        // Tüm cs-g-box-1 lerin en az biiri dolu olsun istenirse aşağıdakii kod açılabilir.
+        // function handleCheckButton(boxItem, boxButton) {
+        //     var allChecked = true;
+        //     $(boxItem + ' .cs-g-box-1').each(function () {
+        //         if ($(this).find('.cs-checkbtn.active').length === 0) {
+        //             allChecked = false;
+        //             return false;
+        //         }
+        //     });
+        //     $(boxButton).toggleClass('active', allChecked);
+        // }
         function handleCheckButton(boxItem, boxButton) {
             var allChecked = true;
-            $(boxItem + ' .cs-g-box-1').each(function () {
-                if ($(this).find('.cs-checkbtn.active').length === 0) {
+            $('.cs-butons-list').each(function () {
+                if ($(boxItem + ' .cs-checkbtn.active').length === 0) {
                     allChecked = false;
                     return false;
                 }
@@ -235,15 +246,18 @@ $(document).ready(function () {
     });
 
     $('#change-tab button').click(function () {
-        updateButtonVisibility();
+        // updateButtonVisibility();
         var clickedButtonId = $(this).attr('controls1');
         var numericValue1 = clickedButtonId.split('-')[2];
         $('.cs-step-main .cs-main-radiogroup .form-check-change').each(function () {
             var numericValue2 = $(this).closest('.cs-step-main').attr('controls1').split('-')[2];
+
+            // console.log(numericValue1,numericValue2)
             if (numericValue2 < numericValue1) {
                 selectedTextInfo($(this));
             }
             if (numericValue2 >= numericValue1) {
+                // console.log(numericValue2)
                 $(this).closest('.cs-step-main').find('.cs-selected-info').text('');
                 $(this).closest('.cs-step-main').find('.cs-head i').removeClass('active');
             }
