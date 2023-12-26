@@ -26,13 +26,19 @@
                         <a href="configurator-main.html" class="cs-list-item active"><i class="icon-main"></i></a>
                         <a href="javascript:void(0)" class="cs-list-item cs-file-icon"><i class="icon-file"></i></a>
                         <a href="javascript:void(0)" class="cs-list-item cs-login-icon"><i class="icon-login"></i></a>
-                        <a href="javascript:void(0)" class="cs-list-item"><i class="icon-global"></i></a>
+                        <a href="javascript:void(0)" class="cs-list-item cs-list-lang" style="border:none !important"><i
+                                class="icon-global"></i><span class="cs-lang-code-text"></span><i
+                                class="icon-arrow-down"></i><i class="icon-arrow-up"></i></a>
                         <div class="cs-language-area">
                             <ul class="cs-language-list">
-                                <li class="cs-language-item"><a href="">Turkish</a></li>
-                                <li class="cs-language-item"><a href="">English</a></li>
-                                <li class="cs-language-item"><a href="">Polish</a></li>
-                                <li class="cs-language-item"><a href="">Deutsch</a></li>
+                                <li class="cs-language-item"><a href="javascript:void(0)" class="cs-link"
+                                        langCode="TR">Turkish</a></li>
+                                <li class="cs-language-item"><a href="javascript:void(0)" class="cs-link"
+                                        langCode="EN">English</a></li>
+                                <li class="cs-language-item"><a href="javascript:void(0)" class="cs-link"
+                                        langCode="PL">Polish</a></li>
+                                <li class="cs-language-item"><a href="javascript:void(0)" class="cs-link"
+                                        langCode="DE">Deutsch</a></li>
                             </ul>
                         </div>
                     </div>
@@ -161,35 +167,35 @@
                 <a href="" class="cs-logout-btn"><i class="icon-download-file"></i>Logout</a>
             </div>
         </div>
-        <div class="cs-add-project-modal">
+        <div class="cs-add-project-modal-2">
             <form>
                 <div class="cs-modal-1">
                     <div class="cs-header">
                         <span class="cs-title-2">My Projects</span>
-                        <a href="javascript:void(0)" id="cs-close-btn"><i class="icon-close"></i></a>
+                        <a href="javascript:void(0)" class="cs-close-btn"><i class="icon-close"></i></a>
                     </div>
                     <div class="cs-body" style="border-bottom: none;">
                         <p class="cs-info mb-4">Please create new project or update
                             existing</p>
                         <div class="cs-radio-area">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios1"
+                                <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios4"
                                     value="option1">
-                                <label class="form-check-label" for="folderRadios1">
+                                <label class="form-check-label" for="folderRadios4">
                                     Folder Name 1
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios2"
+                                <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios5"
                                     value="option2">
-                                <label class="form-check-label" for="folderRadios2">
+                                <label class="form-check-label" for="folderRadios5">
                                     Folder Name 2
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios3"
+                                <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios6"
                                     value="option3">
-                                <label class="form-check-label" for="folderRadios3">
+                                <label class="form-check-label" for="folderRadios6">
                                     Folder Name 3
                                 </label>
                             </div>
@@ -197,24 +203,25 @@
                         <a href="" class="cs-delete-folder">Delete Selected Folder</a>
                     </div>
                     <div class="cs-footer">
-                        <button class="cs-btn-type-1 m-0" id="cs-save-btn">Open Selected Folder</button>
-                        <button class="cs-btn-type-1-border m-0" id="cs-newproject-btn">Create New Project</button>
+                        <button class="cs-btn-type-1 m-0" id="cs-save-btn-2">Open Selected Folder</button>
+                        <button class="cs-btn-type-1-border m-0" id="cs-newproject-btn-2">Create New Project</button>
                     </div>
                 </div>
                 <div class="cs-modal-2">
                     <div class="cs-header">
-                        <a href="javascript:void(0)" id="cs-create-project" class="cs-title-2"><i
+                        <a href="javascript:void(0)" id="cs-create-project-2" class="cs-title-2"><i
                                 class=" icon-arrow-left" style="margin-right: 5px;"></i> Create New Project</a>
                     </div>
                     <div class="cs-body">
-                        <p class="cs-info">Please enter folder name</p>
+                        <p class="cs-info">Please enter folder name to create your project</p>
                         <div class="cs-input-area">
-                            <label for="folder-name" class="cs-input-info">Folder Name</label>
-                            <input id="folder-name" value="Folder 5">
+                            <label for="folder-name-2" class="cs-input-info">Folder Name</label>
+                            <input id="folder-name-2" value="Folder 5">
                         </div>
                     </div>
                     <div class="cs-footer">
-                        <button class="cs-btn-type-1 mb-5">Create Folder</button>
+                        <button class="cs-btn-type-1 mb-0">Create Folder</button>
+                        <button class="cs-btn-type-1-border mb-0">Cancel</button>
                     </div>
                 </div>
             </form>

@@ -80,6 +80,10 @@ button:hover, button:focus {
   gap: 18px;
   position: relative;
 }
+.cs-main-header .cs-header-menu .cs-header-list .cs-list-item {
+  display: flex;
+  align-items: center;
+}
 .cs-main-header .cs-header-menu .cs-header-list .cs-language-area {
   position: absolute;
   z-index: 1;
@@ -100,8 +104,17 @@ button:hover, button:focus {
   visibility: visible;
   transition: all 0.3s;
 }
+.cs-main-header .cs-header-menu .cs-header-list .cs-language-area::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #FFF9FA;
+}
 .cs-main-header .cs-header-menu .cs-header-list .cs-language-area::-webkit-scrollbar {
-  width: 0;
+  width: 3px;
+  background-color: #FFF9FA;
+}
+.cs-main-header .cs-header-menu .cs-header-list .cs-language-area::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #B8B7B7;
 }
 .cs-main-header .cs-header-menu .cs-header-list .cs-language-area .cs-language-list {
   padding: 0;
@@ -122,12 +135,24 @@ button:hover, button:focus {
   width: 100%;
   display: inline-block;
 }
+.cs-main-header .cs-header-menu .cs-header-list .cs-list-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+}
 .cs-main-header .cs-header-menu .cs-header-list .cs-list-item.active {
   border-bottom: 1.5px solid #E20612;
 }
 .cs-main-header .cs-header-menu .cs-header-list .cs-list-item i {
   color: #E20612;
   font-size: 20px;
+}
+.cs-main-header .cs-header-menu .cs-header-list .cs-list-item .cs-lang-code-text {
+  color: #242424;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 5px;
 }
 .cs-main-header .cs-header-logo {
   width: 240px;
@@ -430,6 +455,19 @@ button:hover, button:focus {
   z-index: 98;
 }
 
+.cs-product-configurator {
+  height: calc(100vh - 95px);
+}
+.cs-product-configurator .cs-right-side-main-2 .cs-result-area.endActive {
+  height: calc(100vh - 195px);
+  margin: 0;
+  overflow-y: hidden !important;
+}
+
+.cs-module-configurator {
+  height: calc(100vh - 155px);
+}
+
 .cs-module-configurator, .cs-product-configurator {
   display: flex;
 }
@@ -437,10 +475,8 @@ button:hover, button:focus {
   max-width: 320px;
   width: 100%;
   background: #ffffff;
-  height: 100vh;
   overflow: hidden;
   overflow-y: auto;
-  height: calc(100vh - 155px);
 }
 .cs-module-configurator .cs-left-side-main::-webkit-scrollbar, .cs-product-configurator .cs-left-side-main::-webkit-scrollbar {
   width: 0;
@@ -1299,6 +1335,7 @@ button:hover, button:focus {
   line-height: 26px;
   font-weight: 700;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  opacity: 1 !important;
 }
 #changeModal #change-tab .nav-item .nav-link.active2 {
   opacity: 0.6;
@@ -2136,7 +2173,7 @@ button:hover, button:focus {
 .cs-product-result-main .cs-product-result-content .cs-product-list .cs-product-piece-table {
   background-color: #ffffff;
   margin-top: 20px;
-  height: 300px;
+  height: 350px;
   overflow: auto;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -2387,11 +2424,13 @@ button:hover, button:focus {
   position: absolute;
   right: 0;
   width: 380px;
-  height: 950px;
+  height: calc(100vh - 95px);
   background: #ffffff;
   box-shadow: 0px 64px 144px -36px rgba(112, 112, 112, 0.71);
   z-index: 1051;
   display: none;
+  overflow: hidden;
+  overflow-y: auto;
 }
 .cs-profile-modal .cs-btn-type-1 {
   pointer-events: none;
@@ -2546,7 +2585,7 @@ button:hover, button:focus {
   background-color: rgba(0, 0, 0, 0.5058823529);
 }
 
-.cs-add-project-modal {
+.cs-add-project-modal, .cs-add-project-modal-2 {
   display: none;
   position: absolute;
   top: 42px;
@@ -2558,58 +2597,58 @@ button:hover, button:focus {
   z-index: 3;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.cs-add-project-modal.headopen {
+.cs-add-project-modal.headopen, .cs-add-project-modal-2.headopen {
   top: 95px;
 }
-.cs-add-project-modal.headopen2 {
+.cs-add-project-modal.headopen2, .cs-add-project-modal-2.headopen2 {
   top: -18px;
 }
-.cs-add-project-modal #cs-save-btn {
+.cs-add-project-modal #cs-save-btn, .cs-add-project-modal #cs-save-btn-2, .cs-add-project-modal-2 #cs-save-btn, .cs-add-project-modal-2 #cs-save-btn-2 {
   opacity: 0.5;
   pointer-events: none;
 }
-.cs-add-project-modal #cs-save-btn.active {
+.cs-add-project-modal #cs-save-btn.active, .cs-add-project-modal #cs-save-btn-2.active, .cs-add-project-modal-2 #cs-save-btn.active, .cs-add-project-modal-2 #cs-save-btn-2.active {
   opacity: 1;
   pointer-events: visible;
 }
-.cs-add-project-modal .cs-header {
+.cs-add-project-modal .cs-header, .cs-add-project-modal-2 .cs-header {
   display: flex;
   justify-content: space-between;
   border-bottom: 0.5px solid #707070;
   padding: 0 10px 10px 10px;
 }
-.cs-add-project-modal .cs-header .cs-title-2 {
+.cs-add-project-modal .cs-header .cs-title-2, .cs-add-project-modal-2 .cs-header .cs-title-2 {
   color: #242424;
   font-size: 20px;
   font-weight: 600;
   line-height: 28px;
 }
-.cs-add-project-modal .cs-body {
+.cs-add-project-modal .cs-body, .cs-add-project-modal-2 .cs-body {
   padding: 10px 10px 20px 10px;
   border-bottom: 0.5px solid #707070;
 }
-.cs-add-project-modal .cs-body .cs-radio-area {
+.cs-add-project-modal .cs-body .cs-radio-area, .cs-add-project-modal-2 .cs-body .cs-radio-area {
   max-height: 150px;
   overflow: hidden;
   overflow-y: auto;
 }
-.cs-add-project-modal .cs-body .cs-radio-area::-webkit-scrollbar {
+.cs-add-project-modal .cs-body .cs-radio-area::-webkit-scrollbar, .cs-add-project-modal-2 .cs-body .cs-radio-area::-webkit-scrollbar {
   width: 0;
 }
-.cs-add-project-modal .cs-body .form-check {
+.cs-add-project-modal .cs-body .form-check, .cs-add-project-modal-2 .cs-body .form-check {
   margin-bottom: 8px;
   display: flex;
   gap: 5px;
   align-items: center;
 }
-.cs-add-project-modal .cs-body .form-check-input:checked {
+.cs-add-project-modal .cs-body .form-check-input:checked, .cs-add-project-modal-2 .cs-body .form-check-input:checked {
   background-color: #E20612;
   width: 24px;
   height: 24px;
   border-color: #E20612;
   box-shadow: none;
 }
-.cs-add-project-modal .cs-body label {
+.cs-add-project-modal .cs-body label, .cs-add-project-modal-2 .cs-body label {
   cursor: pointer;
   color: #242424;
   font-size: 14px;
@@ -2617,21 +2656,21 @@ button:hover, button:focus {
   line-height: 22px;
   text-transform: capitalize;
 }
-.cs-add-project-modal .cs-body .form-check-input[type=radio] {
+.cs-add-project-modal .cs-body .form-check-input[type=radio], .cs-add-project-modal-2 .cs-body .form-check-input[type=radio] {
   width: 24px;
   height: 24px;
 }
-.cs-add-project-modal .cs-footer {
+.cs-add-project-modal .cs-footer, .cs-add-project-modal-2 .cs-footer {
   display: flex;
   flex-direction: column;
   position: absolute;
   bottom: 0;
   width: 100%;
 }
-.cs-add-project-modal .cs-modal-2 {
+.cs-add-project-modal .cs-modal-2, .cs-add-project-modal-2 .cs-modal-2 {
   display: none;
 }
-.cs-add-project-modal .cs-modal-2 .cs-body {
+.cs-add-project-modal .cs-modal-2 .cs-body, .cs-add-project-modal-2 .cs-modal-2 .cs-body {
   border: none;
 }
 
@@ -2646,7 +2685,7 @@ button:hover, button:focus {
   text-transform: capitalize;
 }
 
-#cs-close-btn i {
+.cs-close-btn i {
   font-size: 22px;
   color: #242424;
 }

@@ -61,6 +61,9 @@ button
             align-items: center
             gap: 18px
             position: relative
+            .cs-list-item
+                display: flex
+                align-items: center
             .cs-language-area
                 position: absolute
                 z-index: 1
@@ -79,8 +82,16 @@ button
                     opacity: 1
                     visibility: visible
                     transition: all 0.3s
+                &::-webkit-scrollbar-track
+                    border-radius: 10px
+                    background-color: variables.$bgColor9
                 &::-webkit-scrollbar
-                    width: 0
+                    width: 3px
+                    background-color: variables.$bgColor9
+                &::-webkit-scrollbar-thumb
+                    border-radius: 10px
+                    background-color: variables.$borderColor2
+                
                 .cs-language-list
                     padding: 0
                     list-style: none
@@ -97,11 +108,20 @@ button
                             width: 100%
                             display: inline-block
             .cs-list-item
+                width: 100%
+                display: flex
+                align-items: center
+                padding-bottom: 5px
                 &.active
                     border-bottom: 1.5px solid variables.$bgColor1
                 i
                     color: variables.$bgColor1
                     font-size: 20px
+                .cs-lang-code-text
+                    color: variables.$textColor1
+                    font-size: 16px
+                    line-height: 24px
+                    margin-left: 5px
     .cs-header-logo
         width: 240px
         object-fit: cover
@@ -371,17 +391,24 @@ button
             border-radius: 50%
             padding: 4px
             z-index: 98
-
+.cs-product-configurator 
+    height: calc(100vh - 95px)
+    .cs-right-side-main-2 
+        .cs-result-area
+            &.endActive
+                height: calc(100vh - 195px)
+                margin: 0
+                overflow-y: hidden !important
+.cs-module-configurator
+    height: calc(100vh - 155px)
 .cs-module-configurator,.cs-product-configurator
     display: flex
     .cs-left-side-main
         max-width: 320px
         width: 100%
         background: variables.$whiteColor
-        height: 100vh
         overflow: hidden
         overflow-y: auto
-        height: calc(100vh - 155px)
         &::-webkit-scrollbar
             width: 0
         .cs-first-accordion
@@ -1103,6 +1130,7 @@ button
                     line-height: 26px
                     font-weight: variables.$fontWeightBold
                     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+                    opacity: 1 !important
                 &.active2
                     opacity: 0.6
                     pointer-events: none
@@ -1792,7 +1820,7 @@ button
             .cs-product-piece-table
                 background-color: variables.$whiteColor
                 margin-top: 20px
-                height: 300px
+                height: 350px
                 overflow: auto
                 box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px
                 &::-webkit-scrollbar
@@ -1998,11 +2026,13 @@ button
     position: absolute
     right: 0
     width: 380px
-    height: 950px
+    height: calc(100vh - 95px)
     background: variables.$whiteColor
     box-shadow: 0px 64px 144px -36px rgba(112, 112, 112, 0.71)
     z-index: 1051
     display: none
+    overflow: hidden
+    overflow-y: auto
     .cs-btn-type-1
         pointer-events: none
         opacity: 0.6
@@ -2130,7 +2160,7 @@ button
         width: 100vw
         height: calc(100vh - 95px)
         background-color: #00000081
-.cs-add-project-modal
+.cs-add-project-modal,.cs-add-project-modal-2
     display: none
     position: absolute
     top: 42px
@@ -2145,7 +2175,7 @@ button
         top: 95px
     &.headopen2
         top: -18px
-    #cs-save-btn
+    #cs-save-btn,#cs-save-btn-2
         opacity: 0.5
         pointer-events: none
         &.active
@@ -2210,7 +2240,7 @@ button
         font-weight: variables.$fontWeightMedium
         line-height: 22px
         text-transform: capitalize
-#cs-close-btn
+.cs-close-btn
     i
         font-size: 22px
         color: variables.$textColor1

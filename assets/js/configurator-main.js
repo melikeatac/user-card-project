@@ -67,6 +67,7 @@ $(document).ready(function () {
                 return false;
             }
         });
+        // console.log(allFilled, allSelectsExist, isValidPhone, isValidEmail)
         if (allFilled && (allSelectsExist ? allSelects : true) && isValidPhone && isValidEmail) {
             form.find('.cs-btn-type-1').addClass("active");
         } else {
@@ -79,7 +80,6 @@ $(document).ready(function () {
         $('.cs-other-list').toggleClass('active');
         $('.cs-read-more i').toggleClass('icon-arrow-up icon-arrow-down');
     })
-
     $('#cs-add-to-btn').on('click', function () {
         $('.cs-sec-1').addClass('deactive');
         $('.cs-sec-main').removeClass('active');
@@ -99,7 +99,7 @@ $(document).ready(function () {
         $('.cs-sec-1').removeClass('deactive');
         $('.cs-sec-main').removeClass('active');
     })
-    $('#cs-newproject-btn-2').on('click', function () {
+    $('#cs-newproject-btn').on('click', function () {
         $('.cs-sec-main').removeClass('active');
         $('.cs-sec-4').addClass('active');
     })
@@ -213,9 +213,10 @@ $(document).ready(function () {
                 $('#cs-next-btn-4').addClass('active');
                 $('#cs-next-btn-3').hide();
 
-                // $('.cs-left-area').addClass('active');
-                // $(".cs-content-main").hide();
-                // $('.right-area-1').show();
+                $('.cs-left-area').addClass('active');
+                $(".cs-content-main").hide();
+                $('.cs-result-area').show();
+                $('.cs-product-configurator .cs-right-side-main-2 .cs-result-area').addClass('endActive');
             }
         })
     });
@@ -225,6 +226,13 @@ $(document).ready(function () {
             currentStep--;
             hideStep(currentStep);
         }
+        $(".cs-menu-2 .cs-item").each(function () {
+            $('.cs-left-area').removeClass('active');
+            $(".cs-content-main").show();
+            $('.cs-result-area').hide();
+            $('.cs-product-configurator .cs-right-side-main-2 .cs-result-area').removeClass('endActive');
+
+        })
     });
 
     function showStep(step) {
@@ -233,6 +241,7 @@ $(document).ready(function () {
             var cardArea = $(this).find('.cs-card-area');
             var imageArea = $(this).find('.cs-pic-img-area');
             var stepAttribute = parseInt($(element).attr('step'));
+            // console.log(step, stepAttribute);
 
             if (stepAttribute <= step) {
                 $(element).addClass('active1');
@@ -313,12 +322,14 @@ $(document).ready(function () {
     $('.cs-login-icon').on('click', function () {
         $('.cs-profile-modal').toggle();
         $('.cs-modal-backdrop').toggleClass('active', $('.cs-profile-modal').is(':visible'));
+        $('body').css('overflow', 'hidden');
     });
 
     $('.cs-pp-close-btn').on('click', function (e) {
         e.preventDefault();
         $('.cs-profile-modal').hide();
         $('.cs-modal-backdrop').removeClass('active')
+        $('body').css('overflow', 'auto');
     })
 
     $('.cs-radio-area').each(function () {

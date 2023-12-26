@@ -110,13 +110,23 @@
     #cs-add-btn-1 
         span
             display: none
+    .cs-transfer-btn-group
+        max-width: 140px
+        justify-content: flex-start !important
     .cs-files-btn-group,.cs-transfer-btn-group
         display: none
+        height: auto
+        justify-content: center
         &.active
             display: flex
             gap: 10px
-            justify-content: space-between
             width: 100%
+        button
+            font-size: 12px
+            height: auto
+            padding: 6px 20px
+            margin: 0
+            border-radius: 100px
     .cs-global-footer-1 
         .cs-footer-menu-2 
             i
@@ -132,7 +142,7 @@
         .cs-top-bar-content 
             .cs-title-1
                 font-size: 17px
-    .cs-add-project-modal
+    .cs-add-project-modal,.cs-add-project-modal-2
         z-index: 2
         width: 250px
         height: 410px
@@ -328,14 +338,7 @@
     .cs-product-piece-table
         table
             width: 767px
-    .cs-transfer-btn-group,.cs-files-btn-group
-        width: 130px !important
-        height: auto
-        button
-            font-size: 12px
-            height: auto
-            padding: 6px 20px
-            margin: 0
+    
     .modal-footer 
         #cs-back-btn, #cs-back-btn-2, .cs-primary-border-btn,#cs-next-btn,#cs-next-btn-2,.cs-primary-btn,#cs-continue-btn-1
             font-size: 12px

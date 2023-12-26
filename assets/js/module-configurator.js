@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    buttonBackClick($('#change-tab .nav-link.active'), 1)
     if ($('.cs-select2-1').length > 0) {
         $('.cs-select2-1').select2({
             minimumResultsForSearch: -1,
@@ -8,12 +8,18 @@ $(document).ready(function () {
     }
 
     // File ekleme butonlarının işlevselliği
-    $('#cs-create-project').click(function () {
+    $('#cs-create-project,#cs-create-project-2').click(function () {
         $('.cs-modal-1').show();
         $('.cs-modal-2').hide();
     });
 
-    $('#cs-newproject-btn').click(function (e) {
+    // $('#cs-newproject-btn').click(function (e) {
+    //     e.preventDefault();
+    //     $('.cs-modal-1').hide();
+    //     $('.cs-modal-2').show();
+    //     console.log('deneme')
+    // });
+    $('#cs-newproject-btn-2').click(function (e) {
         e.preventDefault();
         $('.cs-modal-1').hide();
         $('.cs-modal-2').show();
@@ -21,10 +27,10 @@ $(document).ready(function () {
 
     $('.cs-radio-area input[name="folderRadios"]').change(function () {
         if ($(this).is(':checked')) {
-            $('#cs-save-btn').addClass('active');
+            $('#cs-save-btn,#cs-save-btn-2').addClass('active');
         }
         else {
-            $('#cs-save-btn').removeClass('active');
+            $('#cs-save-btn,#cs-save-btn-2').removeClass('active');
         }
     });
 
@@ -147,6 +153,8 @@ $(document).ready(function () {
     $('#cs-back-btn-2').click(function () {
 
         var activeTabIndex = $('#change-tab .nav-link.active').parent().index();
+        var activeTab = $('#change-tab .nav-link.active');
+        buttonBackClick(activeTab, activeTabIndex);
         if (activeTabIndex > 0) {
             $('#change-tab li:eq(' + (activeTabIndex - 1) + ') button').tab('show');
         }
@@ -171,8 +179,9 @@ $(document).ready(function () {
         $('.cs-step-main.active .cs-main-radiogroup .form-check-change').each(function () {
             selectedTextInfo($(this));
         })
-
         var activeTabIndex = $('#change-tab .nav-link.active').parent().index();
+        var activeTab = $('#change-tab .nav-link.active');
+        buttonBackClick(activeTab, activeTabIndex + 1);
         var tabCount = $('#report-tab li').length;
         if (activeTabIndex < tabCount - 1) {
             $('#change-tab li:eq(' + (activeTabIndex + 1) + ') button').tab('show');
@@ -242,13 +251,27 @@ $(document).ready(function () {
             $('#change-tab .nav-link[controls1="' + clickedButtonId + '"]').addClass('active');
         }
         finishBtn();
-
+        buttonBackClick($('#change-tab .nav-link.active'), numericValue1);
     });
+
+    function buttonBackClick(button, num) {
+        button.closest('.nav-pills').find('button').each(function () {
+            var buttonId = $(this).attr('controls1');
+            var numericValue3 = parseInt(buttonId.split('-')[2]);
+            // console.log(numericValue3, num)
+            if (numericValue3 <= num) {
+                $(this).removeClass('active2');
+            } else if (numericValue3 > num) {
+                $(this).addClass('active2');
+            }
+        });
+    }
 
     $('#change-tab button').click(function () {
         // updateButtonVisibility();
         var clickedButtonId = $(this).attr('controls1');
         var numericValue1 = clickedButtonId.split('-')[2];
+        buttonBackClick($(this), numericValue1);
         $('.cs-step-main .cs-main-radiogroup .form-check-change').each(function () {
             var numericValue2 = $(this).closest('.cs-step-main').attr('controls1').split('-')[2];
 

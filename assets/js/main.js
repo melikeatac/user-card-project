@@ -42,38 +42,59 @@ $(document).ready(function () {
         $('.cs-header-list .cs-list-item').removeClass('active');
         $(this).addClass('active');
     })
+    $('.cs-lang-code-text').text($('.cs-link').attr('langCode'));
 
-    iconGlobal.on('click', function (event) {
+    $('.cs-language-list .cs-language-item').on('click', function () {
+        var langCode = $(this).find('.cs-link').attr('langCode');
+        $('.cs-lang-code-text').text(langCode);
+    })
+    $('.icon-arrow-up').hide();
+    $('.cs-list-lang').on('click', function (event) {
         event.stopPropagation();
         languageArea.toggleClass('active');
+        if (languageArea.hasClass('active')) {
+            $('.icon-arrow-up').show();
+            $('.icon-arrow-down').hide();
+        }
+        else {
+            $('.icon-arrow-up').hide();
+            $('.icon-arrow-down').show();
+        }
     });
 
     $(document).on('click', function (event) {
         if (!languageArea.is(event.target) && languageArea.has(event.target).length === 0) {
             languageArea.removeClass('active');
+            if (languageArea.hasClass('active')) {
+                $('.icon-arrow-up').show();
+                $('.icon-arrow-down').hide();
+            }
+            else {
+                $('.icon-arrow-up').hide();
+                $('.icon-arrow-down').show();
+            }
         }
     });
     $('#cs-add-btn-1').click(function () {
         $('.cs-add-project-modal').show();
     });
     $('.cs-file-icon').click(function () {
+        $('.cs-add-project-modal-2').show();
         if ($('.cs-top-bar').length > 0) {
-            $('.cs-add-project-modal').addClass('headopen2');
+            $('.cs-add-project-modal-2').addClass('headopen2');
         }
         else {
-            $('.cs-add-project-modal').addClass('headopen');
+            $('.cs-add-project-modal-2').addClass('headopen');
         }
-        $('.cs-add-project-modal').show();
     });
 
-    $('#cs-close-btn').click(function () {
+    $('.cs-close-btn').click(function () {
         $('.cs-add-project-modal').hide();
+        $('.cs-add-project-modal-2').hide();
         $('.cs-add-project-modal').removeClass('headopen2');
-        $('.cs-add-project-modal').removeClass('headopen');
-
     })
 
-    
+
     function inputVal() {
         const combinedVal = Array.from($('.cs-content-text-input .cs-num-input')).map((input, index) => {
             const label = ["Width", "Depth", "Height"][index] || `Input ${index + 1}`;
