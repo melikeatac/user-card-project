@@ -66,7 +66,7 @@ button
                 align-items: center
             .cs-language-area
                 position: absolute
-                z-index: 1
+                z-index: 9999
                 top: 60px
                 right: 0
                 background: variables.$whiteColor
@@ -794,7 +794,7 @@ button
         outline: none
         border-bottom: 1px solid variables.$textColor2
         padding-bottom: 5px
-        color: variables.$textColor2
+        color: variables.$textColor1
         font-size: 16px
         font-weight: variables.$fontWeightMedium
         line-height: 24px
@@ -1015,6 +1015,10 @@ button
         border-left: 0.5px solid variables.$textColor2
         padding-left: 15px
         margin-left: 15px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100%
         .cs-fastener-title-1
             color: variables.$textColor1
             font-size: 16px
@@ -1934,7 +1938,10 @@ button
         .cs-sec-2,.cs-sec-3,.cs-sec-4
             display: none
             &.active
-                display: block
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                height: 100%
             .cs-body
                 padding: 10px
                 .cs-info
@@ -2160,7 +2167,7 @@ button
         width: 100vw
         height: calc(100vh - 95px)
         background-color: #00000081
-.cs-add-project-modal,.cs-add-project-modal-2
+.cs-add-project-modal,.cs-add-project-modal-2,.cs-add-project-modal-3
     display: none
     position: absolute
     top: 42px

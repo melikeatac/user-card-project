@@ -167,7 +167,7 @@
             </div>
 
             <div class="cs-footer">
-                <a href="" class="cs-logout-btn"><i class="icon-download-file"></i>Logout</a>
+                <a href="" class="cs-logout-btn"><i class="icon-logout"></i>Logout</a>
             </div>
         </div>
         <div class="cs-add-project-modal-2">
@@ -219,7 +219,7 @@
                         <p class="cs-info">Please enter folder name to create your project</p>
                         <div class="cs-input-area">
                             <label for="folder-name-2" class="cs-input-info">Folder Name</label>
-                            <input id="folder-name-2" value="Folder 5">
+                            <input id="folder-name-2" placeholder="Folder 5">
                         </div>
                     </div>
                     <div class="cs-footer">
@@ -229,7 +229,7 @@
                 </div>
             </form>
         </div>
-        <div class="cs-product-configurator">
+        <div class="cs-product-configurator cs-product-main">
             <div class="cs-left-side-main">
                 <button class="cs-btn-type-1"><i class="icon-positive"></i>Yeni Konfigurasyon Oluştur</button>
                 <ul class="cs-menu-2">
@@ -900,114 +900,116 @@
                                                 style="font-size: 18px;"></i>Download project files</button>
                                     </div>
                                     <div class="cs-sec-main cs-sec-2">
-                                        <button class="cs-title-1 cs-to-main"><i class="icon-arrow-left"></i>
-                                            Download</button>
-                                        <div class="accordion mt-2" id="accordionProduct">
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="productheadingOne">
-                                                    <button class="accordion-button" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#productOne"
-                                                        aria-expanded="true" aria-controls="productOne">
-                                                        Product Name 1
-                                                    </button>
-                                                </h2>
-                                                <div id="productOne" class="accordion-collapse collapse show"
-                                                    aria-labelledby="productheadingOne"
-                                                    data-bs-parent="#accordionProduct">
-                                                    <div class="accordion-body cs-input-control-main cs-radio-area">
-                                                        <div class="cs-input-control">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="product-check-1">
-                                                            <label class="form-check-label" for="product-check-1">
-                                                                .3ds
-                                                            </label>
-                                                        </div>
-                                                        <div class="cs-input-control">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="product-check-2">
-                                                            <label class="form-check-label" for="product-check-2">
-                                                                .dae
-                                                            </label>
-                                                        </div>
-                                                        <div class="cs-input-control">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="product-check-3">
-                                                            <label class="form-check-label" for="product-check-3">
-                                                                .dwg
-                                                            </label>
-                                                        </div>
-                                                        <div class="cs-input-control">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="product-check-4">
-                                                            <label class="form-check-label" for="product-check-4">
-                                                                .dxf
-                                                            </label>
-                                                        </div>
-                                                        <div class="cs-input-control">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="product-check-5">
-                                                            <label class="form-check-label" for="product-check-5">
-                                                                .fbx
-                                                            </label>
-                                                        </div>
-                                                        <div class="cs-input-control">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="product-check-6">
-                                                            <label class="form-check-label" for="product-check-6">
-                                                                .igs
-                                                            </label>
-                                                        </div>
-                                                        <div class="cs-input-control">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="product-check-7">
-                                                            <label class="form-check-label" for="product-check-7">
-                                                                .log
-                                                            </label>
-                                                        </div>
-                                                        <div class="cs-input-control">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="product-check-8">
-                                                            <label class="form-check-label" for="product-check-8">
-                                                                .max
-                                                            </label>
-                                                        </div>
-                                                        <div class="cs-input-control">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="product-check-9">
-                                                            <label class="form-check-label" for="product-check-9">
-                                                                .igs
-                                                            </label>
-                                                        </div>
-                                                        <div class="cs-input-control">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="product-check-10">
-                                                            <label class="form-check-label" for="product-check-10">
-                                                                .log
-                                                            </label>
-                                                        </div>
-                                                        <div class="cs-input-control">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="product-check-11">
-                                                            <label class="form-check-label" for="product-check-11">
-                                                                .max
-                                                            </label>
+                                        <div>
+                                            <button class="cs-title-1 cs-to-main"><i class="icon-arrow-left"></i>
+                                                Download</button>
+                                            <div class="accordion mt-2" id="accordionProduct">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="productheadingOne">
+                                                        <button class="accordion-button" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#productOne"
+                                                            aria-expanded="true" aria-controls="productOne">
+                                                            Product Name 1
+                                                        </button>
+                                                    </h2>
+                                                    <div id="productOne" class="accordion-collapse collapse show"
+                                                        aria-labelledby="productheadingOne"
+                                                        data-bs-parent="#accordionProduct">
+                                                        <div class="accordion-body cs-input-control-main cs-radio-area">
+                                                            <div class="cs-input-control">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="product-check-1">
+                                                                <label class="form-check-label" for="product-check-1">
+                                                                    .3ds
+                                                                </label>
+                                                            </div>
+                                                            <div class="cs-input-control">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="product-check-2">
+                                                                <label class="form-check-label" for="product-check-2">
+                                                                    .dae
+                                                                </label>
+                                                            </div>
+                                                            <div class="cs-input-control">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="product-check-3">
+                                                                <label class="form-check-label" for="product-check-3">
+                                                                    .dwg
+                                                                </label>
+                                                            </div>
+                                                            <div class="cs-input-control">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="product-check-4">
+                                                                <label class="form-check-label" for="product-check-4">
+                                                                    .dxf
+                                                                </label>
+                                                            </div>
+                                                            <div class="cs-input-control">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="product-check-5">
+                                                                <label class="form-check-label" for="product-check-5">
+                                                                    .fbx
+                                                                </label>
+                                                            </div>
+                                                            <div class="cs-input-control">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="product-check-6">
+                                                                <label class="form-check-label" for="product-check-6">
+                                                                    .igs
+                                                                </label>
+                                                            </div>
+                                                            <div class="cs-input-control">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="product-check-7">
+                                                                <label class="form-check-label" for="product-check-7">
+                                                                    .log
+                                                                </label>
+                                                            </div>
+                                                            <div class="cs-input-control">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="product-check-8">
+                                                                <label class="form-check-label" for="product-check-8">
+                                                                    .max
+                                                                </label>
+                                                            </div>
+                                                            <div class="cs-input-control">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="product-check-9">
+                                                                <label class="form-check-label" for="product-check-9">
+                                                                    .igs
+                                                                </label>
+                                                            </div>
+                                                            <div class="cs-input-control">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="product-check-10">
+                                                                <label class="form-check-label" for="product-check-10">
+                                                                    .log
+                                                                </label>
+                                                            </div>
+                                                            <div class="cs-input-control">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="product-check-11">
+                                                                <label class="form-check-label" for="product-check-11">
+                                                                    .max
+                                                                </label>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="productheadingTwo">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#productTwo"
-                                                        aria-expanded="false" aria-controls="productTwo">
-                                                        Product Name 2
-                                                    </button>
-                                                </h2>
-                                                <div id="productTwo" class="accordion-collapse collapse"
-                                                    aria-labelledby="productheadingTwo"
-                                                    data-bs-parent="#accordionProduct">
-                                                    <div class="accordion-body">
-                                                        2222
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="productheadingTwo">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#productTwo"
+                                                            aria-expanded="false" aria-controls="productTwo">
+                                                            Product Name 2
+                                                        </button>
+                                                    </h2>
+                                                    <div id="productTwo" class="accordion-collapse collapse"
+                                                        aria-labelledby="productheadingTwo"
+                                                        data-bs-parent="#accordionProduct">
+                                                        <div class="accordion-body">
+                                                            2222
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1020,32 +1022,37 @@
                                         </div>
                                     </div>
                                     <div class="cs-sec-main cs-sec-3">
-                                        <button class="cs-title-1 cs-to-main"><i class="icon-arrow-left"></i>
-                                            Save</button>
-                                        <div class="cs-body">
-                                            <p class="cs-info">Please create new project or update
-                                                existing</p>
-                                            <div class="cs-radio-area">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="folderRadios1"
-                                                        id="folderRadios-1-product" value="option1">
-                                                    <label class="form-check-label" for="folderRadios-1-product">
-                                                        Folder Name 1
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="folderRadios1"
-                                                        id="folderRadios-2-product" value="option2">
-                                                    <label class="form-check-label" for="folderRadios-2-product">
-                                                        Folder Name 2
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="folderRadios1"
-                                                        id="folderRadios-3-product" value="option3">
-                                                    <label class="form-check-label" for="folderRadios-3-product">
-                                                        Folder Name 3
-                                                    </label>
+                                        <div>
+                                            <button class="cs-title-1 cs-to-main"><i class="icon-arrow-left"></i>
+                                                Save</button>
+                                            <div class="cs-body">
+                                                <p class="cs-info">Please create new project or update
+                                                    existing</p>
+                                                <div class="cs-radio-area">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="folderRadios1" id="folderRadios-1-product"
+                                                            value="option1">
+                                                        <label class="form-check-label" for="folderRadios-1-product">
+                                                            Folder Name 1
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="folderRadios1" id="folderRadios-2-product"
+                                                            value="option2">
+                                                        <label class="form-check-label" for="folderRadios-2-product">
+                                                            Folder Name 2
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="folderRadios1" id="folderRadios-3-product"
+                                                            value="option3">
+                                                        <label class="form-check-label" for="folderRadios-3-product">
+                                                            Folder Name 3
+                                                        </label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1056,15 +1063,18 @@
                                         </div>
                                     </div>
                                     <div class="cs-sec-main cs-sec-4">
-                                        <div class="cs-header">
-                                            <button class="cs-title-1 cs-to-download"><i class="icon-arrow-left"></i>
-                                                Create New
-                                                Project</button>
-                                        </div>
-                                        <div class="cs-body cs-radio-area">
-                                            <p class="cs-info">Please enter folder name</p>
-                                            <div class="cs-input-area mt-4">
-                                                <input id="folder-name-1" placeholder="Enter Folder Name">
+                                        <div>
+                                            <div class="cs-header">
+                                                <button class="cs-title-1 cs-to-download"><i
+                                                        class="icon-arrow-left"></i>
+                                                    Create New
+                                                    Project</button>
+                                            </div>
+                                            <div class="cs-body cs-radio-area">
+                                                <p class="cs-info">Please enter folder name</p>
+                                                <div class="cs-input-area mt-4">
+                                                    <input id="folder-name-1" placeholder="Enter Folder Name">
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="cs-footer mt-5">
@@ -1094,7 +1104,7 @@
                 <div class="row">
                     <div class="col-12 col-md-3 col-lg-3 col-xl-3">
                         <ul class="cs-footer-logo-m-1">
-                            <a href="index.html"><img src="./assets/img/other/configuremate-logo.png"></a>
+                            <a href="configurator-main.html"><img src="./assets/img/other/configuremate-logo.png"></a>
                         </ul>
                     </div>
 

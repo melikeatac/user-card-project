@@ -122,6 +122,20 @@
     position: relative;
     bottom: 5px;
   }
+  .cs-form-check-area label {
+    font-size: 13px;
+  }
+  .cs-profile-modal .cs-header .cs-title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .cs-profile-modal .cs-header .cs-pp-close-btn i {
+    font-size: 18px;
+  }
+  .cs-profile-modal .accordion-button p {
+    font-size: 15px;
+    line-height: 23px;
+  }
   .cs-container-1 {
     padding: 0 10px;
   }
@@ -156,18 +170,33 @@
     width: 160px;
     margin-bottom: 10px;
   }
+  .cs-main-header .cs-header-menu .cs-header-list {
+    gap: 10px;
+  }
+  .cs-main-header .cs-header-menu .cs-header-list .cs-language-area .cs-language-list .cs-language-item {
+    padding: 5px;
+  }
+  .cs-main-header .cs-header-menu .cs-header-list .cs-language-area .cs-language-list .cs-language-item a {
+    font-size: 13px;
+  }
+  .cs-main-header .cs-header-menu .cs-header-list .cs-list-item i {
+    font-size: 16px;
+  }
+  .cs-main-header .cs-header-menu .cs-header-list .cs-list-item .cs-lang-code-text {
+    font-size: 12px;
+  }
   .cs-main-header .cs-header-logo {
-    width: 160px;
+    width: 145px;
   }
   .cs-top-bar .cs-top-bar-content .cs-title-1 {
     font-size: 17px;
   }
-  .cs-add-project-modal, .cs-add-project-modal-2 {
+  .cs-add-project-modal, .cs-add-project-modal-2, .cs-add-project-modal-3 {
     z-index: 2;
     width: 250px;
     height: 410px;
   }
-  .cs-add-project-modal .cs-header .cs-title-2, .cs-add-project-modal-2 .cs-header .cs-title-2 {
+  .cs-add-project-modal .cs-header .cs-title-2, .cs-add-project-modal-2 .cs-header .cs-title-2, .cs-add-project-modal-3 .cs-header .cs-title-2 {
     font-size: 16px;
   }
   #cs-mobile-menu-2, #cs-mobile-menu-3, #cs-mobile-product-menu {
@@ -273,11 +302,15 @@
     font-size: 14px;
     line-height: 20px;
   }
+  .cs-module-configurator .cs-right-side-main-2 {
+    padding: 0 10px;
+  }
   .cs-module-configurator .cs-left-side-main {
+    max-height: calc(100vh - 190px);
     display: none;
     position: absolute;
     z-index: 1;
-    top: 188px;
+    top: 190px;
   }
   .cs-module-configurator .cs-right-side-main .cs-button-list {
     display: none;
@@ -293,11 +326,30 @@
     height: 40px;
     font-size: 15px;
   }
+  .cs-product-configurator .cs-right-side-main-2 {
+    padding: 0 10px;
+  }
+  .cs-product-configurator .cs-right-side-main-2 .cs-result-area.endActive {
+    height: auto;
+  }
+  .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-pic-img-area .cs-pic-img-list .list-area-label {
+    font-size: 15px;
+    line-height: 23px;
+  }
+  .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-head .cs-title-1 {
+    font-size: 15px;
+    line-height: 23px;
+  }
+  .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-head .cs-info-select, .cs-product-configurator .cs-right-side-main-2 .cs-content-main .cs-head .cs-info-select-2 {
+    font-size: 13px;
+    line-height: 21px;
+  }
   .cs-product-configurator .cs-left-side-main {
     display: none;
     position: absolute;
     z-index: 1;
     top: 180px;
+    min-height: 50vh;
     max-width: 100%;
   }
   .cs-module-configurator-main {

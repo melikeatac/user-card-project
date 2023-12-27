@@ -105,6 +105,21 @@
             line-height: 50px
             position: relative
             bottom: 5px
+    .cs-form-check-area 
+        label
+            font-size: 13px
+    .cs-profile-modal 
+        .cs-header 
+            .cs-title
+                font-size: 18px
+                line-height: 26px
+            .cs-pp-close-btn 
+                i
+                    font-size: 18px
+        .accordion-button 
+            p
+                font-size: 15px
+                line-height: 23px
     .cs-container-1
         padding: 0 10px
     #cs-add-btn-1 
@@ -136,13 +151,27 @@
                 width: 160px
                 margin-bottom:10px
     .cs-main-header 
+        .cs-header-menu 
+            .cs-header-list 
+                gap: 10px
+                .cs-language-area 
+                    .cs-language-list 
+                        .cs-language-item 
+                            padding: 5px
+                            a
+                                font-size: 13px
+                .cs-list-item 
+                    i 
+                        font-size: 16px
+                    .cs-lang-code-text
+                        font-size: 12px
         .cs-header-logo
-            width: 160px 
+            width: 145px 
     .cs-top-bar 
         .cs-top-bar-content 
             .cs-title-1
                 font-size: 17px
-    .cs-add-project-modal,.cs-add-project-modal-2
+    .cs-add-project-modal,.cs-add-project-modal-2,.cs-add-project-modal-3
         z-index: 2
         width: 250px
         height: 410px
@@ -239,11 +268,14 @@
                         font-size: 14px
                         line-height: 20px
     .cs-module-configurator
+        .cs-right-side-main-2
+            padding: 0 10px
         .cs-left-side-main
+            max-height: calc(100vh - 190px)
             display: none
             position: absolute
             z-index: 1
-            top: 188px
+            top: 190px
         .cs-right-side-main 
             .cs-button-list
                 display: none
@@ -257,11 +289,30 @@
                     height: 40px
                     font-size: 15px
     .cs-product-configurator
+        .cs-right-side-main-2
+            padding: 0 10px
+            .cs-result-area
+                &.endActive
+                    height: auto
+            .cs-content-main 
+                .cs-pic-img-area 
+                    .cs-pic-img-list 
+                        .list-area-label
+                            font-size: 15px
+                            line-height: 23px
+                .cs-head 
+                    .cs-title-1
+                        font-size: 15px
+                        line-height: 23px
+                    .cs-info-select,.cs-info-select-2
+                        font-size: 13px
+                        line-height: 21px
         .cs-left-side-main
             display: none
             position: absolute
             z-index: 1
             top: 180px
+            min-height: 50vh
             max-width: 100%
     .cs-module-configurator-main
         flex-direction: column
@@ -355,6 +406,7 @@
     #changeModal 
         .modal-footer
             gap: 5px
+    
 @media (min-width: 500px)
     #goTpButton
         margin: 30px

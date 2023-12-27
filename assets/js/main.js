@@ -76,7 +76,7 @@ $(document).ready(function () {
         }
     });
     $('#cs-add-btn-1').click(function () {
-        $('.cs-add-project-modal').show();
+        $('.cs-add-project-modal-3').show();
     });
     $('.cs-file-icon').click(function () {
         $('.cs-add-project-modal-2').show();
@@ -91,6 +91,7 @@ $(document).ready(function () {
     $('.cs-close-btn').click(function () {
         $('.cs-add-project-modal').hide();
         $('.cs-add-project-modal-2').hide();
+        $('.cs-add-project-modal-3').hide();
         $('.cs-add-project-modal').removeClass('headopen2');
     })
 
@@ -129,5 +130,10 @@ $(document).ready(function () {
             event.preventDefault();
         }
     });
+
+    $('.cs-delete-folder').hide();
+    $('.cs-add-project-modal-2 .cs-radio-area .form-check').on('input', function () {
+        $('.cs-delete-folder').show();
+    })
 
 });

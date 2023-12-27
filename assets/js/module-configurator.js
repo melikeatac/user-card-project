@@ -13,12 +13,11 @@ $(document).ready(function () {
         $('.cs-modal-2').hide();
     });
 
-    // $('#cs-newproject-btn').click(function (e) {
-    //     e.preventDefault();
-    //     $('.cs-modal-1').hide();
-    //     $('.cs-modal-2').show();
-    //     console.log('deneme')
-    // });
+    $('#cs-newproject-btn-3').click(function (e) {
+        e.preventDefault();
+        $('.cs-modal-1').hide();
+        $('.cs-modal-2').show();
+    });
     $('#cs-newproject-btn-2').click(function (e) {
         e.preventDefault();
         $('.cs-modal-1').hide();
@@ -258,7 +257,6 @@ $(document).ready(function () {
         button.closest('.nav-pills').find('button').each(function () {
             var buttonId = $(this).attr('controls1');
             var numericValue3 = parseInt(buttonId.split('-')[2]);
-            // console.log(numericValue3, num)
             if (numericValue3 <= num) {
                 $(this).removeClass('active2');
             } else if (numericValue3 > num) {
@@ -275,12 +273,10 @@ $(document).ready(function () {
         $('.cs-step-main .cs-main-radiogroup .form-check-change').each(function () {
             var numericValue2 = $(this).closest('.cs-step-main').attr('controls1').split('-')[2];
 
-            // console.log(numericValue1,numericValue2)
             if (numericValue2 < numericValue1) {
                 selectedTextInfo($(this));
             }
             if (numericValue2 >= numericValue1) {
-                // console.log(numericValue2)
                 $(this).closest('.cs-step-main').find('.cs-selected-info').text('');
                 $(this).closest('.cs-step-main').find('.cs-head i').removeClass('active');
             }
