@@ -10,6 +10,8 @@
   <link rel="icon" type="image/png" href="assets/img/system/4alabs-fav.jpeg">
 
   <!--CSS START-->
+  <link rel="stylesheet" href="assets/vendor/lightGallery/dist/css/lightgallery.min.css">
+  <link rel="stylesheet" href="assets/vendor/owlcarousel/css/owl.carousel.min.css">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <!--CSS END-->
@@ -17,280 +19,24 @@
 
 <body>
   <header>
-    <div class="cs-main-header">
-      <div class="cs-container-1">
-        <div class="cs-header-menu">
-          <a href="configurator-main.html"><img class="cs-header-logo"
-              src="./assets/img/other/configuremate-logo.png"></a>
-          <div class="cs-header-list">
-            <a href="configurator-main.html" class="cs-list-item active"><i class="icon-main"></i></a>
-            <a href="javascript:void(0)" class="cs-list-item cs-file-icon"><i class="icon-file"></i></a>
-            <a href="javascript:void(0)" class="cs-list-item cs-login-icon"><i class="icon-login"></i></a>
-            <a href="javascript:void(0)" class="cs-list-item cs-list-lang" style="border:none !important"><i
-                class="icon-global"></i><span class="cs-lang-code-text"></span><i class="icon-arrow-down"></i><i
-                class="icon-arrow-up"></i></a>
-            <div class="cs-language-area">
-              <ul class="cs-language-list">
-                <li class="cs-language-item"><a href="javascript:void(0)" class="cs-link" langCode="TR">Turkish</a></li>
-                <li class="cs-language-item"><a href="javascript:void(0)" class="cs-link" langCode="EN">English</a></li>
-                <li class="cs-language-item"><a href="javascript:void(0)" class="cs-link" langCode="PL">Polish</a></li>
-                <li class="cs-language-item"><a href="javascript:void(0)" class="cs-link" langCode="DE">Deutsch</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    header
   </header>
-
   <main>
-    <div class="cs-add-project-modal-2">
-      <form>
-        <div class="cs-modal-1">
-          <div class="cs-header">
-            <span class="cs-title-2">My Projects</span>
-            <a href="javascript:void(0)" class="cs-close-btn"><i class="icon-close"></i></a>
-          </div>
-          <div class="cs-body" style="border-bottom: none;">
-            <p class="cs-info mb-4">Please create new project or update
-              existing</p>
-            <div class="cs-radio-area">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios4" value="option1">
-                <label class="form-check-label" for="folderRadios4">
-                  Folder Name 1
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios5" value="option2">
-                <label class="form-check-label" for="folderRadios5">
-                  Folder Name 2
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="folderRadios" id="folderRadios6" value="option3">
-                <label class="form-check-label" for="folderRadios6">
-                  Folder Name 3
-                </label>
-              </div>
-            </div>
-            <a href="" class="cs-delete-folder">Delete Selected Folder</a>
-          </div>
-          <div class="cs-footer">
-            <button class="cs-btn-type-1 m-0" id="cs-save-btn-2">Open Selected Folder</button>
-            <button class="cs-btn-type-1-border m-0" id="cs-newproject-btn-2">Create New Project</button>
-          </div>
-        </div>
-        <div class="cs-modal-2">
-          <div class="cs-header">
-            <a href="javascript:void(0)" id="cs-create-project-2" class="cs-title-2"><i class=" icon-arrow-left"
-                style="margin-right: 5px;"></i> Create New Project</a>
-          </div>
-          <div class="cs-body">
-            <p class="cs-info">Please enter folder name to create your project</p>
-            <div class="cs-input-area">
-              <label for="folder-name-2" class="cs-input-info">Folder Name</label>
-              <input id="folder-name-2" placeholder="Folder 5">
-            </div>
-          </div>
-          <div class="cs-footer">
-            <button class="cs-btn-type-1 mb-0">Create Folder</button>
-            <button class="cs-btn-type-1-border mb-0">Cancel</button>
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="cs-profile-modal">
-      <div class="cs-header">
-        <h6 class="cs-title">Profile</h6>
-        <a href="" class="cs-pp-close-btn"><i class="icon-close"></i></a>
-      </div>
-      <div class="cs-main">
-        <div class="accordion" id="accordion_main_pp">
-          <form class="cs-login-form">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="ppOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ppcollapseOne"
-                  aria-expanded="true" aria-controls="ppcollapseOne">
-                  <p><i class="icon-login"></i>Personal Information</p>
-                </button>
-              </h2>
-              <div id="ppcollapseOne" class="accordion-collapse collapse show" aria-labelledby="ppOne"
-                data-bs-parent="#accordion_main_pp">
-                <div class="accordion-body">
-                  <div class="cs-form-item">
-                    <label class="" for="form-namesurname">Name Surname</label>
-                    <input type="text" id="form-namesurname" value="Zeynep Bz">
-                  </div>
-                  <div class="cs-form-item">
-                    <label class="" for="form-email">E-mail Address</label>
-                    <input type="email" id="form-email" class="floatingEmail-1" value="zeynepbz@4alabs.io">
-                  </div>
-                  <div class="cs-form-item">
-                    <label class="" for="form-phone">Phone Number</label>
-                    <input type="text" id="form-phone" value="+90 545 544 89 88">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="ppTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#ppcollapseTwo" aria-expanded="false" aria-controls="ppcollapseTwo">
-                  <p><i class="icon-company"></i>Company Information</p>
-                </button>
-              </h2>
-              <div id="ppcollapseTwo" class="accordion-collapse collapse" aria-labelledby="ppTwo"
-                data-bs-parent="#accordion_main_pp">
-                <div class="accordion-body">
-                  <div class="cs-form-item">
-                    <label class="" for="form-companyname">Company Name</label>
-                    <input type="text" id="form-companyname" value="4A Labs">
-                  </div>
-                  <div class="cs-form-item">
-                    <label class="" for="form-c-profile">Company Profile</label>
-                    <input type="email" id="form-c-profile" value="Lorem ipsum dolor">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="ppThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#ppcollapseThree" aria-expanded="false" aria-controls="ppcollapseThree">
-                  <p><i class="icon-lock"></i>Password Settings</p>
-
-                </button>
-              </h2>
-              <div id="ppcollapseThree" class="accordion-collapse collapse" aria-labelledby="ppThree"
-                data-bs-parent="#accordion_main_pp">
-                <div class="accordion-body">
-                  <div class="cs-form-item cs-pass-main">
-                    <label class="" for="form-currentpass">Current Password</label>
-                    <input type="password" id="form-currentpass" value="4A Labs">
-                    <i class="icon-eye-close" id="cs-icon-close-10"></i>
-                  </div>
-                  <div class="cs-form-item">
-                    <input type="password" id="form-newpass" placeholder="New Password">
-                  </div>
-                  <div class="cs-form-item">
-                    <input type="password" id="form-newpass-conf" placeholder="New Password Again">
-                  </div>
-                  <div class="cs-form-check-area">
-
-                    <div>
-                      <input class="form-check-input" type="checkbox" id="form-check-1">
-                      <label class="form-check-label" for="form-check-1">
-                        Within the scope of the Privacy Notice, do you allow SAMET KALIP VE
-                        MADENİ
-                        EŞYA
-                        SANAYİ VE TİCARET A.Ş. to receive E-MAIL for the purpose of announcing
-                        campaigns
-                        and advantages, advertising communication, and product promotion and
-                        processing
-                        your personal data that you have sent in this form for this purpose?
-                      </label>
-                    </div>
-                    <div>
-                      <input class="form-check-input" type="checkbox" id="form-check-2">
-                      <label class="form-check-label" for="form-check-2">
-                        Within the scope of the Privacy Notice, do you allow SAMET KALIP VE
-                        MADENİ
-                        EŞYA
-                        SANAYİ VE TİCARET A.Ş. to receive SMS for the purpose of announcing
-                        campaigns
-                        and advantages, advertising communication, and product promotion and
-                        processing
-                        your personal data that you have sent in this form for this purpose?
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button class="cs-btn-type-1">Save Changes</button>
-
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="cs-footer">
-        <a href="" class="cs-logout-btn"><i class="icon-logout"></i>Logout</a>
-      </div>
-    </div>
-    <div style="height: 100vh;"></div>
-    <div class="cs-modal-backdrop"></div>
-
+    main
   </main>
 
   <a href="javascript: void(0);" id="goTpButton"></a>
 
   <footer>
-    <div class="cs-global-footer-1">
-      <div class="cs-container-1">
-        <div class="row">
-          <div class="col-12 col-md-3 col-lg-3 col-xl-3">
-            <ul class="cs-footer-logo-m-1">
-              <a href="configurator-main.html"><img src="./assets/img/other/configuremate-logo.png"></a>
-            </ul>
-          </div>
-
-          <div class="col-12 col-md-3 col-lg-3 col-xl-3">
-            <h3 class="cs-footer-title-1">Configurator</h3>
-            <ul class="cs-footer-menu-1">
-              <li>
-                <a href="" title="">Product Configurator</a>
-              </li>
-              <li>
-                <a href="" title="">Module Configurator</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-12 col-md-3 col-lg-3 col-xl-3">
-            <h3 class="cs-footer-title-1">Follow us on Social Media</h3>
-            <ul class="cs-footer-menu-2">
-              <li>
-                <a href="" title=""><i class="icon-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="" title=""><i class="icon-twitter"></i></a>
-              </li>
-              <li>
-                <a href="" title=""><i class="icon-facebook"></i></a>
-              </li>
-              <li>
-                <a href="" title=""><i class="icon-instagram"></i></a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-12 col-md-3 col-lg-3 col-xl-3">
-            <p class="footer-desc-1"><strong>Address:</strong> Atatürk Mah. Adnan Menderes Cad. No: 8-13 34513
-              Esenyurt-İstanbul/Türkiye</p>
-
-            <p class="footer-desc-1"><strong>Phone:</strong> +90 212 886 75 23</p>
-            <p class="footer-desc-1"><strong>Fax:</strong> +90 212 886 51 61</p>
-
-            <p class="footer-desc-1"><strong>E-mail: </strong> <a
-                href="mailto:info@samet.com.tr">info@sametglobal.com</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="cs-footer-policy">
-      <div class="cs-policy-list">
-        <a href="">Privacy Policy</a>
-        <a href="">Cookies Policy</a>
-      </div>
-    </div>
+    footer
   </footer>
 
   <script src="assets/vendor/jQuery/jquery-3.6.0.min.js"></script>
   <script src="assets/vendor/bootstrap-5.2/js/bootstrap.min.js"></script>
-  <script src="assets/js/module-configurator.js"></script>
-  <script src="assets/js/configurator-main.js"></script>
+  <script src="assets/vendor/lightGallery/dist/js/lightgallery.min.js"></script>
+  <script src="assets/vendor/owlcarousel/js/owl.carousel.min.js"></script>
   <script src="assets/js/main.js"></script>
+ 
 </body>
 
 </html>
