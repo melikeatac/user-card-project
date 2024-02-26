@@ -23,6 +23,22 @@
     position: relative;
     bottom: 5px;
   }
+  .cs-login-main .cs-card-img {
+    display: none;
+  }
+  .cs-login-main .cs-login-content {
+    padding: 3% 0;
+  }
+  .cs-card-area {
+    flex-direction: column;
+  }
+  .cs-card-area {
+    padding: 20px;
+  }
+  .cs-card-area .cs-mobile-list {
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media (min-width: 500px) {
   #goTpButton {
