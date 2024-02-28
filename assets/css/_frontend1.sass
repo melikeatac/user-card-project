@@ -1,0 +1,613 @@
+@use 'variables'
+
+.cs-container
+    max-width: 1020px
+    width: 100%
+    margin: 0 auto
+.cs-login-main
+    position: relative
+    height: calc(100vh - 50px)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 100%
+    .cs-login-content
+        display: flex
+        align-items: center
+        padding: 3% 7%
+    .cs-card-img
+        max-width: 565px
+        width: 100%
+        object-fit: contain
+        position: absolute
+        bottom: 0
+        left: 200px
+    .cs-row-info-area
+        padding-bottom: 5%
+        .cs-title1
+            font-size: 50px
+            line-height: 58px
+            color: #000000
+            font-weight: 600
+            margin-bottom: 25px
+        .cs-desc1
+            font-size: 16px
+            line-height: 24px
+            font-weight: 400
+            color: #000000
+        .cs-row-link
+            color: #00A9A4
+            font-weight: 600
+            font-size: 16px
+            line-height: 24px
+    .cs-row-form-area
+        display: flex
+        max-width: 370px
+        width: 100%
+        margin: 0 auto
+        flex-direction: column
+        .cs-login-btn
+            color: #ffffff
+            background: #00A9A4
+            font-size: 16px
+            line-height: 24px
+            font-weight: 500
+            height: 55px
+            border-radius: 5px
+            border: 1px solid transparent
+            transition: all 0.3s
+            &:hover
+                border: 1px solid #00A9A4
+                background: #ffffff
+                color: #00A9A4
+                transition: all 0.3s
+
+        .cs-forgot-title
+            text-align: right
+            font-size: 14px
+            line-height: 20px
+            font-weight: 400
+            color: #667085
+            margin-bottom: 25px
+        .cs-info-tile
+            text-align: center
+            color: #B5B5B5
+            font-size: 16px
+            line-height: 24px
+            font-weight: 500
+            margin-top: 40px
+        .cs-form-title
+            font-size: 30px
+            line-height: 45px
+            margin-bottom: 20px
+            color: #000000
+            font-weight: 600
+        .cs-duo-1
+            display: flex
+            gap: 10px
+            margin-top: 30px
+            justify-content: center
+            img
+                width: 42px
+                height: 42px
+                border-radius: 50%
+                object-fit: contain
+.cs-card-main
+    padding: 30px 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    .cs-card-title
+        font-size: 48px
+        line-height: 56px
+        color: #101828
+        font-weight: 600
+        text-align: center
+        margin-bottom: 20px
+        margin-top: 10px
+    .cs-card-desc
+        font-size: 20px
+        line-height: 28px
+        color: #475467
+        font-weight: 500
+        max-width: 770px
+        width: 100%
+        text-align: center
+.cs-link-main
+    color: #00A9A4
+    display: flex
+    justify-content: center
+    gap: 5px
+    text-align: center
+    .cs-link-1
+        color: #00A9A4
+        font-size: 16px
+        line-height: 24px
+        font-weight: 600
+.cs-card-area
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 20px
+    padding: 20px 50px
+    border-radius: 20px
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px
+    .cs-card-detail
+        max-width: 295px
+        width: 100%
+    .cs-mobile-list
+        list-style: none
+        padding: 0
+        margin-top: 20px
+        display: none
+        li
+            display: flex
+            margin-bottom: 4px
+            gap: 4px
+            font-size: 15px
+            color: #848199
+            font-weight: 500
+    .cs-send-btn
+        border: none
+        background: #00716E
+        font-size: 16px
+        line-height: 24px
+        color: #ffffff
+        font-weight: 600
+        border-radius: 10px
+        padding: 10px 15px
+        display: flex
+        gap: 10px
+    .cs-card-img
+        max-width: 285px
+        height: 150px
+        object-fit: cover
+    .cs-duo-list
+        display: flex
+        justify-content: space-between
+        max-width: 300px
+        width: 100%
+        gap: 30px
+        ul
+            list-style: none
+            padding: 0
+            li
+                margin-bottom: 5px
+        .cs-list-1
+            li
+                font-size: 14px
+                line-height: 22px
+                color: #848199
+                font-weight: 500
+        .cs-list-2
+            li
+                font-size: 16px
+                line-height: 24px
+                color: #848199
+                font-weight: 700
+    .cs-card-info
+        background-color: #E6F7F6
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        color: #00A9A4
+        font-size: 16px
+        line-height: 24px
+        font-weight: 600
+        padding: 10px
+        max-width: 280px
+        width: 100%
+.cs-profile-area
+    width: 100%
+    .cs-title-main
+        font-size: 18px
+        line-height: 26px
+        color: #101828
+        font-weight: 600
+    .cs-desc-main
+        font-size: 14px
+        line-height: 22px
+        font-weight: 400
+        color: #475467
+    .cs-btn-group
+        width: 100%
+        display: flex
+        margin-top: 30px
+        justify-content: flex-end
+        gap: 10px
+        .cs-white-btn
+            color: #344054
+            font-size: 14px
+            line-height: 22px
+            padding: 5px 15px
+            background: #ffffff
+            border: 1px solid #D0D5DD
+            border-radius: 8px
+        .cs-primary-btn
+            color: #ffffff
+            font-size: 14px
+            line-height: 22px
+            padding: 5px 15px
+            background: #00A9A4
+            border: 1px solid #00A9A4
+            border-radius: 8px
+    .cs-profile-form
+        width: 100%
+        .cs-pp-area
+            display: flex
+            gap: 20px
+            .cs-pp-img
+                max-width: 64px
+                height: 64px
+                object-fit: cover
+                border-radius: 50%
+            .cs-file-area
+                width: 430px
+                border: 0.5px solid #D0D5DD
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                padding: 20px
+                border-radius: 4px
+                position: relative
+                input
+                    width: 100%
+                    height: 100%
+                    position: absolute
+                    cursor: pointer
+                    opacity: 0
+                .cs-file-title-1
+                    color: #475467
+                    font-size: 14px
+                    font-weight: 400
+                    line-height: 22px
+                    margin: 0
+                    a
+                        color: #00716E
+                        font-weight: 600
+                .cs-file-title-2
+                    color: #475467
+                    font-size: 12px
+                    font-weight: 400
+                    line-height: 22px
+        .cs-duo-main
+            max-width: 700px
+            width: 100%
+        .cs-duo-one
+            max-width: 850px
+            width: 100%
+        .cs-duo
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+            margin-bottom: 10px
+            .cs-list-title
+                font-size: 14px
+                line-height: 22px
+                color: #344054
+                font-weight: 600
+                margin: 0
+            .cs-info
+                font-size: 14px
+                line-height: 22px
+                font-weight: 400
+                color: #475467
+            .cs-input-1
+                max-width: 365px
+                width: 100%
+.cs-input-1
+    position: relative
+    i
+        position: absolute
+        right: 15px
+        top: 50%
+        transform: translateY(-50%)
+        cursor: pointer
+    input
+        height: calc(3.5rem + 2px)
+        line-height: 1.25
+        padding: 1rem 0.75rem
+        border: 1px solid #D0D5DD
+        &:focus
+            box-shadow: none
+            outline: 0
+.select2
+    width: 100% !important
+.select2-container--default
+    .select2-selection--single
+        .select2-selection__arrow
+            b
+                border: 0
+                height: 0
+                left: auto
+                margin-left: 0
+                margin-top: 0
+                position: absolute
+                top: auto
+                width: auto
+.cs-global-select2-container-1
+    max-width: 515px
+    width: 100%
+    label
+        display: block
+        cursor: pointer
+        font-size: 16px
+        line-height: 24px
+        font-weight: 600
+        color: #1A1A1A
+        margin:
+            bottom: 12px
+        text-align: left
+    ::placeholder
+        color: rgba(105, 105, 105, 0.5)
+    .select2-container--default
+        &.select2-container--open
+            &.select2-container--below
+                .select2-selection--single, .select2-selection--multiple
+                    border-radius: 12px
+            &.select2-container--above
+                .select2-selection--single, .select2-selection--multiple
+                    border-radius: 12px
+        .select2-selection--single, .select2-selection--multiple
+            cursor: pointer
+            background-color: #ffffff
+            border: none
+            height: auto
+        .select2-selection--single
+            .select2-selection__arrow
+                height: 25px
+                position: absolute
+                top: 12px
+                right: 20px
+                width: 14px
+            .select2-selection__arrow 
+                b
+                    &::after
+                        font-size: 8px
+                        color: #696969
+            .select2-selection__rendered
+                height: calc(3.5rem + 2px)
+                line-height: 1.25
+                padding: 1rem 0.75rem
+                border: 1px solid #D0D5DD
+                border-radius: 0.375rem
+            .select2-selection__placeholder
+                color: #041614
+                opacity: 0.5
+        .select2-selection--multiple
+            .select2-selection__placeholder
+                color: #041614
+                opacity: 0.5
+        .select2-search--inline
+            .select2-search__field
+                cursor: pointer
+                margin: 10px 0px 0px -10px
+                color: #041614
+                font-size: 15px
+                line-height: 20px
+                font-weight: 400
+                &::placeholder
+                    color: #041614
+                    font-size: 15px
+                    line-height: 20px
+                    font-weight: 400
+                    padding: 0 25px
+    &.type-2
+        label
+            position: absolute
+            z-index: 1
+            margin-left: 14px
+            margin-top: 14px
+            color: #7287FD
+            font-size: 24px
+        .select2-container--default
+            .select2-selection--single
+                .select2-selection__rendered
+                    padding-left: 45px
+.select2-container--open
+    .cs-global-select2-dd-1
+        &.select2-dropdown--below
+            border: 0.5px solid #EDEDED
+            border-radius: 14px
+            background-color: #ffffff
+            margin-top: 10px
+            padding: 10px 20px
+        &.select2-dropdown--above
+            border: 0.5px solid #EDEDED
+            border-radius: 14px
+            background-color: #ffffff
+            margin-top: 10px
+            padding: 10px 20px
+.select2-container--default
+    .cs-global-select2-dd-1
+        .select2-results__option--highlighted
+            &.select2-results__option--selectable
+                background-color: #ffffff
+                color: #041614
+        .select2-results__option--selected
+            background-color: #ffffff
+            color: #041614
+            font-weight: variables.$fontWeightBold
+        .select2-search--dropdown
+            position: relative
+            padding: 0
+            margin:
+                bottom: 15px
+            &::before
+                position: absolute
+                left: 12px
+                top: 50%
+                transform: translateY(-50%)
+                z-index: 0
+                pointer-events: none
+                color: #3830DC
+            .select2-search__field
+                border: 1px solid rgba(114, 135, 253, 0.5)
+                border-radius: 10px
+                padding-left: 30px
+                &:focus
+                    outline: none
+                    box-shadow: none
+.select2-container--open
+    .cs-global-select2-dd-2
+        &.select2-dropdown--below
+            border: 0.5px solid #EDEDED
+            border-radius: 14px
+            background-color: #ffffff
+            margin-top: 10px
+            padding: 10px 20px
+        &.select2-dropdown--above
+            border: 0.5px solid #EDEDED
+            border-radius: 14px
+            background-color: #ffffff
+            margin-top: 10px
+            padding: 10px 20px
+.select2-container--default
+    .cs-global-select2-dd-2
+        .select2-results__option--highlighted
+            &.select2-results__option--selectable
+                background-color: #ffffff
+                color: #041614
+        .select2-results__option--selected
+            background-color: #ffffff
+            color: #041614
+            font-weight: variables.$fontWeightBold
+        .select2-search--dropdown
+            position: relative
+            padding: 0
+            margin:
+                bottom: 15px
+            &::before
+                position: absolute
+                left: 12px
+                top: 50%
+                transform: translateY(-50%)
+                z-index: 0
+                pointer-events: none
+                color: #3830DC
+            .select2-search__field
+                border: 1px solid rgba(114, 135, 253, 0.5)
+                border-radius: 10px
+                padding-left: 30px
+                &:focus
+                    outline: none
+                    box-shadow: none
+
+    .select2-selection--single
+        .select2-selection__arrow
+            b
+                border: 0
+                height: 0
+                left: auto
+                margin-left: 0
+                margin-top: 0
+                position: absolute
+                top: auto
+                width: auto
+.cs-contactus-area
+    padding: 48px
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+    background: #F5F5F5
+    .cs-form-1
+        .cs-textarea-main
+            display: flex
+            flex-direction: column
+            textarea
+                border:1px solid #D0D5DD !important
+                padding: 10px
+                resize: none
+                height: 250px
+                border-radius: 0.375rem
+                &:focus
+                    border:1px solid #D0D5DD !important
+                    outline: 0
+            .cs-mini-info
+                color: #344054
+                font-size: 14px
+                line-height: 22px
+                margin-bottom: 5px
+                font-weight: 600
+    .cs-info-area
+        margin: 0 auto
+        background: #ffffff
+        padding: 20px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        height: 100%
+        border-radius: 20px
+        .cs-contactus-title
+            font-size: 25px
+            line-height: 33px
+            color: #00A9A4
+            font-weight: 600
+            text-align: center
+            max-width: 260px
+            width: 100%
+        .cs-contactus-desc
+            font-size: 15px
+            line-height: 23px
+            color: #00A9A4
+            font-weight: 500
+            text-align: center
+            max-width: 260px
+            width: 100%
+        .cs-list-1
+            padding: 0
+            list-style: none
+            li
+                color: #00716E
+                font-size: 16px
+                font-weight: 600
+                margin-bottom: 20px
+                i
+                    color: #00716E
+                    margin-right: 8px
+        .cs-list-social-media
+            display: flex
+            gap: 30px
+            align-items: center
+            padding: 0
+            list-style: none
+            img
+                width: 36px
+                height: 36px
+                object-fit: contain
+                border-radius: 50%
+                
+.cs-contactus-bottom
+    background: #DDE2E5
+    padding: 30px
+    margin-top: 50px
+    .cs-contactus-content
+        display: grid
+        grid-template-columns: repeat(3,1fr)
+        gap: 50px
+    .cs-cu-content
+        display: flex
+        flex-direction: column
+        width: 100%
+        gap: 10px
+        padding: 0 50px
+        img
+            width: 56px
+            height: 54px
+            object-fit: contain
+            border-radius: 10px
+        .cs-title
+            font-size: 20px
+            color: #00A9A4
+            font-weight: 600
+            line-height: 28px
+        .cs-desc
+            font-size: 14px
+            color: #495057
+            font-weight: 600
+            line-height: 22px
+            a
+                color: #495057
+                font-weight: 700

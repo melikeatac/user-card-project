@@ -23,6 +23,70 @@
     position: relative;
     bottom: 5px;
   }
+  .cs-login-main .cs-card-img {
+    display: none;
+  }
+  .cs-login-main .cs-login-content {
+    padding: 3% 0;
+  }
+  .cs-card-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cs-card-area {
+    padding: 20px;
+  }
+  .cs-card-area .cs-mobile-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cs-profile-area .cs-profile-form .cs-duo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .cs-profile-area .cs-profile-form .cs-duo .cs-list-title {
+    margin-bottom: 10px;
+  }
+  .cs-profile-area .cs-profile-form .cs-pp-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .cs-profile-area .cs-profile-form .cs-pp-area .cs-file-area {
+    width: 100%;
+  }
+  .cs-contactus-area {
+    padding: 20px 10px;
+  }
+  .cs-contactus-bottom {
+    padding: 30px 0;
+  }
+  .cs-contactus-bottom .cs-contactus-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cs-card-main .cs-card-title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .cs-card-main .cs-card-desc {
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
 @media (min-width: 500px) {
   #goTpButton {
