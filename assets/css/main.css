@@ -8,6 +8,61 @@
   margin: 0 auto;
 }
 
+.cs-login-btn {
+  color: #ffffff;
+  background: #00A9A4;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  height: 55px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+.cs-login-btn:hover {
+  border: 1px solid #00A9A4;
+  background: #ffffff;
+  color: #00A9A4;
+  transition: all 0.3s;
+}
+
+.cs-send-btn {
+  border: none;
+  background: #00716E;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 15px;
+  display: flex;
+  gap: 10px;
+}
+.cs-send-btn img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.cs-green-btn {
+  border: none;
+  background: #25D366;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: 600;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px 15px;
+  display: flex;
+  gap: 10px;
+}
+.cs-green-btn img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 .cs-login-main {
   position: relative;
   height: calc(100vh - 50px);
@@ -57,23 +112,6 @@
   width: 100%;
   margin: 0 auto;
   flex-direction: column;
-}
-.cs-login-main .cs-row-form-area .cs-login-btn {
-  color: #ffffff;
-  background: #00A9A4;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-  height: 55px;
-  border-radius: 5px;
-  border: 1px solid transparent;
-  transition: all 0.3s;
-}
-.cs-login-main .cs-row-form-area .cs-login-btn:hover {
-  border: 1px solid #00A9A4;
-  background: #ffffff;
-  color: #00A9A4;
-  transition: all 0.3s;
 }
 .cs-login-main .cs-row-form-area .cs-forgot-title {
   text-align: right;
@@ -176,18 +214,6 @@
   font-size: 15px;
   color: #848199;
   font-weight: 500;
-}
-.cs-card-area .cs-send-btn {
-  border: none;
-  background: #00716E;
-  font-size: 16px;
-  line-height: 24px;
-  color: #ffffff;
-  font-weight: 600;
-  border-radius: 10px;
-  padding: 10px 15px;
-  display: flex;
-  gap: 10px;
 }
 .cs-card-area .cs-card-img {
   max-width: 285px;
@@ -700,6 +726,110 @@
   line-height: 22px;
 }
 .cs-contactus-bottom .cs-cu-content .cs-desc a {
+  color: #495057;
+  font-weight: 700;
+}
+
+.cs-hospital-card-1 {
+  margin-top: 30px;
+}
+.cs-hospital-card-1 .cs-img-area {
+  max-width: 450px;
+  width: 100%;
+  max-height: 250px;
+}
+.cs-hospital-card-1 .cs-img-area img {
+  width: 100%;
+  object-fit: cover;
+}
+.cs-hospital-card-1 .cs-right-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 5px 0;
+}
+.cs-hospital-card-1 .cs-right-area .cs-duo-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.cs-hospital-card-1 .cs-right-area .cs-duo-1 .cs-desc-1 {
+  font-size: 24px;
+  color: #495057;
+  line-height: 32px;
+}
+.cs-hospital-card-1 .cs-right-area .cs-duo-1 .cs-title-1 {
+  color: #495057;
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 600;
+}
+.cs-hospital-card-1 .cs-right-area .cs-duo-1 .cs-star-area {
+  display: flex;
+  align-items: center;
+  color: #FFD43A;
+  font-size: 25px;
+  line-height: 33px;
+  font-weight: 600;
+}
+.cs-hospital-card-1 .cs-right-area .cs-duo-1 .cs-star-area i {
+  margin-right: 5px;
+}
+.cs-hospital-card-1 .cs-right-area .cs-duo-1 .cs-green-btn, .cs-hospital-card-1 .cs-right-area .cs-duo-1 .cs-send-btn {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card-list-main {
+  padding: 50px 0;
+  border-top: 1px solid #495057;
+  border-bottom: 1px solid #495057;
+  margin-top: 35px;
+}
+.card-list-main .cs-duo-2 {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.card-list-main .cs-duo-2 img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.card-list-main .cs-duo-2 span {
+  font-size: 16px;
+  line-height: 24px;
+  color: #495057;
+  font-weight: 700;
+}
+
+.cs-detaill-title {
+  color: #495057;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.cs-content .cs-detail-title-2 {
+  font-size: 16px;
+  line-height: 24px;
+  color: #495057;
+  font-weight: 700;
+}
+.cs-content .cs-detail-link {
+  font-size: 24px;
+  line-height: 32px;
+  color: #00A9A4;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.cs-content .cs-detail-link-2 {
+  font-size: 24px;
+  line-height: 32px;
   color: #495057;
   font-weight: 700;
 }
