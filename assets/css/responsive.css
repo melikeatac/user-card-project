@@ -158,6 +158,67 @@
     gap: 16px;
   }
   /*FOOTER END*/    
+  .cs-hospital-card-1 .cs-right-area .cs-duo-1 .cs-title-1, .cs-hospital-card-1 .cs-right-area .cs-duo-1 .cs-star-area {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .cs-content .cs-detail-link, .cs-content .cs-detail-link-2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .cs-table-area {
+    overflow: hidden;
+    overflow-x: auto;
+    margin-bottom: 10px;
+  }
+  .cs-table-area::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+  .cs-table-area::-webkit-scrollbar {
+    height: 3px;
+    background-color: #F5F5F5;
+  }
+  .cs-table-area::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #555;
+  }
+  .cs-table-area table {
+    width: 650px;
+  }
+  .card-list-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+  }
+  .cs-hospital-card-1 .cs-right-area .cs-duo-1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5px;
+  }
+  .cs-hospital-card-1 .cs-right-area .cs-duo-1 button {
+    width: 100%;
+  }
+  .cs-hospital-card-1 .cs-img-area img {
+    max-height: 160px;
+  }
+  .price-list-area {
+    margin-top: 15px;
+  }
+  .cs-detail-title {
+    font-size: 22px;
+    line-height: 30px;
+  }
 }
 @media (min-width: 500px) {
   #goTpButton {
