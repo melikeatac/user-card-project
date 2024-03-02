@@ -31,41 +31,25 @@
     padding: 3% 0;
   }
   .cs-card-area {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .cs-card-area {
     padding: 20px;
   }
   .cs-card-area .cs-mobile-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .cs-profile-area .cs-profile-form .cs-duo {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 20px;
   }
   .cs-profile-area .cs-profile-form .cs-duo .cs-list-title {
     margin-bottom: 10px;
   }
   .cs-profile-area .cs-profile-form .cs-pp-area {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     width: 100%;
   }
   .cs-profile-area .cs-profile-form .cs-pp-area .cs-file-area {
@@ -124,37 +108,22 @@
   /*İNDEX END*/
   /*FOOTER*/
   footer .cs-footer-top {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   footer .cs-footer-top .cs-col-1 {
-    -webkit-box-flex: 1 !important;
-        -ms-flex: 1 !important;
-            flex: 1 !important;
+    flex: 1 !important;
     max-width: 100% !important;
   }
   footer .cs-footer-top .cs-col-1 .cs-footer-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   footer .cs-footer-top .cs-col-2 {
-    -webkit-box-flex: 1 !important;
-        -ms-flex: 1 !important;
-            flex: 1 !important;
+    flex: 1 !important;
     max-width: 100% !important;
   }
   footer .cs-footer-bottom {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column-reverse;
+    align-items: center;
     gap: 16px;
   }
   /*FOOTER END*/    
@@ -189,21 +158,13 @@
     width: 650px;
   }
   .card-list-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     gap: 10px;
     padding: 20px 0;
   }
   .cs-hospital-card-1 .cs-right-area .cs-duo-1 {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     gap: 5px;
   }
   .cs-hospital-card-1 .cs-right-area .cs-duo-1 button {
@@ -218,6 +179,16 @@
   .cs-detail-title {
     font-size: 22px;
     line-height: 30px;
+  }
+  .cs-clinic-card-area .cs-input-area {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .cs-clinic-card-area .cs-select-area {
+    max-width: 100%;
+  }
+  .cs-clinic-card-area .cs-clinic-card-contents {
+    margin: 30px 0;
   }
 }
 @media (min-width: 500px) {
