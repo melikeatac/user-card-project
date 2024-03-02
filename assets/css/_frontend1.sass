@@ -640,7 +640,8 @@
         max-height: 250px
         img
             width: 100%
-            object-fit: cover
+            height: 100%
+            object-fit: contain
     .cs-right-area
         display: flex
         flex-direction: column
@@ -693,7 +694,7 @@
             line-height: 24px
             color: #495057
             font-weight: 700
-.cs-detaill-title
+.cs-detail-title
     color: #495057
     font-size: 24px
     line-height: 32px
@@ -704,6 +705,7 @@
         line-height: 24px
         color: #495057
         font-weight: 700
+        margin: 10px 0
     .cs-detail-link
         font-size: 24px
         line-height: 32px
@@ -715,3 +717,65 @@
         line-height: 32px
         color: #495057
         font-weight: 700
+.cs-img-list
+    display: flex
+    gap: 20px
+    margin: 15px 0
+    img
+        max-width: 48px
+        width: 100%
+        height: 35px
+        object-fit: contain
+iframe
+    width: 100%
+    height: 150px
+
+.price-list-area
+    margin-top: 50px
+    margin-bottom: 20px
+    border-top: 1px solid #495057
+    border-bottom: 1px solid #495057
+    padding: 20px 0
+    .cs-list-duo
+        display: flex
+        gap: 10px
+        align-items: center
+        color: #495057
+.table>:not(caption)>*>*
+    border: none
+.cs-table-desc-1
+    font-size: 16px
+    line-height: 24px
+    color: #495057
+    font-weight: 700
+.cs-table-desc-2
+    font-size: 16px
+    line-height: 24px
+    color: #F97066
+    font-weight: 900
+.cs-main-table
+    table-layout: fixed
+    width: 100%
+    th,td
+        width: 33%
+        box-sizing: border-box
+        text-align: center
+    .cs-title-1
+        font-size: 16px
+        line-height: 24px
+        color: #495057
+        text-align: center
+        font-weight: 700
+    .cs-title-2
+        font-size: 16px
+        line-height: 24px
+        color: #F97066
+        font-weight: 700
+        text-align: center
+.cs-back-comp
+    color: #495057
+    font-size: 24px
+    line-height: 32px
+    font-weight: 500
+    i
+        margin-right: 8px
