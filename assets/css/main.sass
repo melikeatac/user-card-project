@@ -6,13 +6,17 @@
 @import url('../vendor/bootstrap-5.2/css/bootstrap.min.css')
 @import url('../vendor/fontawesome/css/all.min.css')
 @import url('../vendor/icomoon/style.css')
-@keyframes shake 
-  0%, 100% 
-    transform: translateY(0)
-  50% 
-    transform: translateY(-10px)
-
-
+@keyframes shake
+    0%, 100%
+        transform: translateY(0)
+    50%
+        transform: translateY(-10px)
+@keyframes rotateClockwise 
+    from 
+        transform: rotate(0deg)
+    
+    to 
+        transform: rotate(360deg)
 *
     font-family: variables.$mainFontFamily
 html
@@ -26,35 +30,34 @@ a
 button
     &:hover, &:focus
         @include short-code.text-DO
-#goTpButton
-    display: inline-block
-    background-color: variables.$primaryColor
-    width: 50px
-    height: 50px
-    text-align: center
-    border-radius: 4px
-    position: fixed
-    bottom: 65px
-    right: -3px
-    transition: background-color 0.3s, opacity 0.5s, visibility 0.5s
-    opacity: 0
-    visibility: hidden
-    z-index: 8
-    &::after
-        @include short-code.fontAwesomeCreate('\f077')
-        font-size: 2em
-        line-height: 50px
-        color: variables.$whiteColor
-    &.show-active
-        opacity: 1
-        visibility: visible
+
 .cs-global-btn
+    background-color: #00A9A4
+    padding: 12px 32px 12px 32px
+    border: 1px solid #00A9A4
+    color: #FFFFFF
+    border-radius: 10px
+    transition: all 0.3s ease
+    &:hover
+        color: #00A9A4
+        background-color: #fff
+        transition: all 0.3s ease
+.cs-card-btn
+    color: #00A9A4
+    padding: 12px 32px 12px 32px
+    border: none
+    background-color: #E6F7F6
+    border-radius: 10px
+    text-align: center
+    &:hover
+        color: #FFF
         background-color: #00A9A4
-        padding: 12px 32px 12px 32px
-        border: none
-        color: #FFFFFF
-        border-radius: 10px    
+        transition: all 0.3s ease
+.cs-middle
+    display: flex
+    justify-content: center
 header
+    
     .navbar-nav
         .nav-item
             .nav-link
@@ -62,8 +65,50 @@ header
                 font-weight: 500
                 &.active
                     font-weight: 700
-                    color:#00A9A4
+                    color: #00A9A4
                     text-decoration: underline
+    .navbar-toggler
+        box-shadow: none
+        border: none
+        &:focus
+            box-shadow: none !important
+            border: none !important
+            outline: none !important
+    .cs-col-2
+        min-height: 1px
+        position: relative
+        width: 100%
+        margin-top: 16px
+        .cs-head
+            color: #495057
+            font-size: 16px
+            line-height: 24px
+            font-weight: 600
+        .cs-fc-list
+            list-style-type: none
+            padding: 0
+            margin-top: 30px
+            display: flex
+            flex-direction: column
+            gap: 32px
+            li
+                display: flex
+                gap: 16px
+                a
+                    color: #495057
+                    font-size: 16px
+                    line-height: 24px
+                    font-weight: 400
+                    display: block
+                    
+                i
+                    font-size: 24px
+                    min-width: 40px
+        .cs-social-box
+            a
+                color: #98A2B3
+                font-size: 24px
+                padding: 8px
 .cs-index-headbox
     display: flex
     flex-direction: column
@@ -82,16 +127,94 @@ header
         font-size: 14px
         font-weight: 500
         line-height: 22px
-    
+
 .cs-section-1
-    .cs-banner-textbox
+    .row
+        min-height: 600px
+    .cs-banner-left
+        display: flex
+        align-items: center
+        .cs-banner-textbox
+
+    .cs-banner-right
+        position: relative
+        .cs-banner-cardbox
+            position: relative
+            background-size: cover
+            background-repeat: no-repeat
+            height: 100%
+            z-index: 1
+            img
+                width: 285px
+                height: 160px
+                object-fit: contain
+                border-radius: 15px
+                &:hover
+                    z-index: 4
+                    transition: all 0.3s lineer
+            .cs-img1
+                transform: rotate(20deg)
+                position: absolute
+                top: 25%
+                right: 35%
+                z-index: 3
+                &:hover
+                    transform: rotate(20deg) scale(1.2) 
+            .cs-img2
+                transform: rotate(35deg)
+                position: absolute
+                top: 20%
+                right: 15%
+                z-index: 1
+                &:hover
+                    transform: rotate(35deg) scale(1.2)
+            .cs-img3
+                transform: rotate(-10deg)
+                position: absolute
+                top: 50%
+                right: 15%
+                z-index: 2
+                &:hover
+                    transform: rotate(-10deg) scale(1.2)
+        .cs-banner-colorbox
+            position: absolute
+            top: 0
+            width: 100%
+            height: 100%
+            animation-name: rotateClockwise
+            animation-duration: 5s
+            animation-timing-function: linear
+            animation-iteration-count: infinite
+            .blue, .purple, .pink 
+                width: 350px
+                height: 350px
+                border-radius: 50%
+                filter: blur(200px)
+                position: absolute
+                z-index: -1
+                animation-duration: 5s
+                animation-timing-function: linear
+                animation-iteration-count: infinite
+            .blue 
+                background-color: #00F0FF
+                right: 0
+                
+            .purple 
+                background-color: #6154FE
+                left: 0
+            .pink 
+                background-color: #DB00FF
+                right: 15%
+                bottom: 0
     .owl-carousel-index1
-        padding: 50px 0
+        padding: 50px 16px
         .owl-item
             height: 100%
             .cs-item-main
                 img
                     object-fit: contain
+                    width: 100%
+                    height: 75px
                 .cs-img-c
                     display: none
                 .cs-img-nc
@@ -107,8 +230,8 @@ header
         margin-top: 40px
         .row
             div[class*='col']
-                display: flex
-                justify-content: center
+            display: flex
+            justify-content: center
         .cs-card
             display: flex
             flex-direction: column
@@ -177,7 +300,7 @@ header
             top: 15%
             right: -5%
             animation: shake 3s infinite
-            
+
             .cs-img1
                 position: absolute
                 top: 0
@@ -232,7 +355,7 @@ header
                 line-height: 24px
                 font-weight: 700
     .cs-sec5-brands-wrapper
-        
+
         .cs-brands-main
             display: flex
             align-items: center
@@ -259,4 +382,243 @@ header
                                 display: block
                             .cs-img-nc
                                 display: none
-
+.cs-section-6
+    padding: 50px 0
+    .cs-sec6-main
+        .row
+            max-width: 865px
+            margin: 0 auto
+            .cs-card
+                position: relative
+                max-width: 265px
+                height: max-content
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+                border-radius: 20px       
+                .cs-most-popular
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    position: absolute
+                    top: 0
+                    width: 100%
+                    height: 35px
+                    text-align: center
+                    background-color: #00a9a320
+                    border-radius: 20px 20px 0 0
+                    color: #231D4F
+                    font-weight: 700
+                .cs-card-main
+                    padding: 16px
+                    display: flex
+                    flex-direction: column
+                    width: 100%
+                    gap: 16px
+                    margin-top: 32px
+                    .cs-main-img
+                        max-width: 230px
+                        width: 100%
+                        height: 120px
+                        object-fit: contain
+                        border-radius: 10px
+                    .cs-monthly-price
+                        margin: 0
+                        text-align: center
+                        color: #848199
+                        font-size: 17px
+                        font-weight: 300
+                        span
+                            color: #231D4F
+                            font-size: 30px
+                            font-weight: 700
+                    .cs-head
+                        margin: 0
+                        color: #231D4F
+                        font-size: 24px
+                        line-height: 32px
+                        font-weight: 700
+                    .cs-desc
+                        margin: 0
+                        color: #848199
+                        font-size: 15px
+                        font-weight: 300
+                    .cs-list
+                        list-style-type: none
+                        padding: 0
+                        display: flex
+                        flex-direction: column
+                        gap: .5rem
+                        li
+                            color: #848199
+                            font-size: 15px
+                            font-weight: 300
+                            display: flex
+                            align-items: center
+                            img
+                                margin-right: 8px
+                            &.details-toggler
+                                padding-top: 10px
+                                justify-content: center
+                                a
+                                    color: #ACB5BD
+                                    font-size: 15px
+                                    font-weight: 700
+                        .details-container
+                            display: none
+                            li
+                                margin-bottom: .5rem
+                        .details-container.active
+                            display: block
+.cs-section-7
+    padding: 50px 0
+.cs-section-8
+    padding: 50px 0
+    .cs-slider-area
+        .halfSlider1
+            position: relative
+            .owl-nav
+                button
+                    width: 56px
+                    height: 56px
+                    background: #00716E
+                    border-radius: 50%
+                    color: #FFF
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    font-size: 24px
+                    &.owl-prev
+                        position: absolute
+                        left: 10px
+                        top: 50%
+                        transform: translateY(-50%)
+                    &.owl-next
+                        position: absolute
+                        right: 10px
+                        top: 50%
+                        transform: translateY(-50%)
+            .item
+                padding: 50px 5px
+                
+                .cs-card
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 5px 0px
+                    padding: 16px
+                    display: flex
+                    flex-direction: column
+                    gap: 16px
+                    border-radius: 20px
+                    .cs-head
+                        color: #00A9A4
+                        font-weight: 700
+                        font-size: 22px
+                        line-height: 30px
+                    .cs-desc
+                        color: #6F6C90
+                        font-size: 18px
+                        line-height: 26px
+                        font-weight: 400
+                    .cs-comments-user-wrapper
+                        display: flex
+                        gap: 16px
+                        .cs-user-img
+                            width: 60px
+                            height: 60px
+                            object-fit: cover
+                        .cs-user-head
+                            color: #00A9A4
+                            font-weight: 700
+                            font-size: 18px
+                            line-height: 26px
+                            margin: 0
+                        .cs-user-desc
+                            color: #6F6C90
+                            font-size: 18px
+                            line-height: 26px
+                            font-weight: 400
+footer
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 10px 0px
+    .cs-footer-top
+        display: flex
+        padding: 40px 0
+        .cs-col-1
+            flex: 0 0 calc(100% - 350px)
+            max-width: calc(100% - 350px)
+            min-height: 1px
+            position: relative
+            width: 100%
+            display: flex
+            flex-direction: column
+            gap: 32px
+            .cs-footer-logo
+                height: 67px
+                width: 167px
+                object-fit: contain
+                font-size: 56px
+                font-weight: 700
+                margin-bottom: 16px
+            .cs-desc
+                color: #495057
+                font-size: 16px
+                line-height: 24px
+                font-weight: 400
+                max-width: 320px
+            .cs-footer-list
+                display: inline-flex
+                flex-wrap: wrap
+                list-style-type: none
+                padding: 0
+                gap: 16px
+                max-width: 80%
+                a
+                    color: #495057
+                    font-size: 16px
+                    line-height: 24px
+                    font-weight: 400
+                    &:hover
+                        text-decoration: underline
+        .cs-col-2
+            flex: 0 0 350px
+            max-width: 350px
+            min-height: 1px
+            position: relative
+            width: 100%
+            .cs-head
+                color: #495057
+                font-size: 16px
+                line-height: 24px
+                font-weight: 600
+            .cs-fc-list
+                list-style-type: none
+                padding: 0
+                margin-top: 30px
+                display: flex
+                flex-direction: column
+                gap: 32px
+                li
+                    display: flex
+                    gap: 16px
+                    a
+                        color: #495057
+                        font-size: 16px
+                        line-height: 24px
+                        font-weight: 400
+                        display: block
+                        
+                    i
+                        font-size: 24px
+                        min-width: 40px
+                        
+                    
+    .cs-footer-bottom
+        display: flex
+        justify-content: space-between
+        padding: 25px 0 
+        border-top: 1px solid #000
+        .cs-social-box
+            display: flex
+            gap: 16px
+            a
+                color: #98A2B3
+                font-size: 24px
+                padding: 8px
+        .cs-desc
+            margin: 0
