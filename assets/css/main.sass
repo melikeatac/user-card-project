@@ -452,9 +452,12 @@ header
                             font-size: 15px
                             font-weight: 300
                             display: flex
-                            align-items: center
+                            align-items: flex-start
                             img
-                                margin-right: 8px
+                                margin: 
+                                    right: 8px
+                                    top: 5px
+                                
                             &.details-toggler
                                 padding-top: 10px
                                 justify-content: center
@@ -622,3 +625,63 @@ footer
                 padding: 8px
         .cs-desc
             margin: 0
+/*CARDS PAGE*/
+.cs-cards-headbox
+    text-align: center
+    padding: 30px 0
+    max-width: 768px
+    margin: 0 auto
+    .cs-head
+        font-size: 48px
+        line-height: 56px
+        color: #101828
+        font-weight: 600
+    .cs-desc
+        color: #475467
+        font-size: 20px
+        line-height: 28px
+        font-weight: 400
+.cs-adds-box
+    background-color: #00A9A4
+    display: flex
+    align-items: center
+    gap: 16px
+    max-width: 1015px
+    padding: 16px 24px
+    border-radius: 20px
+    margin: 30px auto
+    img
+        width: 150px
+        height: 85px
+        object-fit: cover
+        border-radius: 20px
+    .cs-desc
+        color: #fff
+        font-size: 24px
+        line-height: 32px
+        font-weight: 700
+        margin: 0
+.cs-important
+    max-width: 850px
+    margin: 30px auto
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+    padding: 16px 32px
+    border-radius: 15px
+    a
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .cs-desc
+            color: #00716E
+            font-size: 24px
+            line-height: 32px
+            text-decoration: underline
+            font-weight: 700
+            margin: 0
+        i
+            color: #00716E
+            font-size: 20px
+
+
+    
+/*CARDS PAGE END*/

@@ -1773,12 +1773,13 @@ header .cs-col-2 .cs-social-box a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .cs-section-6 .cs-sec6-main .row .cs-card .cs-card-main .cs-list li img {
   margin-right: 8px;
+  margin-top: 5px;
 }
 .cs-section-6 .cs-sec6-main .row .cs-card .cs-card-main .cs-list li.details-toggler {
   padding-top: 10px;
@@ -2028,4 +2029,87 @@ footer .cs-footer-bottom .cs-social-box a {
 }
 footer .cs-footer-bottom .cs-desc {
   margin: 0;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*CARDS PAGE*/
+.cs-cards-headbox {
+  text-align: center;
+  padding: 30px 0;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.cs-cards-headbox .cs-head {
+  font-size: 48px;
+  line-height: 56px;
+  color: #101828;
+  font-weight: 600;
+}
+.cs-cards-headbox .cs-desc {
+  color: #475467;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.cs-adds-box {
+  background-color: #00A9A4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  max-width: 1015px;
+  padding: 16px 24px;
+  border-radius: 20px;
+  margin: 30px auto;
+}
+.cs-adds-box img {
+  width: 150px;
+  height: 85px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.cs-adds-box .cs-desc {
+  color: #fff;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cs-important {
+  max-width: 850px;
+  margin: 30px auto;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 16px 32px;
+  border-radius: 15px;
+}
+.cs-important a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cs-important a .cs-desc {
+  color: #00716E;
+  font-size: 24px;
+  line-height: 32px;
+  text-decoration: underline;
+  font-weight: 700;
+  margin: 0;
+}
+.cs-important a i {
+  color: #00716E;
+  font-size: 20px;
+}
+
+/*CARDS PAGE END*//*# sourceMappingURL=main.css.map */
