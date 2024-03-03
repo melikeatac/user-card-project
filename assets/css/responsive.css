@@ -18,8 +18,7 @@
   }
   .cs-card-area .cs-card-img {
     max-width: 205px;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -34,10 +33,10 @@
     max-width: 180px;
   }
   .cs-card-area {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
+  }
+  .cs-contactus-area .cs-info-area .cs-list-social-media {
+    gap: 15px;
   }
 }
 @media (max-width: 767px) {
@@ -53,6 +52,12 @@
     position: relative;
     bottom: 5px;
   }
+  header .cs-col-2 .cs-fc-list {
+    gap: 15px;
+  }
+  header .cs-col-2 .cs-fc-list li i {
+    min-width: 25px;
+  }
   .cs-login-main .cs-card-img {
     display: none;
   }
@@ -60,48 +65,32 @@
     padding: 3% 0;
   }
   .cs-card-area {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .cs-card-area {
     padding: 20px;
   }
   .cs-card-area .cs-mobile-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .cs-profile-area .cs-profile-form .cs-duo {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 20px;
   }
   .cs-profile-area .cs-profile-form .cs-duo .cs-list-title {
     margin-bottom: 10px;
   }
   .cs-profile-area .cs-profile-form .cs-pp-area {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     width: 100%;
   }
   .cs-profile-area .cs-profile-form .cs-pp-area .cs-file-area {
     width: 100%;
   }
   .cs-contactus-area {
-    padding: 20px 10px;
+    padding: 20px 0;
   }
   .cs-contactus-bottom {
     padding: 30px 0;
@@ -126,14 +115,87 @@
     font-size: 14px;
     line-height: 22px;
   }
+  .cs-section-1 .cs-banner-right {
+    height: 200px;
+  }
+  .cs-section-1 .cs-banner-right .cs-banner-colorbox {
+    position: relative;
+    height: 200px;
+    animation-name: none;
+    width: 100%;
+  }
+  .cs-section-1 .cs-banner-right .cs-banner-colorbox .blue, .cs-section-1 .cs-banner-right .cs-banner-colorbox .purple, .cs-section-1 .cs-banner-right .cs-banner-colorbox .pink {
+    max-width: 350px;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    filter: blur(100px);
+  }
+  .cs-section-1 .cs-banner-right .cs-banner-cardbox {
+    height: 200px;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .cs-section-1 .cs-banner-right .cs-banner-cardbox img {
+    max-width: 175px;
+    height: 100px;
+  }
+  .cs-section-1 .owl-carousel-index1 {
+    padding: 20px 15px;
+  }
+  .cs-section-2 {
+    padding: 30px 0;
+  }
   .cs-section-2 .cs-sec2-card-wrapper .cs-card {
     margin: 16px auto;
   }
   .cs-section-3 .cs-sec3-content {
     margin-top: 30px;
   }
+  .cs-section-4 .cs-sec4-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .cs-section-4 .cs-sec4-main .blur-background {
+    position: relative;
+    right: 0;
+    width: 100%;
+    height: 300px;
+  }
+  .cs-section-4 .cs-sec4-main .cs-sec4-imagebox {
+    top: 0;
+    right: 0;
+  }
+  .cs-section-4 .cs-sec4-main .cs-sec4-imagebox .cs-img1 {
+    max-width: 300px;
+    width: 100%;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .cs-section-4 .cs-sec4-main .cs-sec4-imagebox .cs-img2 {
+    max-width: 300px;
+    width: 100%;
+    top: 30px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .cs-section-4 .cs-sec4-main .cs-sec4-imagebox .cs-img3 {
+    max-width: 300px;
+    width: 100%;
+    top: 63px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .cs-section-4 .cs-sec4-main .row {
     max-width: 100%;
+    order: 2;
   }
   .cs-section-4 .cs-sec4-main .row .cs-card {
     max-width: 100%;
@@ -143,6 +205,11 @@
   }
   .cs-section-6 .cs-sec6-main .row .cs-card {
     margin: 30px 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .cs-section-6 .cs-sec6-main .row .cs-card .cs-card-main .cs-list {
+    align-self: flex-start;
   }
   .cs-section-8 .cs-slider-area .halfSlider1 .item {
     padding: 30px 5px;
@@ -153,37 +220,22 @@
   /*İNDEX END*/
   /*FOOTER*/
   footer .cs-footer-top {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   footer .cs-footer-top .cs-col-1 {
-    -webkit-box-flex: 1 !important;
-        -ms-flex: 1 !important;
-            flex: 1 !important;
+    flex: 1 !important;
     max-width: 100% !important;
   }
   footer .cs-footer-top .cs-col-1 .cs-footer-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   footer .cs-footer-top .cs-col-2 {
-    -webkit-box-flex: 1 !important;
-        -ms-flex: 1 !important;
-            flex: 1 !important;
+    flex: 1 !important;
     max-width: 100% !important;
   }
   footer .cs-footer-bottom {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column-reverse;
+    align-items: center;
     gap: 16px;
   }
   /*FOOTER END*/    
@@ -218,21 +270,13 @@
     width: 650px;
   }
   .card-list-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     gap: 10px;
     padding: 20px 0;
   }
   .cs-hospital-card-1 .cs-right-area .cs-duo-1 {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     gap: 5px;
   }
   .cs-hospital-card-1 .cs-right-area .cs-duo-1 button {
@@ -249,10 +293,7 @@
     line-height: 30px;
   }
   .cs-clinic-card-area .cs-input-area {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     gap: 5px;
   }
   .cs-clinic-card-area .cs-select-area {
@@ -265,9 +306,11 @@
     height: 330px;
   }
   .cs-clinic-card-area .cs-clinic-card-contents .cs-row-item {
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+    justify-content: center !important;
+  }
+  .cs-adds-box {
+    flex-direction: column;
+    text-align: center;
   }
 }
 @media (min-width: 500px) {
