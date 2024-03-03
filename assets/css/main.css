@@ -1113,6 +1113,211 @@ iframe {
   margin-right: 8px;
 }
 
+.cs-clinic-card-area .cs-input-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cs-clinic-card-area .cs-select-area {
+  max-width: 215px;
+  width: 100%;
+}
+.cs-clinic-card-area .cs-input-box {
+  border: 1px solid #D0D5DD;
+  border-radius: 0.375rem;
+  max-width: 430px;
+  width: 100%;
+  height: calc(3.5rem + 3px);
+  line-height: 1.25;
+  height: 100%;
+}
+.cs-clinic-card-area .cs-input-box input {
+  border: none;
+  border-radius: 0.375rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 0;
+  padding: 1.1rem 0.75rem;
+  width: 100%;
+}
+.cs-clinic-card-area .cs-input-box input:focus {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 0;
+  width: 100%;
+}
+.cs-clinic-card-area .cs-iconduo {
+  position: relative;
+  width: 100%;
+}
+.cs-clinic-card-area .cs-iconduo select {
+  max-width: 215px;
+  width: 100%;
+}
+.cs-clinic-card-area .cs-iconduo i {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.cs-clinic-card-area .cs-clinic-card-contents {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .cs-card-content-1 {
+  height: 350px;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .cs-row-item:nth-child(3n-2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .cs-row-item:nth-child(3n) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .cs-row-item:nth-child(3n-1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .card {
+  padding: 15px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: none;
+  max-width: 350px;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .card:hover {
+  padding-bottom: 50px;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .card:hover .cs-card-info-btn {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s all;
+  transition: all 0.3s all;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .card .cs-duo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .card .cs-duo .card-link {
+  color: #495057;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .card .cs-duo .card-link i {
+  margin-right: 5px;
+  color: #00716E;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .card .cs-duo .cs-star-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFD43A;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .card .cs-duo .cs-star-area i {
+  margin-right: 5px;
+  color: #FFD43A;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .card .card-title {
+  font-size: 20px;
+  color: #00716E;
+  line-height: 28px;
+  font-weight: 700;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .cs-img-area {
+  position: relative;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .cs-img-area img {
+  width: 100%;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .cs-img-area .cs-discount-text {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 24px;
+  color: #ffffff;
+  height: 40px;
+  background: #00A9A4;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.cs-card-info-btn {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 0;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 24px;
+  border: none;
+  color: #ffffff;
+  height: 40px;
+  background: #00A9A4;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s all;
+  transition: all 0.3s all;
+}
+.cs-card-info-btn:hover {
+  color: #ffffff;
+}
+
 @-webkit-keyframes shake {
   0%, 100% {
     -webkit-transform: translateY(0);
@@ -1456,7 +1661,7 @@ header .cs-col-2 .cs-social-box a {
 .cs-section-2 .cs-sec2-card-wrapper {
   margin-top: 40px;
 }
-.cs-section-2 .cs-sec2-card-wrapper .row {
+.cs-section-2 .cs-sec2-card-wrapper .row div[class*=col] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -4,11 +4,40 @@
     bottom: 60px;
     right: 5px;
   }
+  .cs-clinic-card-area .cs-select-area {
+    max-width: 180px;
+  }
+  .cs-clinic-card-area .cs-input-box {
+    max-width: 320px;
+  }
+  .cs-card-area {
+    padding: 20px;
+  }
+  .cs-card-area .cs-card-detail {
+    max-width: 150px;
+  }
+  .cs-card-area .cs-card-img {
+    max-width: 205px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   #goTpButton {
     bottom: 60px;
     right: 5px;
+  }
+  .cs-clinic-card-area .cs-select-area {
+    max-width: 165px;
+  }
+  .cs-clinic-card-area .cs-input-box {
+    max-width: 180px;
+  }
+  .cs-card-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 @media (max-width: 767px) {
@@ -218,6 +247,27 @@
   .cs-detail-title {
     font-size: 22px;
     line-height: 30px;
+  }
+  .cs-clinic-card-area .cs-input-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5px;
+  }
+  .cs-clinic-card-area .cs-select-area {
+    max-width: 100%;
+  }
+  .cs-clinic-card-area .cs-clinic-card-contents {
+    margin: 30px 0;
+  }
+  .cs-clinic-card-area .cs-clinic-card-contents .cs-card-content-1 {
+    height: 330px;
+  }
+  .cs-clinic-card-area .cs-clinic-card-contents .cs-row-item {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
   }
 }
 @media (min-width: 500px) {
