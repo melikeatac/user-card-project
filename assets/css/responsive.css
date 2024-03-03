@@ -119,12 +119,12 @@
   }
   /*İNDEX*/
   .cs-index-headbox h2.cs-head, .cs-index-headbox h1.cs-head {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 24px !important;
+    line-height: 32px !important;
   }
   .cs-index-headbox .cs-desc {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 14px !important;
+    line-height: 22px !important;
   }
   .cs-section-2 .cs-sec2-card-wrapper .cs-card {
     margin: 16px auto;
@@ -269,6 +269,45 @@
         -ms-flex-pack: center !important;
             justify-content: center !important;
   }
+  /*ABOUT US*/
+  .cs-aboutus-wrapper .cs-aboutus-head {
+    padding: 16px;
+    background: transparent;
+  }
+  .cs-aboutus-wrapper .cs-aboutus-head .cs-aboutus-head-main .cs-desc2 {
+    margin: 0;
+  }
+  .cs-aboutus-wrapper .cs-au-sec-1 {
+    padding: 50px 0;
+  }
+  .cs-aboutus-wrapper .cs-au-sec-1 .row .col-12:first-child {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .cs-aboutus-wrapper .cs-au-sec-1 .row .col-12 .cs-au-s1-text-box {
+    padding: 0;
+  }
+  .cs-aboutus-wrapper .cs-au-sec-1 .row .col-12 .cs-au-s1-text-box .cs-text-box {
+    margin: 8px 0;
+  }
+  .cs-aboutus-wrapper .cs-au-sec-1 .row .col-12 .cs-au-s1-text-box .cs-text-box .cs-tb-span {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .cs-aboutus-wrapper .cs-au-sec-2 {
+    background: transparent;
+    padding: 0;
+  }
+  .cs-aboutus-wrapper .cs-au-sec-2 .cs-au-s2-desc {
+    background: #fff;
+    padding: 16px;
+    text-align: center;
+  }
+  .cs-aboutus-wrapper .cs-au-sec-2 .cs-au-s2-desc .cs-desc {
+    margin: 0;
+  }
+  /*ABOUT US END*/
 }
 @media (min-width: 500px) {
   #goTpButton {

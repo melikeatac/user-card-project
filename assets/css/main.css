@@ -2317,4 +2317,327 @@ footer .cs-footer-bottom .cs-desc {
   font-size: 20px;
 }
 
-/*CARDS PAGE END*//*# sourceMappingURL=main.css.map */
+/*CARDS PAGE END*/
+/*ABOUTUS PAGE*/
+.cs-aboutus-wrapper .cs-aboutus-head {
+  width: 100%;
+  background: #FFF;
+  padding: 96px 16px;
+}
+.cs-aboutus-wrapper .cs-aboutus-head .cs-aboutus-head-main {
+  max-width: 768px;
+  text-align: center;
+  margin: 0 auto;
+  background: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+.cs-aboutus-wrapper .cs-aboutus-head .cs-aboutus-head-main h1.cs-head {
+  color: #000;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+}
+.cs-aboutus-wrapper .cs-aboutus-head .cs-aboutus-head-main .cs-desc2 {
+  color: #475467;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+}
+.cs-aboutus-wrapper .cs-au-sec-1 {
+  padding: 96px 0;
+}
+.cs-aboutus-wrapper .cs-au-sec-1 .cs-au-s1-imagebox img {
+  max-width: 560px;
+  width: 100%;
+}
+.cs-aboutus-wrapper .cs-au-sec-1 .cs-au-s1-text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+  padding: 32px;
+}
+.cs-aboutus-wrapper .cs-au-sec-1 .cs-au-s1-text-box .cs-index-headbox h2.cs-head {
+  color: #000;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+}
+.cs-aboutus-wrapper .cs-au-sec-1 .cs-au-s1-text-box .cs-index-headbox .cs-desc2 {
+  color: #475467;
+}
+.cs-aboutus-wrapper .cs-au-sec-1 .cs-au-s1-text-box .cs-text-box {
+  margin: 32px 0;
+}
+.cs-aboutus-wrapper .cs-au-sec-1 .cs-au-s1-text-box .cs-text-box .cs-tb-span {
+  color: #00A9A4;
+  font-size: 60px;
+  line-height: 68px;
+  font-weight: 700;
+}
+.cs-aboutus-wrapper .cs-au-sec-1 .cs-au-s1-text-box .cs-text-box .cs-tb-desc {
+  color: #101828;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+}
+.cs-aboutus-wrapper .cs-au-sec-2 {
+  padding: 50px 0;
+  background: #FFF;
+}
+.cs-aboutus-wrapper .cs-au-sec-2 .cs-au-s2-desc {
+  max-width: 768px;
+  text-align: center;
+  margin: 0 auto;
+}
+.cs-aboutus-wrapper .cs-au-sec-2 .cs-au-s2-desc .cs-desc {
+  color: #475467;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.cs-aboutus-wrapper .cs-au-sec-2 .owl-carousel-index1 {
+  padding: 50px 16px;
+}
+.cs-aboutus-wrapper .cs-au-sec-2 .owl-carousel-index1 .owl-item {
+  height: 100%;
+}
+.cs-aboutus-wrapper .cs-au-sec-2 .owl-carousel-index1 .owl-item .cs-item-main img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 75px;
+}
+.cs-aboutus-wrapper .cs-au-sec-2 .owl-carousel-index1 .owl-item .cs-item-main .cs-img-c {
+  display: none;
+}
+.cs-aboutus-wrapper .cs-au-sec-2 .owl-carousel-index1 .owl-item .cs-item-main .cs-img-nc {
+  display: block;
+}
+.cs-aboutus-wrapper .cs-au-sec-2 .owl-carousel-index1 .owl-item .cs-item-main:hover .cs-img-c {
+  display: block;
+}
+.cs-aboutus-wrapper .cs-au-sec-2 .owl-carousel-index1 .owl-item .cs-item-main:hover .cs-img-nc {
+  display: none;
+}
+.cs-aboutus-wrapper .cs-au-sec-3 {
+  padding: 50px 0;
+}
+.cs-aboutus-wrapper .cs-au-sec-3 .cs-aboutus-head-main {
+  max-width: 768px;
+  text-align: center;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+.cs-aboutus-wrapper .cs-au-sec-3 .cs-aboutus-head-main h2.cs-head {
+  color: #000;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+}
+.cs-aboutus-wrapper .cs-au-sec-3 .cs-aboutus-head-main .cs-desc2 {
+  color: #475467;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+}
+.cs-aboutus-wrapper .cs-au-sec-3 .cs-au-s3-itembox {
+  padding: 50px 0;
+}
+.cs-aboutus-wrapper .cs-au-sec-3 .cs-au-s3-itembox .cs-au-s3-item {
+  max-width: 384px;
+  margin: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+.cs-aboutus-wrapper .cs-au-sec-3 .cs-au-s3-itembox .cs-au-s3-item img {
+  width: 48px;
+  height: 48px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cs-aboutus-wrapper .cs-au-sec-3 .cs-au-s3-itembox .cs-au-s3-item .cs-head {
+  color: #101828;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+}
+.cs-aboutus-wrapper .cs-au-sec-3 .cs-au-s3-itembox .cs-au-s3-item .cs-desc {
+  color: #475467;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.cs-aboutus-wrapper .cs-au-sec-4 {
+  padding: 50px 0;
+  background: #FFF;
+}
+.cs-aboutus-wrapper .cs-au-sec-4 .cs-au-s4-mobile-box .cs-aboutus-head-main {
+  text-align: center;
+}
+.cs-aboutus-wrapper .cs-au-sec-4 .cs-au-s4-mobile-box .cs-aboutus-head-main .cs-index-headbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cs-aboutus-wrapper .cs-au-sec-4 .cs-au-s4-mobile-box .cs-aboutus-head-main .cs-desc2 {
+  color: #475467;
+}
+.cs-aboutus-wrapper .cs-au-sec-4 .cs-au-s4-mobile-box .cs-button-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.cs-aboutus-wrapper .cs-au-sec-4 .cs-au-s4-mobile-box .cs-button-box button {
+  width: 100%;
+}
+.cs-aboutus-wrapper .cs-au-sec-4 .cs-au-s4-mobile-box .cs-button-box button:nth-child(2) {
+  background: #FFF;
+  color: #344054;
+  border: 1px solid #ACB5BD;
+}
+.cs-aboutus-wrapper .cs-au-sec-4 .cs-au-s4-mobile-box .cs-button-box button:nth-child(2):hover {
+  color: #00A9A4;
+  border: 1px solid #00A9A4;
+}
+.cs-aboutus-wrapper .cs-au-sec-4 .cs-item-main {
+  max-width: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: #F9FAFB;
+  margin: 0 auto;
+}
+.cs-aboutus-wrapper .cs-au-sec-4 .cs-item-main .cs-img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.cs-aboutus-wrapper .cs-au-sec-4 .cs-item-main .cs-desc1 {
+  color: #101828;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  margin: 0;
+}
+.cs-aboutus-wrapper .cs-au-sec-4 .cs-item-main .cs-desc2 {
+  color: #00A9A4;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+.cs-aboutus-wrapper .cs-au-sec-4 .cs-item-main .cs-desc3 {
+  color: #475467;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+.cs-aboutus-wrapper .cs-au-sec-4 .cs-item-main .cs-social-box a {
+  color: #98A2B3;
+  font-size: 18px;
+  padding: 8px;
+}
+.cs-aboutus-wrapper .cs-au-sec-5 {
+  padding: 50px 0;
+  background: #FFF;
+}
+.cs-aboutus-wrapper .cs-au-sec-5 .cs-aboutus-head-main {
+  text-align: center;
+}
+.cs-aboutus-wrapper .cs-au-sec-5 .cs-aboutus-head-main .cs-index-headbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cs-aboutus-wrapper .cs-au-sec-5 .cs-aboutus-head-main .cs-index-headbox .cs-desc1 {
+  color: #00716E;
+  font-size: 14px;
+  line-height: 22px;
+  background: #F9F5FF;
+  border-radius: 16px;
+  padding: 5px 10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.cs-aboutus-wrapper .cs-au-sec-5 .cs-imgbox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cs-aboutus-wrapper .cs-au-sec-5 .cs-imgbox img {
+  max-width: 1280px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*ABOUTUS PAGE END*//*# sourceMappingURL=main.css.map */
