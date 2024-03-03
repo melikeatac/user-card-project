@@ -969,6 +969,21 @@ iframe {
   margin-top: 50px;
   margin-bottom: 100px;
 }
+.cs-clinic-card-area .cs-clinic-card-contents .cs-card-content-1 {
+  height: 350px;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .cs-row-item:nth-child(3n-2) {
+  display: flex;
+  justify-content: flex-start;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .cs-row-item:nth-child(3n) {
+  display: flex;
+  justify-content: flex-end;
+}
+.cs-clinic-card-area .cs-clinic-card-contents .cs-row-item:nth-child(3n-1) {
+  display: flex;
+  justify-content: center;
+}
 .cs-clinic-card-area .cs-clinic-card-contents .card {
   padding: 15px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -978,7 +993,6 @@ iframe {
   position: relative;
   border-radius: 10px;
   cursor: pointer;
-  padding-bottom: 15px;
 }
 .cs-clinic-card-area .cs-clinic-card-contents .card:hover {
   padding-bottom: 50px;

@@ -822,6 +822,18 @@ iframe
     .cs-clinic-card-contents
         margin-top: 50px
         margin-bottom: 100px
+        .cs-card-content-1
+            height: 350px
+        .cs-row-item
+            &:nth-child(3n-2)
+                display: flex
+                justify-content: flex-start
+            &:nth-child(3n)
+                display: flex
+                justify-content: flex-end
+            &:nth-child(3n-1)
+                display: flex
+                justify-content: center
         .card
             padding: 15px
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
@@ -831,7 +843,6 @@ iframe
             position: relative
             border-radius: 10px
             cursor: pointer
-            padding-bottom: 15px
             &:hover
                 padding-bottom: 50px
                 .cs-card-info-btn
