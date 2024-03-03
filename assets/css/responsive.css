@@ -39,6 +39,9 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .cs-contactus-area .cs-info-area .cs-list-social-media {
+    gap: 15px;
+  }
 }
 @media (max-width: 767px) {
   #goTpButton {
@@ -52,6 +55,12 @@
     line-height: 50px;
     position: relative;
     bottom: 5px;
+  }
+  header .cs-col-2 .cs-fc-list {
+    gap: 15px;
+  }
+  header .cs-col-2 .cs-fc-list li i {
+    min-width: 25px;
   }
   .cs-login-main .cs-card-img {
     display: none;
@@ -101,7 +110,7 @@
     width: 100%;
   }
   .cs-contactus-area {
-    padding: 20px 10px;
+    padding: 20px 0;
   }
   .cs-contactus-bottom {
     padding: 30px 0;
@@ -125,6 +134,46 @@
   .cs-index-headbox .cs-desc {
     font-size: 14px !important;
     line-height: 22px !important;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .cs-section-1 .cs-banner-right {
+    height: 200px;
+  }
+  .cs-section-1 .cs-banner-right .cs-banner-colorbox {
+    position: relative;
+    height: 200px;
+    -webkit-animation-name: none;
+            animation-name: none;
+    width: 100%;
+  }
+  .cs-section-1 .cs-banner-right .cs-banner-colorbox .blue, .cs-section-1 .cs-banner-right .cs-banner-colorbox .purple, .cs-section-1 .cs-banner-right .cs-banner-colorbox .pink {
+    max-width: 350px;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+  }
+  .cs-section-1 .cs-banner-right .cs-banner-cardbox {
+    height: 200px;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .cs-section-1 .cs-banner-right .cs-banner-cardbox img {
+    max-width: 175px;
+    height: 100px;
+  }
+  .cs-section-1 .owl-carousel-index1 {
+    padding: 20px 15px;
+  }
+  .cs-section-2 {
+    padding: 30px 0;
   }
   .cs-section-2 .cs-sec2-card-wrapper .cs-card {
     margin: 16px auto;
@@ -132,8 +181,56 @@
   .cs-section-3 .cs-sec3-content {
     margin-top: 30px;
   }
+  .cs-section-4 .cs-sec4-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cs-section-4 .cs-sec4-main .blur-background {
+    position: relative;
+    right: 0;
+    width: 100%;
+    height: 300px;
+  }
+  .cs-section-4 .cs-sec4-main .cs-sec4-imagebox {
+    top: 0;
+    right: 0;
+  }
+  .cs-section-4 .cs-sec4-main .cs-sec4-imagebox .cs-img1 {
+    max-width: 300px;
+    width: 100%;
+    right: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .cs-section-4 .cs-sec4-main .cs-sec4-imagebox .cs-img2 {
+    max-width: 300px;
+    width: 100%;
+    top: 30px;
+    right: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .cs-section-4 .cs-sec4-main .cs-sec4-imagebox .cs-img3 {
+    max-width: 300px;
+    width: 100%;
+    top: 63px;
+    right: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
   .cs-section-4 .cs-sec4-main .row {
     max-width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   .cs-section-4 .cs-sec4-main .row .cs-card {
     max-width: 100%;
@@ -143,6 +240,12 @@
   }
   .cs-section-6 .cs-sec6-main .row .cs-card {
     margin: 30px 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .cs-section-6 .cs-sec6-main .row .cs-card .cs-card-main .cs-list {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
   .cs-section-8 .cs-slider-area .halfSlider1 .item {
     padding: 30px 5px;
@@ -308,6 +411,13 @@
     margin: 0;
   }
   /*ABOUT US END*/
+  .cs-adds-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
 }
 @media (min-width: 500px) {
   #goTpButton {

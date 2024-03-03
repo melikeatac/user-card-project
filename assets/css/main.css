@@ -244,11 +244,12 @@
   gap: 20px;
   padding: 20px 50px;
   border-radius: 20px;
+  margin-bottom: 50px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 .cs-card-area .cs-card-detail {
-  max-width: 295px;
+  max-width: 290px;
   width: 100%;
 }
 .cs-card-area .cs-mobile-list {
@@ -739,8 +740,8 @@
 
 .cs-contactus-area {
   padding: 48px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background: #F5F5F5;
 }
 .cs-contactus-area .cs-form-1 .cs-textarea-main {
@@ -1391,6 +1392,8 @@ button:hover, button:focus {
   border-radius: 10px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  z-index: 1;
+  position: relative;
 }
 .cs-global-btn:hover {
   color: #00A9A4;
@@ -2007,6 +2010,27 @@ header .cs-col-2 .cs-social-box a {
   display: block;
 }
 
+.cs-card-content-list .cs-card {
+  height: 100% !important;
+}
+.cs-card-content-list .cs-card .cs-card-main {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  margin-top: 0 !important;
+  padding-top: 35px !important;
+}
+.cs-card-content-list .cs-card .cs-card-main .cs-list {
+  margin-top: 20px;
+}
+.cs-card-content-list .cs-card .cs-card-main .cs-monthly-price {
+  margin: 10px 0 !important;
+}
+.cs-card-content-list .cs-card .cs-card-main .cs-head {
+  margin: 20px 0 !important;
+}
+
 .cs-section-7 {
   padding: 50px 0;
 }
@@ -2286,33 +2310,35 @@ footer .cs-footer-bottom .cs-desc {
 }
 
 .cs-important {
-  max-width: 850px;
+  max-width: 895px;
   margin: 30px auto;
-  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  padding: 16px 32px;
   border-radius: 15px;
 }
-.cs-important a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.cs-important ul {
+  list-style: disc;
 }
-.cs-important a .cs-desc {
+.cs-important ul li {
+  color: #6F6C90;
+  font-size: 18px;
+  line-height: 35px;
+  font-weight: 400;
+}
+.cs-important .cs-desc {
   color: #00716E;
   font-size: 24px;
   line-height: 32px;
   text-decoration: underline;
   font-weight: 700;
   margin: 0;
+  background: #ffffff !important;
+  border: none !important;
+  outline: 0;
 }
-.cs-important a i {
+.cs-important .cs-desc:focus:not(:focus-visible) {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.cs-important i {
   color: #00716E;
   font-size: 20px;
 }
