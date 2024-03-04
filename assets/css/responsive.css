@@ -57,25 +57,20 @@
   }
   header .cs-col-2 .cs-fc-list li i {
     min-width: 25px;
+    color: #98a2b4;
   }
   .cs-card-area .cs-duo-list {
     overflow: hidden;
     overflow-x: auto;
     padding-bottom: 10px;
   }
-  .cs-card-area .cs-duo-list::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    background-color: #F5F5F5;
-  }
   .cs-card-area .cs-duo-list::-webkit-scrollbar {
     height: 3px;
-    background-color: #F5F5F5;
   }
   .cs-card-area .cs-duo-list::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #555;
+    background-color: #e6f8f6;
   }
   .cs-card-area .cs-duo-list table {
     max-width: 650px;
@@ -259,6 +254,9 @@
     flex: 1 !important;
     max-width: 100% !important;
   }
+  footer .cs-footer-top .cs-col-2 .cs-fc-list li i {
+    min-width: 30px;
+  }
   footer .cs-footer-bottom {
     flex-direction: column-reverse;
     align-items: center;
@@ -320,7 +318,7 @@
   }
   .cs-clinic-card-area .cs-input-area {
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
   }
   .cs-clinic-card-area .cs-select-area {
     max-width: 100%;

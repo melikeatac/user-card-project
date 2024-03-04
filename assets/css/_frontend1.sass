@@ -233,6 +233,7 @@
             line-height: 24px
             color: #848199
             font-weight: 500
+            white-space: nowrap
         .cs-list-2
             font-size: 16px
             line-height: 24px
@@ -668,7 +669,7 @@
     .cs-img-area
         max-width: 450px
         width: 100%
-        max-height: 250px
+        height: 250px
         img
             width: 100%
             height: 100%
@@ -850,11 +851,13 @@ iframe
             top: 50%
             right: 20px
             transform: translateY(-50%)
+            color: #98a2b4
     .cs-clinic-card-contents
         margin-top: 50px
         margin-bottom: 100px
         .cs-card-content-1
             height: 350px
+            width: 100%
         .cs-row-item
             &:nth-child(3n-2)
                 display: flex
@@ -910,7 +913,7 @@ iframe
             img
                 width: 100%
                 height: 200px
-                object-fit: contain
+                object-fit: cover
                 border-radius: 10px
             .cs-discount-text
                 position: absolute
@@ -921,7 +924,7 @@ iframe
                 align-items: center
                 top: 0
                 font-size: 16px
-                font-weight: 900
+                font-weight: 700
                 line-height: 24px
                 color: #ffffff
                 height: 40px
@@ -937,19 +940,63 @@ iframe
     align-items: center
     bottom: 0
     font-size: 16px
-    font-weight: 900
+    font-weight: 700
     line-height: 24px
     border: none
     color: #ffffff
     height: 40px
-    background: #00A9A4
+    background-color: #00A9A4
     border-bottom-left-radius: 10px 
     border-bottom-right-radius: 10px
     opacity: 0
     visibility: hidden
-    transition: all 0.3s all
     &:hover
         color: #ffffff
+    &.cs-card-info-btn-nologin
+        font-size: 13px
+        line-height: 21px
+.cs-dropdown
+    .dropdown-menu
+        border: none
+        margin: 0
+        background: transparent
+        width: 100%
+        border-radius: 0
+    .dropdown-item
+        display: flex !important
+        gap: 10px
+        font-size: 16px
+        line-height: 22px
+        align-items: center
+        color: #495057
+        font-weight: 600
+        margin-bottom: 10px
+        &:hover
+            background: #dffbf9
+        img
+            width: 24px
+            height: 24px
+            object-fit: contain
+    button
+        border: none
+        outline: 0
+        box-shadow: none
+        &:hover,&:active,&:focus
+            border: none
+            outline: 0
+            box-shadow: none
+    .cs-dropdown-image
+        width: 48px
+        height: 48px
+        border-radius: 50%
+        object-fit: contain
+        margin-right: 15px
+    .cs-dropdown-title
+        font-size: 16px
+        line-height: 24px
+        color: #495057  
+        font-weight: 600
+
 
 
     

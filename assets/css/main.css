@@ -278,6 +278,7 @@
   line-height: 24px;
   color: #848199;
   font-weight: 500;
+  white-space: nowrap;
 }
 .cs-card-area .cs-duo-list .cs-list-2 {
   font-size: 16px;
@@ -774,7 +775,7 @@
 .cs-hospital-card-1 .cs-img-area {
   max-width: 450px;
   width: 100%;
-  max-height: 250px;
+  height: 250px;
 }
 .cs-hospital-card-1 .cs-img-area img {
   width: 100%;
@@ -1002,6 +1003,7 @@ iframe {
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
+  color: #98a2b4;
 }
 .cs-clinic-card-area .cs-clinic-card-contents {
   margin-top: 50px;
@@ -1009,6 +1011,7 @@ iframe {
 }
 .cs-clinic-card-area .cs-clinic-card-contents .cs-card-content-1 {
   height: 350px;
+  width: 100%;
 }
 .cs-clinic-card-area .cs-clinic-card-contents .cs-row-item:nth-child(3n-2) {
   display: flex;
@@ -1076,7 +1079,7 @@ iframe {
 .cs-clinic-card-area .cs-clinic-card-contents .cs-img-area img {
   width: 100%;
   height: 200px;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 10px;
 }
 .cs-clinic-card-area .cs-clinic-card-contents .cs-img-area .cs-discount-text {
@@ -1088,7 +1091,7 @@ iframe {
   align-items: center;
   top: 0;
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 24px;
   color: #ffffff;
   height: 40px;
@@ -1106,20 +1109,72 @@ iframe {
   align-items: center;
   bottom: 0;
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 24px;
   border: none;
   color: #ffffff;
   height: 40px;
-  background: #00A9A4;
+  background-color: #00A9A4;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s all;
 }
 .cs-card-info-btn:hover {
   color: #ffffff;
+}
+.cs-card-info-btn.cs-card-info-btn-nologin {
+  font-size: 13px;
+  line-height: 21px;
+}
+
+.cs-dropdown .dropdown-menu {
+  border: none;
+  margin: 0;
+  background: transparent;
+  width: 100%;
+  border-radius: 0;
+}
+.cs-dropdown .dropdown-item {
+  display: flex !important;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 22px;
+  align-items: center;
+  color: #495057;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.cs-dropdown .dropdown-item:hover {
+  background: #dffbf9;
+}
+.cs-dropdown .dropdown-item img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.cs-dropdown button {
+  border: none;
+  outline: 0;
+  box-shadow: none;
+}
+.cs-dropdown button:hover, .cs-dropdown button:active, .cs-dropdown button:focus {
+  border: none;
+  outline: 0;
+  box-shadow: none;
+}
+.cs-dropdown .cs-dropdown-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: contain;
+  margin-right: 15px;
+}
+.cs-dropdown .cs-dropdown-title {
+  font-size: 16px;
+  line-height: 24px;
+  color: #495057;
+  font-weight: 600;
 }
 
 @keyframes shake {
@@ -1352,7 +1407,8 @@ header .cs-col-2 .cs-social-box a {
   animation-iteration-count: infinite;
 }
 .cs-section-1 .cs-banner-right .cs-banner-colorbox .blue, .cs-section-1 .cs-banner-right .cs-banner-colorbox .purple, .cs-section-1 .cs-banner-right .cs-banner-colorbox .pink {
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   height: 350px;
   border-radius: 50%;
   filter: blur(200px);
@@ -1899,17 +1955,23 @@ footer .cs-footer-bottom {
   padding: 25px 0;
   border-top: 1px solid #000;
 }
-footer .cs-footer-bottom .cs-social-box {
-  display: flex;
-  gap: 16px;
-}
-footer .cs-footer-bottom .cs-social-box a {
-  color: #98A2B3;
-  font-size: 24px;
-  padding: 8px;
-}
 footer .cs-footer-bottom .cs-desc {
   margin: 0;
+}
+
+.cs-social-box {
+  display: flex;
+  gap: 12px;
+}
+.cs-social-box a {
+  color: #98A2B3;
+  font-size: 24px;
+  padding: 8px 2px;
+}
+.cs-social-box a img {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
 }
 
 /*CARDS PAGE*/

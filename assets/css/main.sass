@@ -191,7 +191,8 @@ header
             animation-timing-function: linear
             animation-iteration-count: infinite
             .blue, .purple, .pink 
-                width: 350px
+                max-width: 350px
+                width: 100%
                 height: 350px
                 border-radius: 50%
                 filter: blur(200px)
@@ -648,15 +649,19 @@ footer
         justify-content: space-between
         padding: 25px 0 
         border-top: 1px solid #000
-        .cs-social-box
-            display: flex
-            gap: 16px
-            a
-                color: #98A2B3
-                font-size: 24px
-                padding: 8px
         .cs-desc
             margin: 0
+.cs-social-box
+    display: flex
+    gap: 12px
+    a
+        color: #98A2B3
+        font-size: 24px
+        padding: 8px 2px
+        img
+            width: 23px
+            height: 23px
+            object-fit: contain
 /*CARDS PAGE*/
 .cs-cards-headbox
     text-align: center
