@@ -151,31 +151,36 @@ header
                 border-radius: 15px
                 &:hover
                     z-index: 4
-                    transition: all 0.3s lineer
             .cs-img1
                 transform: rotate(20deg)
                 position: absolute
                 top: 25%
                 right: 35%
                 z-index: 3
+                transition: all .5s
                 &:hover
-                    transform: rotate(20deg) scale(1.2) 
+                    transform: rotate(20deg) scale(1.1)
+                    transition: all .5s 
             .cs-img2
                 transform: rotate(35deg)
                 position: absolute
                 top: 20%
                 right: 15%
                 z-index: 1
+                transition: all .5s
                 &:hover
-                    transform: rotate(35deg) scale(1.2)
+                    transform: rotate(35deg) scale(1.1)
+                    transition: all .5s
             .cs-img3
                 transform: rotate(-10deg)
                 position: absolute
                 top: 50%
                 right: 15%
                 z-index: 2
+                transition: all .5s
                 &:hover
-                    transform: rotate(-10deg) scale(1.2)
+                    transform: rotate(-10deg) scale(1.1)
+                    transition: all .5s
         .cs-banner-colorbox
             position: absolute
             top: 0
@@ -717,7 +722,41 @@ footer
     i
         color: #00716E
         font-size: 20px
-
+    .accordion-button
+        text-decoration: none !important
+        &:not(.collapsed)::after 
+            content: "\f078"
+            font-family: 'Font Awesome 5 Free'
+            margin-left: 5px
+            background-image: none
+            transform: none
+            margin-left: auto
+            font-size: 18px
+            display: flex
+            justify-content: center
+            align-items: center
+            color: #FFF
+            background: #00A9A4
+            padding: 5px
+            border-radius: 50%
+            width: 32px
+            height: 32px
+        &.collapsed::after 
+            content: "\f054"
+            font-family: 'Font Awesome 5 Free'
+            margin-left: 5px
+            background-image: none
+            transform: none
+            margin-left: auto
+            font-size: 18px
+            display: flex
+            justify-content: center
+            align-items: center
+            color: #00A9A4
+            background: transparent
+            border-radius: 50%
+            width: 32px
+            height: 32px
 
 
     

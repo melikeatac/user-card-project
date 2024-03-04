@@ -24,3 +24,8 @@ $(document).ready(function() {
     }
 });
 /* Select2 1 End */
+$(document).ready(function() {
+    var closestBody = $('.cs-login-main').closest('body');
+    
+    closestBody.css('overflow-y', 'hidden');
+  });

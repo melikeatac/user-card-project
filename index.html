@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
   <title>Document</title>
-  
+
 
   <!--CSS START-->
   <link rel="stylesheet" href="assets/vendor/lightGallery/dist/css/lightgallery.min.css">
@@ -54,13 +54,14 @@
               <ul class="cs-fc-list">
                 <li>
                   <i class="fas fa-phone-volume"></i>
-    
+
                   <a href="tel:+">
                     +1012 3456 789
                   </a>
                 </li>
                 <li><i class="fas fa-envelope"></i><a href="mailto:">demo@gmail.com</a></li>
-                <li><i class="fas fa-map-pin"></i><a href="mailto:">132 Dartmouth Street Hamburg, Hamburg 02156 Germany</a>
+                <li><i class="fas fa-map-pin"></i><a href="mailto:">132 Dartmouth Street Hamburg, Hamburg 02156
+                    Germany</a>
                 </li>
               </ul>
               <div class="cs-social-box">
@@ -70,7 +71,7 @@
               </div>
             </div>
           </div>
-          
+
         </div>
       </nav>
     </div>
@@ -98,8 +99,8 @@
           <div class="col-12 col-lg-6 cs-banner-right">
             <div class="cs-banner-cardbox" style="background-image: url(assets/img/lingkaran.png);">
               <img class="cs-img1" src="assets/img/bannercard1.jpeg" alt="">
-              <img class="cs-img2" src="assets/img/bannercard2.jpeg" alt="">
-              <img class="cs-img3" src="assets/img/bannercard2.jpeg" alt="">
+              <img class="cs-img2" src="assets/img/bannercard22.jpeg" alt="">
+              <img class="cs-img3" src="assets/img/bannercard33.jpeg" alt="">
             </div>
             <div class="cs-banner-colorbox">
               <div class="purple"></div>
@@ -555,7 +556,7 @@
                 </div>
                 <div class="col-12 col-md-12 text-center text-lg-end">
                   <button class="cs-global-btn">Submit</button>
-              </div>
+                </div>
               </div>
             </div>
           </div>
@@ -775,16 +776,15 @@
           loop: false,
           autoplayTimeout: 4000,
           autoplayHoverPause: true,
-          autoWith: true,
           navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
           smartSpeed: 1000,
           margin: 25,
           responsiveClass: true,
           onInitialized: function (event) {
-            $('.owl-prev', event.target).hide(); // İlk başta sol oku gizle
+            updateNavVisibility(event); // Sayfa yüklendiğinde kontrol fonksiyonunu çağır
           },
           onTranslated: function (event) {
-            $('.owl-prev', event.target).show(); // Hareket tamamlandığında sol oku göster
+            updateNavVisibility(event); // Slide geçişinde kontrol fonksiyonunu çağır
           },
           responsive: {
             0: {
@@ -807,9 +807,23 @@
         });
       }
 
+      function updateNavVisibility(event) {
+        if (event.item.index === 0) {
+          $('.owl-prev', event.target).hide();
+        } else {
+          $('.owl-prev', event.target).show();
+        }
+
+        if (event.item.index === event.item.count - 1) {
+          $('.owl-next', event.target).hide();
+        } else {
+          $('.owl-next', event.target).show();
+        }
+      }
+
       halfSliderFunc(halfSlider1);
     }
-    
+
     $(document).ready(function () {
       $(".detailsToggle").click(function () {
         $(this).closest('.cs-list').find(".details-container").slideToggle();

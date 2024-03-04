@@ -61,13 +61,36 @@
         display: flex
         align-items: center
         padding: 3% 7%
-    .cs-card-img
-        max-width: 565px
-        width: 100%
-        object-fit: contain
+    .cs-card-img-wrapper
         position: absolute
         bottom: 0
         left: 200px
+        .cs-card-img
+            max-width: 565px
+            width: 100%
+            object-fit: contain
+        .cs-banner-colorbox
+            position: absolute
+            top: 0
+            width: 100%
+            height: 100%
+            display: flex
+            .blue, .purple, .pink 
+                width: 100%
+                height: initial
+                border-radius: 50%
+                filter: blur(150px)
+                z-index: -1
+            .blue 
+                background-color: #00F0FF    
+            .purple 
+                background-color: #6154FE
+            .pink 
+                background-color: #DB00FF
+                right: 15%
+
+            
+            
     .cs-row-info-area
         padding-bottom: 5%
         .cs-title1
@@ -927,3 +950,6 @@ iframe
     transition: all 0.3s all
     &:hover
         color: #ffffff
+
+
+    
