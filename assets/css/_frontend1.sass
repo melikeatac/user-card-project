@@ -179,11 +179,14 @@
             font-size: 15px
             color: #848199
             font-weight: 500
+            align-items: flex-start
 
     .cs-card-img
         max-width: 285px
+        width: 100%
         height: 150px
         object-fit: cover
+        border-radius: 15px
     .cs-duo-list
         display: flex
         justify-content: space-between
@@ -198,7 +201,7 @@
         .cs-list-1
             li
                 font-size: 14px
-                line-height: 22px
+                line-height: 24px
                 color: #848199
                 font-weight: 500
         .cs-list-2
@@ -303,7 +306,7 @@
         .cs-duo
             display: flex
             justify-content: space-between
-            align-items: center
+            align-items: flex-start
             width: 100%
             margin-bottom: 10px
             .cs-list-title
@@ -618,7 +621,7 @@
         img
             width: 56px
             height: 54px
-            object-fit: contain
+            object-fit: cover
             border-radius: 10px
         .cs-title
             font-size: 20px
@@ -856,6 +859,7 @@ iframe
                 justify-content: space-between
                 .card-link
                     color: #495057
+                    min-height: 50px
                     i
                         margin-right: 5px
                         color: #00716E
@@ -878,6 +882,9 @@ iframe
             position: relative
             img
                 width: 100%
+                height: 200px
+                object-fit: contain
+                border-radius: 10px
             .cs-discount-text
                 position: absolute
                 left: 0
