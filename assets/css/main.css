@@ -1398,38 +1398,16 @@ header .cs-col-2 .cs-social-box a {
 }
 .cs-section-1 .cs-banner-right .cs-banner-colorbox {
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  top: 15%;
+  right: 15%;
+  width: 400px;
+  height: 400px;
   animation-name: rotateClockwise;
   animation-duration: 5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-}
-.cs-section-1 .cs-banner-right .cs-banner-colorbox .blue, .cs-section-1 .cs-banner-right .cs-banner-colorbox .purple, .cs-section-1 .cs-banner-right .cs-banner-colorbox .pink {
-  max-width: 350px;
-  width: 100%;
-  height: 350px;
-  border-radius: 50%;
-  filter: blur(200px);
-  position: absolute;
-  z-index: -1;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-.cs-section-1 .cs-banner-right .cs-banner-colorbox .blue {
-  background-color: #00F0FF;
-  right: 0;
-}
-.cs-section-1 .cs-banner-right .cs-banner-colorbox .purple {
-  background-color: #6154FE;
-  left: 0;
-}
-.cs-section-1 .cs-banner-right .cs-banner-colorbox .pink {
-  background-color: #DB00FF;
-  right: 15%;
-  bottom: 0;
+  background: linear-gradient(90deg, rgb(97, 84, 254) 20%, rgb(0, 240, 255) 50%, rgb(211, 0, 255) 80%);
+  filter: blur(120px);
 }
 .cs-section-1 .owl-carousel-index1 {
   padding: 50px 16px;
@@ -1557,18 +1535,30 @@ header .cs-col-2 .cs-social-box a {
   top: 0;
   right: 0;
   z-index: 3;
+  max-width: 450px;
+  height: 250px;
+  object-fit: contain;
+  width: 100%;
 }
 .cs-section-4 .cs-sec4-main .cs-sec4-imagebox .cs-img2 {
   position: absolute;
   top: 50px;
   right: 0;
   z-index: 2;
+  max-width: 450px;
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
 }
 .cs-section-4 .cs-sec4-main .cs-sec4-imagebox .cs-img3 {
   position: absolute;
   top: 50px;
   right: -30px;
   z-index: 1;
+  max-width: 450px;
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
 }
 .cs-section-4 .cs-sec4-main .blur-background {
   position: absolute;
@@ -1828,6 +1818,7 @@ header .cs-col-2 .cs-social-box a {
   flex-direction: column;
   gap: 16px;
   border-radius: 20px;
+  background: #ffffff;
 }
 .cs-section-8 .cs-slider-area .halfSlider1 .item .cs-card .cs-head {
   color: #00A9A4;

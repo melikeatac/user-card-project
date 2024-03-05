@@ -183,35 +183,17 @@ header
                     transition: all .5s
         .cs-banner-colorbox
             position: absolute
-            top: 0
-            width: 100%
-            height: 100%
+            top: 15%
+            right: 15%
+            width: 400px
+            height: 400px
             animation-name: rotateClockwise
             animation-duration: 5s
             animation-timing-function: linear
             animation-iteration-count: infinite
-            .blue, .purple, .pink 
-                max-width: 350px
-                width: 100%
-                height: 350px
-                border-radius: 50%
-                filter: blur(200px)
-                position: absolute
-                z-index: -1
-                animation-duration: 5s
-                animation-timing-function: linear
-                animation-iteration-count: infinite
-            .blue 
-                background-color: #00F0FF
-                right: 0
-                
-            .purple 
-                background-color: #6154FE
-                left: 0
-            .pink 
-                background-color: #DB00FF
-                right: 15%
-                bottom: 0
+            background: linear-gradient(90deg, rgba(97,84,254,1) 20%, rgba(0,240,255,1) 50%, rgba(211,0,255,1) 80%)
+            filter: blur(120px)
+               
     .owl-carousel-index1
         padding: 50px 16px
         .owl-item
@@ -312,16 +294,28 @@ header
                 top: 0
                 right: 0
                 z-index: 3
+                max-width: 450px
+                height: 250px
+                object-fit: contain
+                width: 100%
             .cs-img2
                 position: absolute
                 top: 50px
                 right: 0
                 z-index: 2
+                max-width: 450px
+                width: 100%
+                height: 250px
+                object-fit: contain
             .cs-img3
                 position: absolute
                 top: 50px
                 right: -30px
                 z-index: 1
+                max-width: 450px
+                width: 100%
+                height: 250px
+                object-fit: contain
         .blur-background
             position: absolute
             right: -50px
@@ -542,6 +536,7 @@ header
                     flex-direction: column
                     gap: 16px
                     border-radius: 20px
+                    background: #ffffff
                     .cs-head
                         color: #00A9A4
                         font-weight: 700
