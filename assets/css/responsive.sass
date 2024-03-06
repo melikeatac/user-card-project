@@ -33,6 +33,7 @@
                 gap: 15px
             
 @media (max-width: 767px)
+
     #goTpButton
         width: 40px
         height: 40px
@@ -43,6 +44,17 @@
             line-height: 50px
             position: relative
             bottom: 5px
+    .card-list-main
+        grid-template-columns: repeat(2,1fr)
+        gap: 20px
+    .cs-hospital-card-1 
+        .cs-right-main
+            flex-direction: column
+            align-items: center
+            .cs-img-area
+                height: 180px
+        .cs-right-area
+            height: auto
     header 
         .cs-col-2 
             .cs-fc-list
@@ -259,11 +271,6 @@
             background-color: #555
         table
             width: 650px
-    .card-list-main
-        display: flex
-        flex-direction: column
-        gap: 10px
-        padding: 20px 0
     .cs-hospital-card-1 
         .cs-right-area 
             .cs-duo-1

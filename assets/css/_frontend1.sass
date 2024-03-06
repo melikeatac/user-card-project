@@ -666,89 +666,121 @@
                 font-weight: 700
 .cs-hospital-card-1
     margin-top: 30px
-    .cs-img-area
-        max-width: 450px
-        width: 100%
-        height: 250px
-        img
+    .cs-right-main
+        display: flex
+        gap: 20px
+        .cs-img-area
+            max-width: 215px
             width: 100%
-            height: 100%
-            object-fit: contain
+            height: 215px
+            background-color: #c1e5e3ad
+            border-radius: 10px
+            img
+                width: 100%
+                height: 100%
+                object-fit: contain
+    
+
     .cs-right-area
         display: flex
         flex-direction: column
-        justify-content: space-between
         height: 100%
-        padding: 5px 0
-        .cs-duo-1
+        .cs-desc-1
+            font-size: 16px
+            line-height: 24px
+            color: #495057
+            font-weight: 400
+            margin: 10px 0
+        .cs-title-1
+            font-size: 28px
+            line-height: 36px
+            margin: 0
+            color: #495057
+            font-weight: 600
+        .cs-green-btn, .cs-send-btn
+            flex: 1
+            text-align: center
             display: flex
-            justify-content: space-between
-            align-items: center
-            gap: 50px
-            .cs-desc-1
-                font-size: 24px
-                color: #495057
-                line-height: 32px
-            .cs-title-1
-                color: #495057
-                font-size: 36px
-                line-height: 44px
-                font-weight: 600
-            .cs-star-area
-                display: flex
-                align-items: center
-                color: #FFD43A
-                font-size: 25px
-                line-height: 33px
-                font-weight: 600
-                i
-                    margin-right: 5px
-            .cs-green-btn, .cs-send-btn
-                flex: 1
-                text-align: center
-                display: flex
-                justify-content: center
+            justify-content: center
+.cs-star-area
+    display: flex
+    align-items: center
+    color: #FFD43A
+    font-size: 18px
+    line-height: 26px
+    font-weight: 600
+    margin: 5px 0
+    i
+        margin-right: 5px
+.cs-duo-3
+    display: flex
+    flex-direction: column
+    button
+        width: 100%
+        display: flex
+        margin-bottom: 15px
+        justify-content: center
+.cs-shadow-1,.cs-shadow-2
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+    padding: 20px
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    border-radius: 20px
 .card-list-main
-    padding: 50px 0
-    border-top: 1px solid #495057
-    border-bottom: 1px solid #495057
-    margin-top: 35px
+    display: grid
+    grid-template-columns: repeat(4,1fr)
+    padding: 15px 0 10px 0
     .cs-duo-2
         display: flex
         gap: 8px
         align-items: center
+        justify-content: center
         img
             width: 40px
             height: 40px
             object-fit: contain
         span
-            font-size: 16px
-            line-height: 24px
+            font-size: 14px
+            line-height: 23px
             color: #495057
-            font-weight: 700
+            font-weight: 600
 .cs-detail-title
     color: #495057
     font-size: 24px
     line-height: 32px
     font-weight: 700
-.cs-content
-    .cs-detail-title-2
-        font-size: 16px
-        line-height: 24px
+.cs-detail-title-2
+    font-size: 16px
+    line-height: 24px
+    color: #495057
+    font-weight: 700
+    margin: 10px 0
+.cs-detail-link-2
+    font-size: 16px
+    line-height: 24px
+    color: #495057
+    font-weight: 500
+    display: flex
+    margin-bottom: 10px
+    align-items: center
+    gap: 5px
+    &:hover
         color: #495057
-        font-weight: 700
-        margin: 10px 0
-    .cs-detail-link
-        font-size: 24px
-        line-height: 32px
-        color: #00A9A4
-        font-weight: 700
+.cs-detail-link-1
+    font-size: 16px
+    line-height: 24px
+    color: #495057
+    margin-bottom: 10px
+    font-weight: 500
+    text-decoration: underline
+    display: flex
+    align-items: center
+    gap: 5px
+    &:hover
+        color: #495057
         text-decoration: underline
-    .cs-detail-link-2
-        font-size: 24px
-        line-height: 32px
-        color: #495057
-        font-weight: 700
 .cs-img-list
     display: flex
     gap: 20px
@@ -763,11 +795,11 @@ iframe
     height: 150px
 
 .price-list-area
-    margin-top: 50px
+    margin-top: 30px
     margin-bottom: 20px
-    border-top: 1px solid #495057
-    border-bottom: 1px solid #495057
-    padding: 20px 0
+    padding: 20px
+    border-radius: 20px
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
     .cs-list-duo
         display: flex
         gap: 10px
@@ -809,6 +841,8 @@ iframe
     font-size: 24px
     line-height: 32px
     font-weight: 500
+    &:hover
+        color: #495057
     i
         margin-right: 8px
 .cs-clinic-card-area
