@@ -297,12 +297,12 @@
                 border-radius: 50%
             .cs-file-area
                 width: 430px
-                border: 0.5px solid #D0D5DD
+                border: 1px solid #D0D5DD
                 display: flex
                 flex-direction: column
                 align-items: center
                 justify-content: center
-                padding: 20px
+                padding: 10px
                 border-radius: 4px
                 position: relative
                 input
@@ -613,10 +613,11 @@
             padding: 0
             list-style: none
             li
-                color: #00716E
-                font-size: 16px
-                font-weight: 600
                 margin-bottom: 20px
+                a
+                    color: #00716E
+                    font-size: 16px
+                    font-weight: 600
                 i
                     color: #00716E
                     margin-right: 8px
@@ -1032,5 +1033,79 @@ iframe
         font-weight: 600
 
 
-
-    
+.owl-carousel-au-user 
+    .owl-nav
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 20px
+        padding-top: 30px
+        i
+            font-size: 30px
+            color: #00aaa4a6
+.cs-check-link
+    font-size: 16px
+    line-height: 24px
+    color: #00aaa4
+    cursor: pointer
+    user-select: none
+    &:hover
+        text-decoration: underline
+        color: #00aaa4
+.form-check-label
+    user-select: none
+.form-check-input
+    &:checked
+        background-color: #00aaa4 !important
+        border-color: #00aaa4 !important
+    &:focus
+        box-shadow: none
+        outline: 0
+        border-color: #00aaa4 !important
+.cs-close-btn
+    position: absolute
+    top: 7px
+    right: 7px
+    border: none
+    box-shadow: none
+    outline: 0
+    &:focus
+        border: none
+        box-shadow: none
+        outline: 0
+    i
+        font-size: 22px
+        color: #01aba4
+.cs-modal-desc
+    margin-top: 30px
+    color: #073837
+    font-size: 16px
+    line-height: 24px
+#sharecardModal,#qrCodeModal
+    .cs-share-btn
+        background-color: #00aaa4
+        color: #ffffff
+        border: none
+    .modal-footer
+        border: none 
+        padding: 0 5px 5px 0
+.cs-card-btn-group
+    max-width: 200px
+    width: 100%
+    button
+        width: 100%
+        justify-content: center
+        align-items: center
+        display: flex
+.cs-qr-main
+    width: 100%
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    display: flex
+    margin-top: 30px
+    margin-bottom: 30px
+    img
+        max-width: 200px
+        height: 200px
+        object-fit: contain
