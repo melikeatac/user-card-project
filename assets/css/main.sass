@@ -17,6 +17,21 @@
     
     to 
         transform: rotate(360deg)
+@keyframes slideIn
+        0% 
+            transform: translateY(-100%)
+            opacity: 0
+        100% 
+            transform: translateY(0)
+            opacity: 1
+@keyframes fadeIn 
+    0%
+        opacity: 0
+        transform: translateY(-150px) rotate3d(1, 1, 1, 300deg)
+    
+    100%
+        opacity: 1
+        transform: translateY(0) rotate3d(1, 1, 1, 300deg)
 *
     font-family: variables.$mainFontFamily
 html
@@ -282,40 +297,45 @@ header
                     font-size: 16px
                     line-height: 24px
                     font-weight: 400
-        .cs-sec4-imagebox
+        .cs-sec4-imagebox 
             position: absolute
             width: 100%
-            top: 15%
-            right: -5%
-            animation: shake 3s infinite
+            top: 25%
+            right: 0
+            .cs-img1, .cs-img3, .cs-img2 
+                position: absolute
+                right: 0
+                width: 100%
+                max-width: 450px
+                height: 250px
+                object-fit: contain
+                transform: translateY(-200px) rotate3d(1, 1, 1, 300deg)
+                transition: all 0.5s ease-in-out
+                opacity: 0
+                border-radius: 15px
+        .cs-img1
+            top: 50px
+            z-index: 3
+        .cs-img3
+            top: 100px
+            z-index: 2
+        .cs-img2
+            top: 150px
+            z-index: 1
+        .cs-sec4-imagebox.animate .cs-img1 
+            transform: translateY(0) rotate3d(1, 1, 1, 300deg)
+            transition-delay: .7s
+            opacity: 1
 
-            .cs-img1
-                position: absolute
-                top: 0
-                right: 0
-                z-index: 3
-                max-width: 450px
-                height: 250px
-                object-fit: contain
-                width: 100%
-            .cs-img2
-                position: absolute
-                top: 50px
-                right: 0
-                z-index: 2
-                max-width: 450px
-                width: 100%
-                height: 250px
-                object-fit: contain
-            .cs-img3
-                position: absolute
-                top: 50px
-                right: -30px
-                z-index: 1
-                max-width: 450px
-                width: 100%
-                height: 250px
-                object-fit: contain
+        .cs-sec4-imagebox.animate .cs-img3 
+            transform: translateY(0) rotate3d(1, 1, 1, 300deg)
+            transition-delay: .4s
+            opacity: 1
+
+        .cs-sec4-imagebox.animate .cs-img2 
+            transform: translateY(0) rotate3d(1, 1, 1, 300deg)
+            transition-delay: 0.1s
+            opacity: 1
         .blur-background
             position: absolute
             right: -50px

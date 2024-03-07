@@ -284,9 +284,9 @@
           </div>
           <div class="blur-background"></div>
           <div class="cs-sec4-imagebox">
-            <img class="cs-img1" src="assets/img/Horizontalcard1.png" alt="">
-            <img class="cs-img3" src="assets/img/HorizontalCard3.png" alt="">
-            <img class="cs-img2" src="assets/img/HorizontalCard2.png" alt="">
+            <img class="cs-img1" src="assets/img/bannercard1.jpeg" alt="">
+            <img class="cs-img3" src="assets/img/bannercard22.jpeg" alt="">
+            <img class="cs-img2" src="assets/img/bannercard33.jpeg" alt="">
           </div>
         </div>
       </div>
@@ -840,6 +840,23 @@
         $(this).find("i").toggleClass("fa-chevron-up fa-chevron-down");
       });
     });
+    $(document).ready(function () {
+    var csSec4Imagebox = $('.cs-sec4-imagebox');
+
+    $(window).scroll(function () {
+        var windowTop = $(window).scrollTop();
+        var elementTop = csSec4Imagebox.offset().top;
+
+        
+        if (windowTop >= elementTop - 700) {
+            csSec4Imagebox.addClass('animate');
+        } else {
+            csSec4Imagebox.removeClass('animate');
+        }
+    });
+});
+
+
   </script>
 </body>
 
