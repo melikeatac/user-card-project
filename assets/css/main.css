@@ -426,7 +426,7 @@
 }
 .cs-profile-area .cs-profile-form .cs-pp-area .cs-file-area {
   width: 430px;
-  border: 0.5px solid #D0D5DD;
+  border: 1px solid #D0D5DD;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -440,7 +440,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 20px;
+  padding: 10px;
   border-radius: 4px;
   position: relative;
 }
@@ -853,10 +853,12 @@
   list-style: none;
 }
 .cs-contactus-area .cs-info-area .cs-list-1 li {
+  margin-bottom: 20px;
+}
+.cs-contactus-area .cs-info-area .cs-list-1 li a {
   color: #00716E;
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 20px;
 }
 .cs-contactus-area .cs-info-area .cs-list-1 li i {
   color: #00716E;
@@ -1488,6 +1490,136 @@ iframe {
   line-height: 24px;
   color: #495057;
   font-weight: 600;
+}
+
+.owl-carousel-au-user .owl-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  padding-top: 30px;
+}
+.owl-carousel-au-user .owl-nav i {
+  font-size: 30px;
+  color: rgba(0, 170, 164, 0.6509803922);
+}
+
+.cs-check-link {
+  font-size: 16px;
+  line-height: 24px;
+  color: #00aaa4;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.cs-check-link:hover {
+  text-decoration: underline;
+  color: #00aaa4;
+}
+
+.form-check-label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.form-check-input:checked {
+  background-color: #00aaa4 !important;
+  border-color: #00aaa4 !important;
+}
+.form-check-input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 0;
+  border-color: #00aaa4 !important;
+}
+
+.cs-close-btn {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 0;
+}
+.cs-close-btn:focus {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 0;
+}
+.cs-close-btn i {
+  font-size: 22px;
+  color: #01aba4;
+}
+
+.cs-modal-desc {
+  margin-top: 30px;
+  color: #073837;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#sharecardModal .cs-share-btn, #qrCodeModal .cs-share-btn {
+  background-color: #00aaa4;
+  color: #ffffff;
+  border: none;
+}
+#sharecardModal .modal-footer, #qrCodeModal .modal-footer {
+  border: none;
+  padding: 0 5px 5px 0;
+}
+
+.cs-card-btn-group {
+  max-width: 200px;
+  width: 100%;
+}
+.cs-card-btn-group button {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cs-qr-main {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.cs-qr-main img {
+  max-width: 200px;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @-webkit-keyframes shake {
@@ -2225,6 +2357,10 @@ header .cs-col-2 .cs-social-box a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+.cs-section-6 .cs-sec6-main .row .cs-card .cs-card-main .cs-list li:first-child {
+  font-weight: 700;
+  color: #5a5a5b;
 }
 .cs-section-6 .cs-sec6-main .row .cs-card .cs-card-main .cs-list li img {
   margin-right: 8px;
